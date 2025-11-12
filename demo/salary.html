@@ -137,135 +137,134 @@
                 </div>
             </div>
 
- <!-- Main Content Area -->
-<div class="flex-1 overflow-y-auto bg-gray-50">
-  <div class="p-6">
-    <!-- Header + Actions -->
-    <section class="mb-8">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-bold">Employee Salary</h2>
-        <div class="flex gap-2">
-          <a href="../pages/salary-edit.html" class="btn btn-primary">Edit Salary</a>
-          <button id="remove-employee" class="btn btn-outline">Remove Selected</button>
+      <!-- Main Content Area -->
+      <div class="flex-1 overflow-y-auto bg-gray-50">
+        <div class="p-6">
+          <!-- Header + Actions -->
+          <section class="mb-8">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-2xl font-bold">Employee Salary</h2>
+              <div class="flex gap-2">
+                <a href="../pages/salary-edit.html" class="btn btn-primary">Edit Salary</a>
+                <button id="remove-employee" class="btn btn-outline">Remove Selected</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Salary Table -->
+          <section class="rounded-lg shadow-sm overflow-hidden bg-white">
+            <!-- Toolbar -->
+            <div class="px-6 py-4 border-b flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+              <!-- (Optional) Filters -->
+              <div class="flex flex-wrap items-end gap-3">
+                <div>
+                  <label for="filter-emp-id" class="block text-sm mb-1">Employee ID</label>
+                  <input id="filter-emp-id" type="text" class="form-control" placeholder="e.g. 001" />
+                </div>
+                <button id="apply-filter" class="btn btn-outline">Apply</button>
+              </div>
+
+              <!-- Export -->
+              <div class="flex gap-2">
+                <button class="px-3 py-1 rounded-md text-sm border">Copy</button>
+                <button class="px-3 py-1 rounded-md text-sm border">PDF</button>
+                <button class="px-3 py-1 rounded-md text-sm border">Excel</button>
+                <button class="px-3 py-1 rounded-md text-sm border">CSV</button>
+                <button class="px-3 py-1 rounded-md text-sm border">Print</button>
+              </div>
+            </div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto">
+              <table id="salary-table" class="min-w-full divide-y">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="px-4 py-3 text-left text-sm font-semibold"></th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">Salary ID</th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">First Name</th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">Last Name</th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">Base Salary</th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">Deduction</th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">Bonus</th>
+                    <th class="px-4 py-3 text-left text-sm font-semibold">Total Paid</th>
+                    <th class="px-4 py-3 text-right text-sm font-semibold">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y bg-white">
+                  <!-- Row 1 -->
+                  <tr class="salary-row"
+                      data-id="001"
+                      data-empid="001"
+                      data-hours="160"
+                      data-hourly="18.75"
+                      data-bonus="0"
+                      data-deduction="2999"
+                      data-basesalary="3000"
+                      data-total="1">
+                    <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
+                    <td class="px-4 py-3">001</td>
+                    <td class="px-4 py-3">
+                      <a href="#" class="emp-link underline">001</a>
+                    </td>
+                    <td class="px-4 py-3">Nguyen Quy</td>
+                    <td class="px-4 py-3">Khanh</td>
+                    <td class="px-4 py-3">$3,000</td>
+                    <td class="px-4 py-3">$2,999</td>
+                    <td class="px-4 py-3">$0</td>
+                    <td class="px-4 py-3 font-semibold">$1</td>
+                    <td class="px-4 py-3 text-right">
+                      <button class="text-sm underline text-red-600 remove-row">Delete</button>
+                    </td>
+                  </tr>
+
+                  <!-- Row 2 -->
+                  <tr class="salary-row"
+                      data-id="002"
+                      data-empid="002"
+                      data-hours="160"
+                      data-hourly="18.75"
+                      data-bonus="0"
+                      data-deduction="30"
+                      data-basesalary="3000"
+                      data-total="2970">
+                    <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
+                    <td class="px-4 py-3">002</td>
+                    <td class="px-4 py-3">
+                      <a href="#" class="emp-link underline">002</a>
+                    </td>
+                    <td class="px-4 py-3">Khanh</td>
+                    <td class="px-4 py-3">Ngu</td>
+                    <td class="px-4 py-3">$3,000</td>
+                    <td class="px-4 py-3">$30</td>
+                    <td class="px-4 py-3">$0</td>
+                    <td class="px-4 py-3 font-semibold">$2,970</td>
+                    <td class="px-4 py-3 text-right">
+                      <button class="text-sm underline text-red-600 remove-row">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Salary Detail Panel -->
+          <section id="salary-detail" class="rounded-lg shadow-sm bg-white mt-6 px-6 py-5 hidden">
+            <h3 class="text-lg font-semibold mb-4">Salary Detail</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div><strong>Salary ID:</strong> <span id="d-id"></span></div>
+              <div><strong>Employee ID:</strong> <span id="d-empid"></span></div>
+              <div><strong>Total Hours:</strong> <span id="d-hours"></span></div>
+              <div><strong>Hourly Rate:</strong> $<span id="d-hourly"></span></div>
+              <div><strong>Base Salary:</strong> $<span id="d-base"></span></div>
+              <div><strong>Bonus:</strong> $<span id="d-bonus"></span></div>
+              <div><strong>Deduction:</strong> $<span id="d-deduction"></span></div>
+              <div class="font-semibold"><strong>Total Paid:</strong> $<span id="d-total"></span></div>
+            </div>
+          </section>
         </div>
       </div>
-    </section>
-
-    <!-- Salary Table -->
-    <section class="rounded-lg shadow-sm overflow-hidden bg-white">
-      <!-- Toolbar -->
-      <div class="px-6 py-4 border-b flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <h3 class="text-lg font-semibold">Salary Report</h3>
-
-        <!-- (Optional) Filters -->
-        <div class="flex flex-wrap items-end gap-3">
-          <div>
-            <label for="filter-emp-id" class="block text-sm mb-1">Employee ID</label>
-            <input id="filter-emp-id" type="text" class="form-control" placeholder="e.g. 001" />
-          </div>
-          <button id="apply-filter" class="btn btn-outline">Apply</button>
-        </div>
-
-        <!-- Export -->
-        <div class="flex gap-2">
-          <button class="px-3 py-1 rounded-md text-sm border">Copy</button>
-          <button class="px-3 py-1 rounded-md text-sm border">PDF</button>
-          <button class="px-3 py-1 rounded-md text-sm border">Excel</button>
-          <button class="px-3 py-1 rounded-md text-sm border">CSV</button>
-          <button class="px-3 py-1 rounded-md text-sm border">Print</button>
-        </div>
-      </div>
-
-      <!-- Table -->
-      <div class="overflow-x-auto">
-        <table id="salary-table" class="min-w-full divide-y">
-          <thead class="bg-gray-50">
-            <tr>
-              <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Salary ID</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">First Name</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Last Name</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Base Salary</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Deduction</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Bonus</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Total Paid</th>
-              <th class="px-4 py-3 text-right text-sm font-semibold">Actions</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y bg-white">
-            <!-- Row 1 -->
-            <tr class="salary-row"
-                data-id="001"
-                data-empid="001"
-                data-hours="160"
-                data-hourly="18.75"
-                data-bonus="0"
-                data-deduction="2999"
-                data-basesalary="3000"
-                data-total="1">
-              <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
-              <td class="px-4 py-3">001</td>
-              <td class="px-4 py-3">
-                <a href="#" class="emp-link underline">001</a>
-              </td>
-              <td class="px-4 py-3">Nguyen Quy</td>
-              <td class="px-4 py-3">Khanh</td>
-              <td class="px-4 py-3">$3,000</td>
-              <td class="px-4 py-3">$2,999</td>
-              <td class="px-4 py-3">$0</td>
-              <td class="px-4 py-3 font-semibold">$1</td>
-              <td class="px-4 py-3 text-right">
-                <button class="text-sm underline text-red-600 remove-row">Delete</button>
-              </td>
-            </tr>
-
-            <!-- Row 2 -->
-            <tr class="salary-row"
-                data-id="002"
-                data-empid="002"
-                data-hours="160"
-                data-hourly="18.75"
-                data-bonus="0"
-                data-deduction="30"
-                data-basesalary="3000"
-                data-total="2970">
-              <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
-              <td class="px-4 py-3">002</td>
-              <td class="px-4 py-3">
-                <a href="#" class="emp-link underline">002</a>
-              </td>
-              <td class="px-4 py-3">Khanh</td>
-              <td class="px-4 py-3">Ngu</td>
-              <td class="px-4 py-3">$3,000</td>
-              <td class="px-4 py-3">$30</td>
-              <td class="px-4 py-3">$0</td>
-              <td class="px-4 py-3 font-semibold">$2,970</td>
-              <td class="px-4 py-3 text-right">
-                <button class="text-sm underline text-red-600 remove-row">Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Salary Detail Panel -->
-    <section id="salary-detail" class="rounded-lg shadow-sm bg-white mt-6 px-6 py-5 hidden">
-      <h3 class="text-lg font-semibold mb-4">Salary Detail</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div><strong>Salary ID:</strong> <span id="d-id"></span></div>
-        <div><strong>Employee ID:</strong> <span id="d-empid"></span></div>
-        <div><strong>Total Hours:</strong> <span id="d-hours"></span></div>
-        <div><strong>Hourly Rate:</strong> $<span id="d-hourly"></span></div>
-        <div><strong>Base Salary:</strong> $<span id="d-base"></span></div>
-        <div><strong>Bonus:</strong> $<span id="d-bonus"></span></div>
-        <div><strong>Deduction:</strong> $<span id="d-deduction"></span></div>
-        <div class="font-semibold"><strong>Total Paid:</strong> $<span id="d-total"></span></div>
-      </div>
-    </section>
-  </div>
-</div>
 
 </body>
 </html>

@@ -138,138 +138,136 @@
             </div>
 
            <!-- Main Content Area -->
-<div class="flex-1 overflow-y-auto bg-gray-50">
-  <div class="p-6">
-    <!-- Header + Actions -->
-    <section class="mb-8">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-bold">Employee Leave Management</h2>
-        <div class="flex gap-2">
-          <a href="../pages/leave-form.html" class="btn btn-primary">Add Leave Request</a>
-          <button id="bulk-remove" class="btn btn-outline">Remove Selected</button>
-        </div>
-      </div>
-    </section>
+    <div class="flex-1 overflow-y-auto bg-gray-50">
+      <div class="p-6">
+        <!-- Header + Actions -->
+        <section class="mb-8">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Employee Leave Management</h2>
+            <div class="flex gap-2">
+              <a href="../pages/leave-form.html" class="btn btn-primary">Add Leave Request</a>
+              <button id="bulk-remove" class="btn btn-outline">Remove Selected</button>
+            </div>
+          </div>
+        </section>
 
-    <!-- Leave Table -->
-    <section class="rounded-lg shadow-sm overflow-hidden bg-white">
-      <!-- Toolbar -->
-      <div class="px-6 py-4 border-b">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <h3 class="text-lg font-semibold">Employee Leave Report</h3>
+        <!-- Leave Table -->
+        <section class="rounded-lg shadow-sm overflow-hidden bg-white">
+          <!-- Toolbar -->
+          <div class="px-6 py-4 border-b">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <!-- Filters -->
+              <div class="flex flex-wrap items-end gap-3">
+                <div>
+                  <label for="leave-type" class="block text-sm mb-1">Type</label>
+                  <select id="leave-type" class="form-control">
+                    <option value="">All</option>
+                    <option value="Annual">Annual</option>
+                    <option value="Sick">Sick</option>
+                    <option value="Unpaid">Unpaid</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="status" class="block text-sm mb-1">Status</label>
+                  <select id="status" class="form-control">
+                    <option value="">All</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="from-date" class="block text-sm mb-1">From</label>
+                  <input type="date" id="from-date" class="form-control" />
+                </div>
+                <div>
+                  <label for="to-date" class="block text-sm mb-1">To</label>
+                  <input type="date" id="to-date" class="form-control" />
+                </div>
+                <div>
+                  <label for="emp-id" class="block text-sm mb-1">Employee ID</label>
+                  <input type="text" id="emp-id" class="form-control" placeholder="e.g. 001" />
+                </div>
+                <button id="apply-filter" class="btn btn-outline">Apply</button>
+              </div>
 
-          <!-- Filters -->
-          <div class="flex flex-wrap items-end gap-3">
-            <div>
-              <label for="leave-type" class="block text-sm mb-1">Type</label>
-              <select id="leave-type" class="form-control">
-                <option value="">All</option>
-                <option value="Annual">Annual</option>
-                <option value="Sick">Sick</option>
-                <option value="Unpaid">Unpaid</option>
-              </select>
+              <!-- Export -->
+              <div class="flex gap-2">
+                <button class="px-3 py-1 rounded-md text-sm border">Copy</button>
+                <button class="px-3 py-1 rounded-md text-sm border">PDF</button>
+                <button class="px-3 py-1 rounded-md text-sm border">Excel</button>
+                <button class="px-3 py-1 rounded-md text-sm border">CSV</button>
+                <button class="px-3 py-1 rounded-md text-sm border">Print</button>
+              </div>
             </div>
-            <div>
-              <label for="status" class="block text-sm mb-1">Status</label>
-              <select id="status" class="form-control">
-                <option value="">All</option>
-                <option value="Pending">Pending</option>
-                <option value="Approved">Approved</option>
-                <option value="Rejected">Rejected</option>
-              </select>
-            </div>
-            <div>
-              <label for="from-date" class="block text-sm mb-1">From</label>
-              <input type="date" id="from-date" class="form-control" />
-            </div>
-            <div>
-              <label for="to-date" class="block text-sm mb-1">To</label>
-              <input type="date" id="to-date" class="form-control" />
-            </div>
-            <div>
-              <label for="emp-id" class="block text-sm mb-1">Employee ID</label>
-              <input type="text" id="emp-id" class="form-control" placeholder="e.g. 001" />
-            </div>
-            <button id="apply-filter" class="btn btn-outline">Apply</button>
           </div>
 
-          <!-- Export -->
-          <div class="flex gap-2">
-            <button class="px-3 py-1 rounded-md text-sm border">Copy</button>
-            <button class="px-3 py-1 rounded-md text-sm border">PDF</button>
-            <button class="px-3 py-1 rounded-md text-sm border">Excel</button>
-            <button class="px-3 py-1 rounded-md text-sm border">CSV</button>
-            <button class="px-3 py-1 rounded-md text-sm border">Print</button>
+          <!-- Table -->
+          <div class="overflow-x-auto">
+            <table id="leave-table" class="min-w-full divide-y">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-3 text-left text-sm font-semibold"></th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">Manager ID</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">Type</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">Start Date</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">End Date</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">Duration</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">Note</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold">Status</th>
+                  <th class="px-4 py-3 text-right text-sm font-semibold">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y bg-white">
+                <!-- Sample Row -->
+                <tr>
+                  <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
+                  <td class="px-4 py-3">001</td>
+                  <td class="px-4 py-3">099</td>
+                  <td class="px-4 py-3">Annual</td>
+                  <td class="px-4 py-3">2024-11-01</td>
+                  <td class="px-4 py-3">2024-11-05</td>
+                  <td class="px-4 py-3">5 days</td>
+                  <td class="px-4 py-3">Family trip</td>
+                  <td class="px-4 py-3">
+                    <span class="inline-block px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800 status-badge">Pending</span>
+                  </td>
+                  <td class="px-4 py-3 text-right">
+                    <div class="flex gap-2 justify-end">
+                      <button class="btn btn-outline btn-approve">Approve</button>
+                      <button class="btn btn-outline btn-reject">Reject</button>
+                      <button class="text-sm underline text-red-600 remove-row">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
+                  <td class="px-4 py-3">002</td>
+                  <td class="px-4 py-3">101</td>
+                  <td class="px-4 py-3">Sick</td>
+                  <td class="px-4 py-3">2024-11-03</td>
+                  <td class="px-4 py-3">2024-11-03</td>
+                  <td class="px-4 py-3">1 day</td>
+                  <td class="px-4 py-3">Flu</td>
+                  <td class="px-4 py-3">
+                    <span class="inline-block px-2 py-1 text-xs rounded-full bg-green-100 text-green-800 status-badge">Approved</span>
+                  </td>
+                  <td class="px-4 py-3 text-right">
+                    <div class="flex gap-2 justify-end">
+                      <button class="btn btn-outline btn-approve">Approve</button>
+                      <button class="btn btn-outline btn-reject">Reject</button>
+                      <button class="text-sm underline text-red-600 remove-row">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
+        </section>
       </div>
-
-      <!-- Table -->
-      <div class="overflow-x-auto">
-        <table id="leave-table" class="min-w-full divide-y">
-          <thead class="bg-gray-50">
-            <tr>
-              <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Manager ID</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Type</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Start Date</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">End Date</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Duration</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Note</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Status</th>
-              <th class="px-4 py-3 text-right text-sm font-semibold">Actions</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y bg-white">
-            <!-- Sample Row -->
-            <tr>
-              <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
-              <td class="px-4 py-3">001</td>
-              <td class="px-4 py-3">099</td>
-              <td class="px-4 py-3">Annual</td>
-              <td class="px-4 py-3">2024-11-01</td>
-              <td class="px-4 py-3">2024-11-05</td>
-              <td class="px-4 py-3">5 days</td>
-              <td class="px-4 py-3">Family trip</td>
-              <td class="px-4 py-3">
-                <span class="inline-block px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800 status-badge">Pending</span>
-              </td>
-              <td class="px-4 py-3 text-right">
-                <div class="flex gap-2 justify-end">
-                  <button class="btn btn-outline btn-approve">Approve</button>
-                  <button class="btn btn-outline btn-reject">Reject</button>
-                  <button class="text-sm underline text-red-600 remove-row">Delete</button>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-3"><input type="checkbox" class="row-check" /></td>
-              <td class="px-4 py-3">002</td>
-              <td class="px-4 py-3">101</td>
-              <td class="px-4 py-3">Sick</td>
-              <td class="px-4 py-3">2024-11-03</td>
-              <td class="px-4 py-3">2024-11-03</td>
-              <td class="px-4 py-3">1 day</td>
-              <td class="px-4 py-3">Flu</td>
-              <td class="px-4 py-3">
-                <span class="inline-block px-2 py-1 text-xs rounded-full bg-green-100 text-green-800 status-badge">Approved</span>
-              </td>
-              <td class="px-4 py-3 text-right">
-                <div class="flex gap-2 justify-end">
-                  <button class="btn btn-outline btn-approve">Approve</button>
-                  <button class="btn btn-outline btn-reject">Reject</button>
-                  <button class="text-sm underline text-red-600 remove-row">Delete</button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </div>
-</div>
+    </div>
 
 </body>
 </html>
