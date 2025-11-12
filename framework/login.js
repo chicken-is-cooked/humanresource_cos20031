@@ -1,5 +1,4 @@
-  // ========= Mock user store (DEMO) =========
-    // Thay thế bằng dữ liệu thật khi có backend. Password ở đây chỉ để demo.
+// ========= Mock user store (DEMO) =========
     const USERS = [
       { username: 'ceo',       password: '123456',       role: 'CEO',      employeeId: 'E0001' },
       { username: 'hr.admin',  password: '123456',        role: 'HR',       employeeId: 'E0002' },
@@ -8,9 +7,9 @@
       { username: 'staff02',   password: '123456',     role: 'Employee', employeeId: 'E1002' },
     ];
 
-    // Trang đích sau khi đăng nhập thành công
-    const DEFAULT_REDIRECT = '../demo/employee.html'; // đổi path nếu bạn đặt trang khác
-    const ALLOWED_ROLES = new Set(['CEO','HR','Manager']); // chỉ các role này mới vào khu admin
+    
+    const DEFAULT_REDIRECT = '../demo/employee.html'; 
+    const ALLOWED_ROLES = new Set(['CEO','HR','Manager']);
 
     // ========= Helpers =========
     function showError(msg) {
@@ -86,7 +85,6 @@
       setSession(user, remember);
       showToast('Signed in successfully');
 
-      // điều hướng tới trang đích
       const target = getRedirectTarget();
       window.location.href = target;
     });
