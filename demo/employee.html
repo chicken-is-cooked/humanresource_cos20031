@@ -189,6 +189,7 @@
                     </section>
 
                     <!-- Employee Table Section -->
+                     
                     <section class="rounded-lg shadow-sm overflow-hidden bg-white">
                         <div class="px-6 py-4 border-b flex items-center justify-between">
                             <h3 class="text-lg font-semibold">Employee Directory</h3>
@@ -209,56 +210,62 @@
                                 <thead class="bg-gray-50">
                                     <tr>
                                         <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">First Name</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Last Name</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Date Of Birth</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Gender</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Address</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Email</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Phone Number</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Marriage Status</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Position</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Department ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employment Type</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>          <!-- EmployeeID -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">First Name</th>           <!-- First_Name -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Last Name</th>            <!-- Last_Name -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Date of Birth</th>        <!-- DateOfBirth -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Gender</th>               <!-- Gender -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Address</th>              <!-- Address -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Contact</th>              <!-- Contact (email / phone) -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Marriage Status</th>      <!-- MariageStatus -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Position ID</th>          <!-- PositionID -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Department ID</th>        <!-- DepartmentID -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employment Type</th>      <!-- EmploymentType -->
                                         <th class="px-4 py-3 text-right text-sm font-semibold">Actions</th>
                                     </tr>
                                 </thead>
+
                                 <!-- Table Body -->
                                 <tbody class="divide-y bg-white">
                                     <tr>
-                                        <td class="px-4 py-3"><input type="checkbox" class="row-check"></td>
-                                        <td class="px-4 py-3">001</td>
-                                        <td class="px-4 py-3">Nguyen</td>
-                                        <td class="px-4 py-3">Quy Khanh</td>
-                                        <td class="px-4 py-3">2004-11-30</td>
-                                        <td class="px-4 py-3">Female</td>
-                                        <td class="px-4 py-3">homeless</td>
-                                        <td class="px-4 py-3">quykhanhnq53@gmail.com</td>
-                                        <td class="px-4 py-3">*******608</td>
-                                        <td class="px-4 py-3">N/A</td>
-                                        <td class="px-4 py-3">unemployed</td>
-                                        <td class="px-4 py-3">000</td>
-                                        <td class="px-4 py-3">full-time</td>
+                                        <td class="px-4 py-3">
+                                            <input type="checkbox" class="row-check">
+                                        </td>
+                                        <td class="px-4 py-3">001</td>                                <!-- EmployeeID -->
+                                        <td class="px-4 py-3">Nguyen</td>                             <!-- First_Name -->
+                                        <td class="px-4 py-3">Quy Khanh</td>                          <!-- Last_Name -->
+                                        <td class="px-4 py-3">2004-11-30</td>                         <!-- DateOfBirth -->
+                                        <td class="px-4 py-3">Female</td>                             <!-- Gender -->
+                                        <td class="px-4 py-3">Homeless</td>                           <!-- Address -->
+                                        <td class="px-4 py-3">
+                                            quykhanhnq53@gmail.com / *******608                       <!-- Contact -->
+                                        </td>
+                                        <td class="px-4 py-3">N/A</td>                                 <!-- MariageStatus -->
+                                        <td class="px-4 py-3">000</td>                                 <!-- PositionID -->
+                                        <td class="px-4 py-3">000</td>                                 <!-- DepartmentID -->
+                                        <td class="px-4 py-3">Full-time</td>                           <!-- EmploymentType -->
                                         <td class="px-4 py-3 text-right">
                                             <button class="text-sm underline text-red-600 remove-row">Delete</button>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td class="px-4 py-3"><input type="checkbox" class="row-check"></td>
-                                        <td class="px-4 py-3">002</td>
-                                        <td class="px-4 py-3">Nguyen</td>
-                                        <td class="px-4 py-3">Khanh</td>
-                                        <td class="px-4 py-3">unknown</td>
-                                        <td class="px-4 py-3">Female</td>
-                                        <td class="px-4 py-3">homeless</td>
-                                        <td class="px-4 py-3">nqk3011@gmail.com</td>
-                                        <td class="px-4 py-3">*******375</td>
-                                        <td class="px-4 py-3">N/A</td>
-                                        <td class="px-4 py-3">unemployed</td>
-                                        <td class="px-4 py-3">008</td>
-                                        <td class="px-4 py-3">full-time</td>
+                                        <td class="px-4 py-3">
+                                            <input type="checkbox" class="row-check">
+                                        </td>
+                                        <td class="px-4 py-3">002</td>                                <!-- EmployeeID -->
+                                        <td class="px-4 py-3">Nguyen</td>                             <!-- First_Name -->
+                                        <td class="px-4 py-3">Khanh</td>                              <!-- Last_Name -->
+                                        <td class="px-4 py-3">Unknown</td>                            <!-- DateOfBirth -->
+                                        <td class="px-4 py-3">Female</td>                             <!-- Gender -->
+                                        <td class="px-4 py-3">Homeless</td>                           <!-- Address -->
+                                        <td class="px-4 py-3">
+                                            nqk3011@gmail.com / *******375                            <!-- Contact -->
+                                        </td>
+                                        <td class="px-4 py-3">N/A</td>                                 <!-- MariageStatus -->
+                                        <td class="px-4 py-3">008</td>                                 <!-- PositionID -->
+                                        <td class="px-4 py-3">008</td>                                 <!-- DepartmentID -->
+                                        <td class="px-4 py-3">Full-time</td>                           <!-- EmploymentType -->
                                         <td class="px-4 py-3 text-right">
                                             <button class="text-sm underline text-red-600 remove-row">Delete</button>
                                         </td>
@@ -267,6 +274,7 @@
                             </table>
                         </div>
                     </section>
+
                 </div>
             </div>
         </div>
