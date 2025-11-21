@@ -1,21 +1,27 @@
 <?php
-// KẾT NỐI DATABASE
-require_once "settings.php";  // settings.php nằm cùng thư mục demo
+require_once "settings.php";
 
+// Kết nối DB
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
 
-// LẤY DỮ LIỆU TỪ BẢNG payroll
+// Lấy dữ liệu từ bảng position
+// Nếu bảng của bạn tên khác (vd: employeeposition) thì sửa lại chỗ `position` bên dưới
 $sql = "
     SELECT 
+        EmployeeID,
+        DepartmentID,
+        PositionID,
         PayrollID,
-        BaseSalary
-    FROM `payroll`
-    ORDER BY PayrollID ASC
+        StartDate,
+        EndDate
+    FROM `position`
+    ORDER BY EmployeeID ASC, StartDate DESC
 ";
-$result = mysqli_query($conn, $sql);
+$result   = mysqli_query($conn, $sql);
+$rowCount = $result ? mysqli_num_rows($result) : 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +34,6 @@ $result = mysqli_query($conn, $sql);
     <script src="/_sdk/element_sdk.js"></script>
     <script src="/_sdk/data_sdk.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Nếu sau này có JS riêng cho payroll thì để ở đây (không bắt buộc) -->
-    <script src="../demo/framework/payroll.js" defer></script>
 
     <!-- Core Styles -->
     <style>
@@ -51,10 +55,10 @@ $result = mysqli_query($conn, $sql);
 
         .card { background: var(--surface); }
         .shadow-smooth { box-shadow: 0 10px 30px rgba(0,0,0,.06); }
-
+        
         .sidebar { background: #fff; }
         .sidebar a { border-radius: .75rem; }
-        .sidebar a.active {
+        .sidebar a.active { 
             background: #eef2ff;
             font-weight: 600;
         }
@@ -70,14 +74,24 @@ $result = mysqli_query($conn, $sql);
         }
         .btn-outline { border: 1px solid #e5e7eb; }
 
-        .table th, .table td { white-space: nowrap; }
-
         .badge {
             padding: .125rem .5rem;
             border-radius: .5rem;
             background: #ecfeff;
         }
-        .modal-backdrop { background: rgba(0,0,0,.35); }
+
+        .form-control {
+            width: 100%;
+            padding: .5rem .75rem;
+            border-radius: .5rem;
+            border: 1px solid #d1d5db;
+            font-size: 0.875rem;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 1px rgba(59,130,246,.3);
+        }
     </style>
 </head>
 <body>
@@ -104,7 +118,7 @@ $result = mysqli_query($conn, $sql);
             </div>
         </nav>
 
-       <div class="flex flex-1 overflow-hidden">
+              <div class="flex flex-1 overflow-hidden">
             <!-- Sidebar Navigation -->
             <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
                 <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
@@ -198,52 +212,136 @@ $result = mysqli_query($conn, $sql);
             </div>
 
             <!-- Main Content Area -->
-            <div class="flex-1 overflow-y-auto bg-gray-50 min-h-screen">
-                <div class="max-w-5xl mx-auto p-6">
-                    <!-- Header -->
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="text-2xl font-bold">Payroll List</h2>
-                        <!-- Nếu sau này muốn thêm form thì thêm nút Add Payroll ở đây -->
-                        <!-- <a href="../demo/payroll-form.php" class="btn btn-primary">Add Payroll</a> -->
-                    </div>
-
-                    <!-- Payroll Table -->
-                    <section class="rounded-lg shadow-sm overflow-hidden bg-white">
-                        <div class="px-6 py-4 border-b">
-                            <h3 class="text-lg font-semibold">Payroll Records</h3>
-                            <p class="text-sm opacity-70 mt-1">
-                                Showing all records from the <strong>payroll</strong> table.
-                            </p>
+            <div class="flex-1 overflow-y-auto bg-gray-50">
+                <div class="p-6">
+                    <!-- Header + Action -->
+                    <section class="mb-8">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-bold">Position Management</h2>
+                            <div class="flex gap-2">
+                                <a href="../demo/position-form.html" class="btn btn-primary">Add Position</a>
+                                <button id="edit-position-btn" class="btn btn-outline">Edit Selected</button>
+                            </div>
                         </div>
 
+                        <!-- Quick Stats (demo) -->
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                            <div class="p-6 rounded-lg shadow-sm bg-white">
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <div>
+                                        <p class="text-sm opacity-70">Total Positions</p>
+                                        <p id="position-total" class="text-2xl font-bold">
+                                            <?php echo $rowCount; ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-sm bg-white">
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">👤</span>
+                                    <div>
+                                        <p class="text-sm opacity-70">Employees with Positions</p>
+                                        <p id="position-emps" class="text-2xl font-bold">–</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-sm bg-white">
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🏢</span>
+                                    <div>
+                                        <p class="text-sm opacity-70">Departments</p>
+                                        <p id="position-depts" class="text-2xl font-bold">–</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-sm bg-white">
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">⏳</span>
+                                    <div>
+                                        <p class="text-sm opacity-70">Active Positions</p>
+                                        <p id="position-active" class="text-2xl font-bold">–</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Position Table Section -->
+                    <section class="rounded-lg shadow-sm overflow-hidden bg-white">
+                        <!-- Toolbar -->
+                        <div class="px-6 py-4 border-b">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <!-- Filters -->
+                                <div class="flex flex-wrap items-end gap-3">
+                                    <div>
+                                        <label for="filter-emp-id" class="block text-sm mb-1">Employee ID</label>
+                                        <input type="text" id="filter-emp-id" class="form-control" placeholder="e.g. 1" />
+                                    </div>
+                                    <div>
+                                        <label for="filter-dept-id" class="block text-sm mb-1">Department ID</label>
+                                        <input type="text" id="filter-dept-id" class="form-control" placeholder="e.g. D01" />
+                                    </div>
+                                    <button id="apply-filter" class="btn btn-outline">Apply</button>
+                                </div>
+
+                                <!-- Export buttons (demo) -->
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 rounded-md text-sm border">Copy</button>
+                                    <button class="px-3 py-1 rounded-md text-sm border">PDF</button>
+                                    <button class="px-3 py-1 rounded-md text-sm border">Excel</button>
+                                    <button class="px-3 py-1 rounded-md text-sm border">CSV</button>
+                                    <button class="px-3 py-1 rounded-md text-sm border">Print</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Table -->
                         <div class="overflow-x-auto">
-                            <table class="min-w-full divide-y">
+                            <table id="position-table" class="min-w-full divide-y">
                                 <thead class="bg-gray-50">
                                     <tr>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold"></th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Department ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Position ID</th>
                                         <th class="px-4 py-3 text-left text-sm font-semibold">Payroll ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Base Salary</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Start Date</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">End Date</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y bg-white">
-                                    <?php if ($result && mysqli_num_rows($result) > 0): ?>
+                                    <?php if ($result && $rowCount > 0): ?>
+                                        <?php mysqli_data_seek($result, 0); ?>
                                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
                                             <tr>
+                                                <td class="px-4 py-3">
+                                                    <input type="checkbox" class="row-check" />
+                                                </td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <?php echo htmlspecialchars($row['EmployeeID']); ?>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <?php echo htmlspecialchars($row['DepartmentID']); ?>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <?php echo htmlspecialchars($row['PositionID']); ?>
+                                                </td>
                                                 <td class="px-4 py-3 text-sm">
                                                     <?php echo htmlspecialchars($row['PayrollID']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php
-                                                    // format 2 chữ số thập phân, nếu muốn thêm dấu $ thì nối thêm
-                                                    $salary = number_format((float)$row['BaseSalary'], 2);
-                                                    echo '$' . $salary;
-                                                    ?>
+                                                    <?php echo htmlspecialchars($row['StartDate']); ?>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <?php echo htmlspecialchars($row['EndDate']); ?>
                                                 </td>
                                             </tr>
                                         <?php endwhile; ?>
                                     <?php else: ?>
                                         <tr>
-                                            <td colspan="2" class="px-4 py-3 text-center text-sm text-gray-500">
-                                                No payroll records found.
+                                            <td colspan="7" class="px-4 py-3 text-center text-sm text-gray-500">
+                                                No position records found.
                                             </td>
                                         </tr>
                                     <?php endif; ?>
@@ -262,5 +360,24 @@ if ($result) {
 }
 mysqli_close($conn);
 ?>
+
+<script>
+  // Filter theo EmployeeID & DepartmentID (client-side)
+  document.getElementById('apply-filter')?.addEventListener('click', () => {
+    const emp  = (document.getElementById('filter-emp-id')?.value || '').trim().toLowerCase();
+    const dept = (document.getElementById('filter-dept-id')?.value || '').trim().toLowerCase();
+
+    const rows = document.querySelectorAll('#position-table tbody tr');
+    rows.forEach(row => {
+      const empId  = row.children[1].textContent.trim().toLowerCase();
+      const deptId = row.children[2].textContent.trim().toLowerCase();
+
+      const okEmp  = !emp  || empId.includes(emp);
+      const okDept = !dept || deptId.includes(dept);
+
+      row.style.display = (okEmp && okDept) ? '' : 'none';
+    });
+  });
+</script>
 </body>
 </html>

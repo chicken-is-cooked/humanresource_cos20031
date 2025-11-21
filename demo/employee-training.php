@@ -1,20 +1,15 @@
 <?php
-// KẾT NỐI DATABASE
-require_once "settings.php";  // settings.php nằm cùng thư mục demo
+
+require_once "settings.php";  
 
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
 
-// LẤY DỮ LIỆU TỪ BẢNG payroll
-$sql = "
-    SELECT 
-        PayrollID,
-        BaseSalary
-    FROM `payroll`
-    ORDER BY PayrollID ASC
-";
+
+$sql = "SELECT TrainingID, EmployeeID, Status FROM `employeetraining`
+    ORDER BY EmployeeID ASC";
 $result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
@@ -28,8 +23,8 @@ $result = mysqli_query($conn, $sql);
     <script src="/_sdk/element_sdk.js"></script>
     <script src="/_sdk/data_sdk.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Nếu sau này có JS riêng cho payroll thì để ở đây (không bắt buộc) -->
-    <script src="../demo/framework/payroll.js" defer></script>
+    <!-- Nếu có JS riêng cho training thì để ở đây, không bắt buộc -->
+    <script src="../demo/framework/training.js" defer></script>
 
     <!-- Core Styles -->
     <style>
@@ -104,7 +99,7 @@ $result = mysqli_query($conn, $sql);
             </div>
         </nav>
 
-       <div class="flex flex-1 overflow-hidden">
+        <div class="flex flex-1 overflow-hidden">
             <!-- Sidebar Navigation -->
             <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
                 <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
@@ -202,17 +197,17 @@ $result = mysqli_query($conn, $sql);
                 <div class="max-w-5xl mx-auto p-6">
                     <!-- Header -->
                     <div class="flex items-center justify-between mb-6">
-                        <h2 class="text-2xl font-bold">Payroll List</h2>
-                        <!-- Nếu sau này muốn thêm form thì thêm nút Add Payroll ở đây -->
-                        <!-- <a href="../demo/payroll-form.php" class="btn btn-primary">Add Payroll</a> -->
+                        <h2 class="text-2xl font-bold">Employee Training List</h2>
+                        <!-- Nếu sau này có form, có thể thêm nút Add Training -->
+                        <!-- <a href="../demo/training-form.php" class="btn btn-primary">Add Training</a> -->
                     </div>
 
-                    <!-- Payroll Table -->
+                    <!-- Training Table -->
                     <section class="rounded-lg shadow-sm overflow-hidden bg-white">
                         <div class="px-6 py-4 border-b">
-                            <h3 class="text-lg font-semibold">Payroll Records</h3>
+                            <h3 class="text-lg font-semibold">Training Records</h3>
                             <p class="text-sm opacity-70 mt-1">
-                                Showing all records from the <strong>payroll</strong> table.
+                                Showing all records from the <strong>Training</strong> table.
                             </p>
                         </div>
 
@@ -220,8 +215,9 @@ $result = mysqli_query($conn, $sql);
                             <table class="min-w-full divide-y">
                                 <thead class="bg-gray-50">
                                     <tr>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Payroll ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Base Salary</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Training ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y bg-white">
@@ -229,21 +225,20 @@ $result = mysqli_query($conn, $sql);
                                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
                                             <tr>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['PayrollID']); ?>
+                                                    <?php echo htmlspecialchars($row['TrainingID']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php
-                                                    // format 2 chữ số thập phân, nếu muốn thêm dấu $ thì nối thêm
-                                                    $salary = number_format((float)$row['BaseSalary'], 2);
-                                                    echo '$' . $salary;
-                                                    ?>
+                                                    <?php echo htmlspecialchars($row['EmployeeID']); ?>
+                                                </td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <?php echo htmlspecialchars($row['Status']); ?>
                                                 </td>
                                             </tr>
                                         <?php endwhile; ?>
                                     <?php else: ?>
                                         <tr>
-                                            <td colspan="2" class="px-4 py-3 text-center text-sm text-gray-500">
-                                                No payroll records found.
+                                            <td colspan="3" class="px-4 py-3 text-center text-sm text-gray-500">
+                                                No training records found.
                                             </td>
                                         </tr>
                                     <?php endif; ?>
@@ -257,9 +252,7 @@ $result = mysqli_query($conn, $sql);
     </div>
 
 <?php
-if ($result) {
-    mysqli_free_result($result);
-}
+mysqli_free_result($result);
 mysqli_close($conn);
 ?>
 </body>

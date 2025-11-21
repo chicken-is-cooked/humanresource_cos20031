@@ -115,48 +115,96 @@ $result = mysqli_query($conn, $sql);
             </div>
         </nav>
 
-        <div class="flex flex-1 overflow-hidden">
-            <!-- Sidebar -->
+       <div class="flex flex-1 overflow-hidden">
+            <!-- Sidebar Navigation -->
             <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
-                <div class="p-4">
-                    <nav class="space-y-2">
-                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
-                            <div class="flex items-center">
-                                <span class="text-lg mr-3">👥</span>
-                                <span><a href="../demo/employee.html">Employees</a></span>
-                            </div>
-                        </button>
-                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
-                            <div class="flex items-center">
-                                <span class="text-lg mr-3">💰</span>
-                                <span><a href="../demo/salary.html">Salary Management</a></span>
-                            </div>
-                        </button>
-                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
-                            <div class="flex items-center">
-                                <span class="text-lg mr-3">📅</span>
-                                <span><a href="../demo/attendance.html">Attendance</a></span>
-                            </div>
-                        </button>
-                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="departments">
-                            <div class="flex items-center">
-                                <span class="text-lg mr-3">🏢</span>
-                                <span><a href="../demo/department.html">Departments</a></span>
-                            </div>
-                        </button>
-                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="reports">
-                            <div class="flex items-center">
-                                <span class="text-lg mr-3">📊</span>
-                                <span><a href="../demo/leave-request.php">Leave Request</a></span>
-                            </div>
-                        </button>
-                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="settings">
-                            <div class="flex items-center">
-                                <span class="text-lg mr-3">👥</span>
-                                <span><a href="../demo/job-history.php">Job History</a></span>
-                            </div>
-                        </button>
-                    </nav>
+                <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
+                <div class="p-4 h-full overflow-y-auto">
+                <nav class="space-y-2">
+
+                    <!-- CORE -->
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">👥</span>
+                        <span><a href="../demo/employee.html">Employees</a></span>
+                    </div>
+                    </button>
+
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">💰</span>
+                        <span><a href="../demo/payroll.php">Salary Management</a></span>
+                    </div>
+                    </button>
+
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">📅</span>
+                        <span><a href="../demo/attendance.php">Attendance</a></span>
+                    </div>
+                    </button>
+
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="departments">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">🏢</span>
+                        <span><a href="../demo/department.html">Departments</a></span>
+                    </div>
+                    </button>
+
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="leave">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">📊</span>
+                        <span><a href="../demo/leave-request.php">Leave Request</a></span>
+                    </div>
+                    </button>
+
+                    <!-- FAMILY / CHILDREN -->
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="children">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">👶</span>
+                        <span><a href="../demo/children.php">Children</a></span>
+                    </div>
+                    </button>
+
+                    <!-- TRAINING & DEVELOPMENT -->
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="emp-training">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">🎓</span>
+                        <span><a href="../demo/employee-training.php">Employee Training</a></span>
+                    </div>
+                    </button>
+
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="training">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">🎯</span>
+                        <span><a href="../demo/training.php">Training Courses</a></span>
+                    </div>
+                    </button>
+
+                    <!-- JOB MANAGEMENT (scroll xuống sẽ thấy hết) -->
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-history">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">🧾</span>
+                        <span><a href="../demo/job-history.php">Job History</a></span>
+                    </div>
+                    </button>
+
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="position-history">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">📌</span>
+                        <span><a href="../demo/position-history.php">Position History</a></span>
+                        <!-- nếu file bạn là position.php thì đổi link lại thành position.php -->
+                    </div>
+                    </button>
+
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-experience">
+                    <div class="flex items-center">
+                        <span class="text-lg mr-3">💼</span>
+                        <span><a href="../demo/job-experience.php">Job Experience</a></span>
+                    </div>
+                    </button>
+
+                </nav>
                 </div>
             </div>
 

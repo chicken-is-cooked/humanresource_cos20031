@@ -7,19 +7,19 @@ if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
 
-// Lấy dữ liệu attendance
+// Lấy dữ liệu từ bảng children
 $sql = "
     SELECT 
-        AttendanceID,
+        ChildrenID,
         EmployeeID,
-        Date,
-        TimeIn,
-        TimeOut,
-        Status
-    FROM `attendance`
-    ORDER BY Date DESC, EmployeeID ASC
+        Name,
+        DateOfBirth,
+        Gender
+    FROM `children`
+    ORDER BY EmployeeID ASC, ChildrenID ASC
 ";
 $result = mysqli_query($conn, $sql);
+$rowCount = $result ? mysqli_num_rows($result) : 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -116,102 +116,102 @@ $result = mysqli_query($conn, $sql);
             </div>
         </nav>
 
-            <div class="flex flex-1 overflow-hidden">
-              <!-- Sidebar Navigation -->
-              <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
-                <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
-                <div class="p-4 h-full overflow-y-auto">
-                  <nav class="space-y-2">
+        <div class="flex flex-1 overflow-hidden">
+        <!-- Sidebar Navigation -->
+        <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
+            <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
+            <div class="p-4 h-full overflow-y-auto">
+            <nav class="space-y-2">
 
-                    <!-- CORE -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">👥</span>
-                        <span><a href="../demo/employee.html">Employees</a></span>
-                      </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">💰</span>
-                        <span><a href="../demo/payroll.php">Salary Management</a></span>
-                      </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">📅</span>
-                        <span><a href="../demo/attendance.php">Attendance</a></span>
-                      </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="departments">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">🏢</span>
-                        <span><a href="../demo/department.html">Departments</a></span>
-                      </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="leave">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">📊</span>
-                        <span><a href="../demo/leave-request.php">Leave Request</a></span>
-                      </div>
-                    </button>
-
-                    <!-- FAMILY / CHILDREN -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="children">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">👶</span>
-                        <span><a href="../demo/children.php">Children</a></span>
-                      </div>
-                    </button>
-
-                    <!-- TRAINING & DEVELOPMENT -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="emp-training">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">🎓</span>
-                        <span><a href="../demo/employee-training.php">Employee Training</a></span>
-                      </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="training">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">🎯</span>
-                        <span><a href="../demo/training.php">Training Courses</a></span>
-                      </div>
-                    </button>
-
-                    <!-- JOB MANAGEMENT (scroll xuống sẽ thấy hết) -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-history">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">🧾</span>
-                        <span><a href="../demo/job-history.php">Job History</a></span>
-                      </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="position-history">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">📌</span>
-                        <span><a href="../demo/position-history.php">Position History</a></span>
-                        <!-- nếu file bạn là position.php thì đổi link lại thành position.php -->
-                      </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-experience">
-                      <div class="flex items-center">
-                        <span class="text-lg mr-3">💼</span>
-                        <span><a href="../demo/job-experience.php">Job Experience</a></span>
-                      </div>
-                    </button>
-
-                  </nav>
+                <!-- CORE -->
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">👥</span>
+                    <span><a href="../demo/employee.html">Employees</a></span>
                 </div>
-              </div>
-              <!-- Phần main content phía dưới giữ nguyên như cũ -->
+                </button>
+
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">💰</span>
+                    <span><a href="../demo/payroll.php">Salary Management</a></span>
+                </div>
+                </button>
+
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">📅</span>
+                    <span><a href="../demo/attendance.php">Attendance</a></span>
+                </div>
+                </button>
+
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="departments">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">🏢</span>
+                    <span><a href="../demo/department.html">Departments</a></span>
+                </div>
+                </button>
+
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="leave">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">📊</span>
+                    <span><a href="../demo/leave-request.php">Leave Request</a></span>
+                </div>
+                </button>
+
+                <!-- FAMILY / CHILDREN -->
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="children">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">👶</span>
+                    <span><a href="../demo/children.php">Children</a></span>
+                </div>
+                </button>
+
+                <!-- TRAINING & DEVELOPMENT -->
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="emp-training">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">🎓</span>
+                    <span><a href="../demo/employee-training.php">Employee Training</a></span>
+                </div>
+                </button>
+
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="training">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">🎯</span>
+                    <span><a href="../demo/training.php">Training Courses</a></span>
+                </div>
+                </button>
+
+                <!-- JOB MANAGEMENT (scroll xuống sẽ thấy hết) -->
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-history">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">🧾</span>
+                    <span><a href="../demo/job-history.php">Job History</a></span>
+                </div>
+                </button>
+
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="position-history">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">📌</span>
+                    <span><a href="../demo/position-history.php">Position History</a></span>
+                    <!-- nếu file bạn là position.php thì đổi link lại thành position.php -->
+                </div>
+                </button>
+
+                <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-experience">
+                <div class="flex items-center">
+                    <span class="text-lg mr-3">💼</span>
+                    <span><a href="../demo/job-experience.php">Job Experience</a></span>
+                </div>
+                </button>
+
+            </nav>
+            </div>
+        </div>
+        <!-- Phần main content phía dưới giữ nguyên như cũ -->
 
 
-            <!-- Main Content Area -->
+            <!-- Main Content Area (giống y attendance, chỉ đổi bảng) -->
             <div class="flex-1 overflow-y-auto bg-gray-50">
                 <div class="p-6">
                     <!-- Header + Action -->
@@ -224,7 +224,7 @@ $result = mysqli_query($conn, $sql);
                             </div>
                         </div>
 
-                        <!-- Quick Stats (tạm để số 0/demo) -->
+                        <!-- Quick Stats (để nguyên, chỉ dùng số record từ children) -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
@@ -232,7 +232,7 @@ $result = mysqli_query($conn, $sql);
                                     <div>
                                         <p class="text-sm opacity-70">Attendance Records</p>
                                         <p id="att-total" class="text-2xl font-bold">
-                                            <?php echo $result ? mysqli_num_rows($result) : 0; ?>
+                                            <?php echo $rowCount; ?>
                                         </p>
                                     </div>
                                 </div>
@@ -267,12 +267,11 @@ $result = mysqli_query($conn, $sql);
                         </div>
                     </section>
 
-                    <!-- Attendance Table Section -->
+                    <!-- Children Table Section (chỉ đổi chỗ này so với attendance) -->
                     <section class="rounded-lg shadow-sm overflow-hidden bg-white">
-                        <!-- Toolbar -->
+                        <!-- Toolbar giữ nguyên -->
                         <div class="px-6 py-4 border-b">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                                <!-- Filters -->
                                 <div class="flex flex-wrap items-end gap-3">
                                     <div>
                                         <label for="from-date" class="block text-sm mb-1">From</label>
@@ -289,7 +288,6 @@ $result = mysqli_query($conn, $sql);
                                     <button id="apply-filter" class="btn btn-outline">Apply</button>
                                 </div>
 
-                                <!-- Export buttons (demo) -->
                                 <div class="flex gap-2">
                                     <button class="px-3 py-1 rounded-md text-sm border">Copy</button>
                                     <button class="px-3 py-1 rounded-md text-sm border">PDF</button>
@@ -300,52 +298,48 @@ $result = mysqli_query($conn, $sql);
                             </div>
                         </div>
 
-                        <!-- Table -->
+                        <!-- Table: Children -->
                         <div class="overflow-x-auto">
                             <table id="attendance-table" class="min-w-full divide-y">
                                 <thead class="bg-gray-50">
                                     <tr>
                                         <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Attendance ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Children ID</th>
                                         <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Date</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Time In</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Time Out</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Status</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Name</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Date Of Birth</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Gender</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y bg-white">
-                                    <?php if ($result && mysqli_num_rows($result) > 0): ?>
-                                        <?php mysqli_data_seek($result, 0); // về đầu result để lặp ?>
+                                    <?php if ($result && $rowCount > 0): ?>
+                                        <?php mysqli_data_seek($result, 0); ?>
                                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
                                             <tr>
                                                 <td class="px-4 py-3">
                                                     <input type="checkbox" class="row-check" />
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['AttendanceID']); ?>
+                                                    <?php echo htmlspecialchars($row['ChildrenID']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
                                                     <?php echo htmlspecialchars($row['EmployeeID']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['Date']); ?>
+                                                    <?php echo htmlspecialchars($row['Name']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['TimeIn']); ?>
+                                                    <?php echo htmlspecialchars($row['DateOfBirth']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['TimeOut']); ?>
-                                                </td>
-                                                <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['Status']); ?>
+                                                    <?php echo htmlspecialchars($row['Gender']); ?>
                                                 </td>
                                             </tr>
                                         <?php endwhile; ?>
                                     <?php else: ?>
                                         <tr>
-                                            <td colspan="7" class="px-4 py-3 text-center text-sm text-gray-500">
-                                                No attendance records found.
+                                            <td colspan="6" class="px-4 py-3 text-center text-sm text-gray-500">
+                                                No children records found.
                                             </td>
                                         </tr>
                                     <?php endif; ?>
@@ -366,21 +360,15 @@ mysqli_close($conn);
 ?>
 
 <script>
-  // Lọc theo ngày & EmployeeID (client-side)
+  // Filter theo EmployeeID, tạm bỏ lọc ngày vì children không có field date range
   document.getElementById('apply-filter')?.addEventListener('click', () => {
-    const from = document.getElementById('from-date')?.value || '';
-    const to   = document.getElementById('to-date')?.value || '';
-    const emp  = (document.getElementById('filter-emp-id')?.value || '').trim();
-
+    const emp = (document.getElementById('filter-emp-id')?.value || '').trim();
     const rows = document.querySelectorAll('#attendance-table tbody tr');
+
     rows.forEach(row => {
-      const dateText = row.children[3].textContent.trim(); // cột Date
-      const empId    = row.children[2].textContent.trim(); // cột EmployeeID
-
-      const okEmp  = !emp || empId.includes(emp);
-      const okDate = (!from || dateText >= from) && (!to || dateText <= to);
-
-      row.style.display = (okEmp && okDate) ? '' : 'none';
+      const empId = row.children[2].textContent.trim(); // cột EmployeeID
+      const okEmp = !emp || empId.includes(emp);
+      row.style.display = okEmp ? '' : 'none';
     });
   });
 </script>

@@ -7,16 +7,18 @@ if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
 
-// Lấy dữ liệu từ bảng training
+// Lấy dữ liệu từ bảng job_experience
+// Nếu bảng bạn tên khác, sửa lại `job_experience` bên dưới
 $sql = "
     SELECT 
-        TrainingID,
-        Course,
-        Description,
+        job_exp_id,
+        EmployeeID,
+        Company,
         StartDate,
-        EndDate
-    FROM `training`
-    ORDER BY StartDate DESC, TrainingID ASC
+        EndDate,
+        Description
+    FROM `job_experience`
+    ORDER BY EmployeeID ASC, StartDate DESC, job_exp_id ASC
 ";
 $result   = mysqli_query($conn, $sql);
 $rowCount = $result ? mysqli_num_rows($result) : 0;
@@ -116,96 +118,48 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
             </div>
         </nav>
 
-       <div class="flex flex-1 overflow-hidden">
+        <div class="flex flex-1 overflow-hidden">
             <!-- Sidebar Navigation -->
             <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
-                <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
-                <div class="p-4 h-full overflow-y-auto">
-                <nav class="space-y-2">
-
-                    <!-- CORE -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">👥</span>
-                        <span><a href="../demo/employee.html">Employees</a></span>
-                    </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">💰</span>
-                        <span><a href="../demo/payroll.php">Salary Management</a></span>
-                    </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">📅</span>
-                        <span><a href="../demo/attendance.php">Attendance</a></span>
-                    </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="departments">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🏢</span>
-                        <span><a href="../demo/department.html">Departments</a></span>
-                    </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="leave">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">📊</span>
-                        <span><a href="../demo/leave-request.php">Leave Request</a></span>
-                    </div>
-                    </button>
-
-                    <!-- FAMILY / CHILDREN -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="children">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">👶</span>
-                        <span><a href="../demo/children.php">Children</a></span>
-                    </div>
-                    </button>
-
-                    <!-- TRAINING & DEVELOPMENT -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="emp-training">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🎓</span>
-                        <span><a href="../demo/employee-training.php">Employee Training</a></span>
-                    </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="training">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🎯</span>
-                        <span><a href="../demo/training.php">Training Courses</a></span>
-                    </div>
-                    </button>
-
-                    <!-- JOB MANAGEMENT (scroll xuống sẽ thấy hết) -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-history">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🧾</span>
-                        <span><a href="../demo/job-history.php">Job History</a></span>
-                    </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="position-history">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">📌</span>
-                        <span><a href="../demo/position-history.php">Position History</a></span>
-                        <!-- nếu file bạn là position.php thì đổi link lại thành position.php -->
-                    </div>
-                    </button>
-
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-experience">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">💼</span>
-                        <span><a href="../demo/job-experience.php">Job Experience</a></span>
-                    </div>
-                    </button>
-
-                </nav>
+                <div class="p-4">
+                    <nav class="space-y-2">
+                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
+                            <div class="flex items-center">
+                                <span class="text-lg mr-3">👥</span>
+                                <span><a href="../demo/employee.html">Employees</a></span>
+                            </div>
+                        </button>
+                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
+                            <div class="flex items-center">
+                                <span class="text-lg mr-3">💰</span>
+                                <span><a href="../demo/payroll.php">Salary Management</a></span>
+                            </div>
+                        </button>
+                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
+                            <div class="flex items-center">
+                                <span class="text-lg mr-3">📅</span>
+                                <span><a href="../demo/attendance.php">Attendance</a></span>
+                            </div>
+                        </button>
+                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="departments">
+                            <div class="flex items-center">
+                                <span class="text-lg mr-3">🏢</span>
+                                <span><a href="../demo/department.html">Departments</a></span>
+                            </div>
+                        </button>
+                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="reports">
+                            <div class="flex items-center">
+                                <span class="text-lg mr-3">📊</span>
+                                <span><a href="../demo/training.php">Training</a></span>
+                            </div>
+                        </button>
+                        <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="settings">
+                            <div class="flex items-center">
+                                <span class="text-lg mr-3">👥</span>
+                                <span><a href="../demo/job-experience.php">Job Experience</a></span>
+                            </div>
+                        </button>
+                    </nav>
                 </div>
             </div>
 
@@ -215,21 +169,21 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                     <!-- Header + Action -->
                     <section class="mb-8">
                         <div class="flex justify-between items-center mb-6">
-                            <h2 class="text-2xl font-bold">Training Management</h2>
+                            <h2 class="text-2xl font-bold">Job Experience Management</h2>
                             <div class="flex gap-2">
-                                <a href="../demo/training-form.html" class="btn btn-primary">Add Training</a>
-                                <button id="edit-training-btn" class="btn btn-outline">Edit Selected</button>
+                                <a href="../demo/job-experience-form.html" class="btn btn-primary">Add Job Experience</a>
+                                <button id="edit-job-exp-btn" class="btn btn-outline">Edit Selected</button>
                             </div>
                         </div>
 
-                        <!-- Quick Stats (dùng số course) -->
+                        <!-- Quick Stats -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
-                                    <span class="text-2xl mr-3">📚</span>
+                                    <span class="text-2xl mr-3">📁</span>
                                     <div>
-                                        <p class="text-sm opacity-70">Total Courses</p>
-                                        <p id="training-total" class="text-2xl font-bold">
+                                        <p class="text-sm opacity-70">Total Job Records</p>
+                                        <p id="job-exp-total" class="text-2xl font-bold">
                                             <?php echo $rowCount; ?>
                                         </p>
                                     </div>
@@ -237,35 +191,35 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                             </div>
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
-                                    <span class="text-2xl mr-3">🗓️</span>
+                                    <span class="text-2xl mr-3">👤</span>
                                     <div>
-                                        <p class="text-sm opacity-70">Current / Upcoming</p>
-                                        <p id="training-current" class="text-2xl font-bold">–</p>
+                                        <p class="text-sm opacity-70">Employees with Experience</p>
+                                        <p id="job-exp-emps" class="text-2xl font-bold">–</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
-                                    <span class="text-2xl mr-3">✅</span>
+                                    <span class="text-2xl mr-3">🏢</span>
                                     <div>
-                                        <p class="text-sm opacity-70">Completed</p>
-                                        <p id="training-completed" class="text-2xl font-bold">–</p>
+                                        <p class="text-sm opacity-70">Companies</p>
+                                        <p id="job-exp-companies" class="text-2xl font-bold">–</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
-                                    <span class="text-2xl mr-3">⌛</span>
+                                    <span class="text-2xl mr-3">⏳</span>
                                     <div>
-                                        <p class="text-sm opacity-70">Longest Course</p>
-                                        <p id="training-longest" class="text-2xl font-bold">–</p>
+                                        <p class="text-sm opacity-70">Longest Tenure</p>
+                                        <p id="job-exp-longest" class="text-2xl font-bold">–</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Training Table Section -->
+                    <!-- Job Experience Table Section -->
                     <section class="rounded-lg shadow-sm overflow-hidden bg-white">
                         <!-- Toolbar -->
                         <div class="px-6 py-4 border-b">
@@ -273,16 +227,12 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                                 <!-- Filters -->
                                 <div class="flex flex-wrap items-end gap-3">
                                     <div>
-                                        <label for="from-date" class="block text-sm mb-1">From Start Date</label>
-                                        <input type="date" id="from-date" class="form-control" />
+                                        <label for="filter-emp-id" class="block text-sm mb-1">Employee ID</label>
+                                        <input type="text" id="filter-emp-id" class="form-control" placeholder="e.g. 1" />
                                     </div>
                                     <div>
-                                        <label for="to-date" class="block text-sm mb-1">To Start Date</label>
-                                        <input type="date" id="to-date" class="form-control" />
-                                    </div>
-                                    <div>
-                                        <label for="filter-course" class="block text-sm mb-1">Course</label>
-                                        <input type="text" id="filter-course" class="form-control" placeholder="e.g. Excel" />
+                                        <label for="filter-company" class="block text-sm mb-1">Company</label>
+                                        <input type="text" id="filter-company" class="form-control" placeholder="e.g. ABC Corp" />
                                     </div>
                                     <button id="apply-filter" class="btn btn-outline">Apply</button>
                                 </div>
@@ -300,15 +250,16 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
 
                         <!-- Table -->
                         <div class="overflow-x-auto">
-                            <table id="training-table" class="min-w-full divide-y">
+                            <table id="job-exp-table" class="min-w-full divide-y">
                                 <thead class="bg-gray-50">
                                     <tr>
                                         <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Training ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Course</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Description</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Job Exp ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Company</th>
                                         <th class="px-4 py-3 text-left text-sm font-semibold">Start Date</th>
                                         <th class="px-4 py-3 text-left text-sm font-semibold">End Date</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Description</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y bg-white">
@@ -320,13 +271,13 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                                                     <input type="checkbox" class="row-check" />
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['TrainingID']); ?>
+                                                    <?php echo htmlspecialchars($row['job_exp_id']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['Course']); ?>
+                                                    <?php echo htmlspecialchars($row['EmployeeID']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['Description']); ?>
+                                                    <?php echo htmlspecialchars($row['Company']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
                                                     <?php echo htmlspecialchars($row['StartDate']); ?>
@@ -334,12 +285,15 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                                                 <td class="px-4 py-3 text-sm">
                                                     <?php echo htmlspecialchars($row['EndDate']); ?>
                                                 </td>
+                                                <td class="px-4 py-3 text-sm">
+                                                    <?php echo htmlspecialchars($row['Description']); ?>
+                                                </td>
                                             </tr>
                                         <?php endwhile; ?>
                                     <?php else: ?>
                                         <tr>
-                                            <td colspan="6" class="px-4 py-3 text-center text-sm text-gray-500">
-                                                No training records found.
+                                            <td colspan="7" class="px-4 py-3 text-center text-sm text-gray-500">
+                                                No job experience records found.
                                             </td>
                                         </tr>
                                     <?php endif; ?>
@@ -360,21 +314,21 @@ mysqli_close($conn);
 ?>
 
 <script>
-  // Filter theo Course + StartDate (client-side)
+  // Filter theo EmployeeID & Company (client-side)
   document.getElementById('apply-filter')?.addEventListener('click', () => {
-    const from = document.getElementById('from-date')?.value || '';
-    const to   = document.getElementById('to-date')?.value || '';
-    const course = (document.getElementById('filter-course')?.value || '').trim().toLowerCase();
+    const emp  = (document.getElementById('filter-emp-id')?.value || '').trim().toLowerCase();
+    const comp = (document.getElementById('filter-company')?.value || '').trim().toLowerCase();
 
-    const rows = document.querySelectorAll('#training-table tbody tr');
+    const rows = document.querySelectorAll('#job-exp-table tbody tr');
     rows.forEach(row => {
-      const courseText = row.children[2].textContent.trim().toLowerCase(); // Course
-      const startDate  = row.children[4].textContent.trim();               // StartDate
+      const jobExpId = row.children[1].textContent.trim().toLowerCase(); // nếu cần
+      const empId    = row.children[2].textContent.trim().toLowerCase();
+      const company  = row.children[3].textContent.trim().toLowerCase();
 
-      const okCourse = !course || courseText.includes(course);
-      const okDate   = (!from || startDate >= from) && (!to || startDate <= to);
+      const okEmp  = !emp  || empId.includes(emp) || jobExpId.includes(emp);
+      const okComp = !comp || company.includes(comp);
 
-      row.style.display = (okCourse && okDate) ? '' : 'none';
+      row.style.display = (okEmp && okComp) ? '' : 'none';
     });
   });
 </script>
