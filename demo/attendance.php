@@ -1,3 +1,6 @@
+<?php
+require_once "settings.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,14 +234,10 @@
               <th class="px-4 py-3 text-left text-sm font-semibold"></th>
               <th class="px-4 py-3 text-left text-sm font-semibold">Attendance ID</th>
               <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">First Name</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Last Name</th>
               <th class="px-4 py-3 text-left text-sm font-semibold">Work Date</th>
               <th class="px-4 py-3 text-left text-sm font-semibold">Time In</th>
               <th class="px-4 py-3 text-left text-sm font-semibold">Time Out</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Minutes Worked</th>
-              <th class="px-4 py-3 text-left text-sm font-semibold">Description</th>
-              <th class="px-4 py-3 text-right text-sm font-semibold">Actions</th>
+              <th class="px-4 py-3 text-right text-sm font-semibold">Action</th>
             </tr>
           </thead>
           <tbody class="divide-y bg-white">
