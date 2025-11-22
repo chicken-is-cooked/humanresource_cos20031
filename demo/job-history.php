@@ -83,6 +83,8 @@ require_once "settings.php";
             </div>
         </nav>
 
+<!--sidebar-->
+
        <div class="flex flex-1 overflow-hidden">
             <!-- Sidebar Navigation -->
             <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
@@ -94,7 +96,7 @@ require_once "settings.php";
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
                     <div class="flex items-center">
                         <span class="text-lg mr-3">👥</span>
-                        <span><a href="../demo/employee.html">Employees</a></span>
+                        <span><a href="../demo/employee.php">Employees</a></span>
                     </div>
                     </button>
 
@@ -161,7 +163,7 @@ require_once "settings.php";
                     <div class="flex items-center">
                         <span class="text-lg mr-3">📌</span>
                         <span><a href="../demo/position-history.php">Position History</a></span>
-                        <!-- nếu file bạn là position.php thì đổi link lại thành position.php -->
+
                     </div>
                     </button>
 
@@ -176,6 +178,7 @@ require_once "settings.php";
                 </div>
             </div>
 
+            
             <!-- Main Content Area -->
             <div class="flex-1 overflow-y-auto bg-gray-50">
                 <div class="p-6">

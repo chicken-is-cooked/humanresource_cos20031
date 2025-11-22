@@ -40,6 +40,7 @@ $result = mysqli_query($conn, $sql);
     <script src="/_sdk/data_sdk.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- JS xử lý Approve / Reject / Delete -->
     <script src="../demo/framework/leave-request.js" defer></script>
 
     <!-- Core Styles -->
@@ -89,6 +90,13 @@ $result = mysqli_query($conn, $sql);
             background: #ecfeff;
         }
         .modal-backdrop { background: rgba(0,0,0,.35); }
+
+        .form-control {
+            border: 1px solid #e5e7eb;
+            border-radius: .5rem;
+            padding: .4rem .6rem;
+            font-size: .875rem;
+        }
     </style>
 </head>
 <body>
@@ -115,6 +123,8 @@ $result = mysqli_query($conn, $sql);
             </div>
         </nav>
 
+<!--sidebar-->
+
        <div class="flex flex-1 overflow-hidden">
             <!-- Sidebar Navigation -->
             <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
@@ -126,7 +136,7 @@ $result = mysqli_query($conn, $sql);
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
                     <div class="flex items-center">
                         <span class="text-lg mr-3">👥</span>
-                        <span><a href="../demo/employee.html">Employees</a></span>
+                        <span><a href="../demo/employee.php">Employees</a></span>
                     </div>
                     </button>
 
@@ -193,7 +203,7 @@ $result = mysqli_query($conn, $sql);
                     <div class="flex items-center">
                         <span class="text-lg mr-3">📌</span>
                         <span><a href="../demo/position-history.php">Position History</a></span>
-                        <!-- nếu file bạn là position.php thì đổi link lại thành position.php -->
+
                     </div>
                     </button>
 
@@ -303,7 +313,8 @@ $result = mysqli_query($conn, $sql);
                                                 $badgeClass = 'bg-red-100 text-red-800';
                                             }
                                     ?>
-                                        <tr>
+                                        <!-- Gắn LeaveReqID vào data-attribute để JS dùng -->
+                                        <tr data-leave-id="<?php echo htmlspecialchars($row['LeaveReqID']); ?>">
                                             <td class="px-4 py-3">
                                                 <input type="checkbox" class="row-check" />
                                             </td>

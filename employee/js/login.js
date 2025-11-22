@@ -8,7 +8,7 @@
     ];
 
     
-    const DEFAULT_REDIRECT = '../employee/employee.html'; 
+    const DEFAULT_REDIRECT = '../employee/index.php'; 
     const ALLOWED_ROLES = new Set(['Employee']);
 
     // ========= Helpers =========

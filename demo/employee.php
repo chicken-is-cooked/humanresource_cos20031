@@ -1,3 +1,52 @@
+<?php
+require_once "settings.php";
+
+// Kết nối database
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+$db_error = "";
+$result = null;
+
+// Lấy giá trị search từ query string
+$searchEmpId = isset($_GET['emp_id']) ? trim($_GET['emp_id']) : "";
+$searchName  = isset($_GET['name'])   ? trim($_GET['name'])   : "";
+
+if (!$conn) {
+    $db_error = "Unable to connect to the database. Error code " . mysqli_connect_errno() .
+                ": " . mysqli_connect_error();
+} else {
+    // Xây dựng câu lệnh SELECT + WHERE theo filter
+    $where = [];
+
+    if ($searchEmpId !== "") {
+        $empIdEsc = mysqli_real_escape_string($conn, $searchEmpId);
+        $where[] = "EmployeeID LIKE '%$empIdEsc%'";
+    }
+
+    if ($searchName !== "") {
+        $nameEsc = mysqli_real_escape_string($conn, $searchName);
+        // Tìm theo FirstName hoặc LastName
+        $where[] = "(FirstName LIKE '%$nameEsc%' OR LastName LIKE '%$nameEsc%')";
+    }
+
+    $query = "SELECT 
+                EmployeeID, FirstName, LastName, DateOfBirth, Gender,
+                Address, Contact, Email, PaymentInfo, MarriageStatus,
+                Children, Password, HealthInsurance, PositionID,
+                DepartmentID, EmploymentType, Role
+              FROM employees7";
+
+    if (count($where) > 0) {
+        $query .= " WHERE " . implode(" AND ", $where);
+    }
+
+    $result = mysqli_query($conn, $query);
+
+    if (!$result) {
+        $db_error = "MySQL query error.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +138,7 @@
             </div>
         </nav>
 
-          <!--sidebar-->
+        <!--sidebar-->
 
        <div class="flex flex-1 overflow-hidden">
             <!-- Sidebar Navigation -->
@@ -102,7 +151,7 @@
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
                     <div class="flex items-center">
                         <span class="text-lg mr-3">👥</span>
-                        <span><a href="../demo/employee.html">Employees</a></span>
+                        <span><a href="../demo/employee.php">Employees</a></span>
                     </div>
                     </button>
 
@@ -169,7 +218,7 @@
                     <div class="flex items-center">
                         <span class="text-lg mr-3">📌</span>
                         <span><a href="../demo/position-history.php">Position History</a></span>
-                        <!-- nếu file bạn là position.php thì đổi link lại thành position.php -->
+
                     </div>
                     </button>
 
@@ -238,9 +287,41 @@
 
                     <!-- Employee Table Section -->
                      
+                    <!-- Employee Table Section -->
                     <section class="rounded-lg shadow-sm overflow-hidden bg-white">
-                        <div class="px-6 py-4 border-b flex items-center justify-between">
+                        <div class="px-6 py-4 border-b flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                             <h3 class="text-lg font-semibold">Employee Directory</h3>
+
+                            <!-- Search form -->
+                            <form method="get" class="flex flex-wrap items-end gap-3">
+                                <div>
+                                    <label for="emp_id" class="block text-sm mb-1">Employee ID</label>
+                                    <input 
+                                        type="text" 
+                                        id="emp_id" 
+                                        name="emp_id" 
+                                        class="border rounded-md px-2 py-1 text-sm"
+                                        placeholder="e.g. 101"
+                                        value="<?php echo htmlspecialchars($searchEmpId); ?>"
+                                    >
+                                </div>
+                                <div>
+                                    <label for="name" class="block text-sm mb-1">Name</label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        class="border rounded-md px-2 py-1 text-sm"
+                                        placeholder="First or Last name"
+                                        value="<?php echo htmlspecialchars($searchName); ?>"
+                                    >
+                                </div>
+                                <div class="flex gap-2 mb-1">
+                                    <button type="submit" class="btn btn-outline mt-4">Search</button>
+                                    <a href="employee.php" class="btn btn-outline mt-4">Clear</a>
+                                </div>
+                            </form>
+
                             <!-- Toolbar -->
                             <div class="flex gap-2" id="employee-toolbar">
                                 <button id="remove-employee" class="btn btn-outline">Remove Selected</button>
@@ -258,75 +339,83 @@
                                 <thead class="bg-gray-50">
                                     <tr>
                                         <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>          <!-- EmployeeID -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">First Name</th>           <!-- First_Name -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Last Name</th>            <!-- Last_Name -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Date of Birth</th>        <!-- DateOfBirth -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Gender</th>               <!-- Gender -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Address</th>              <!-- Address -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Contact</th>              <!-- Contact (email / phone) -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Marriage Status</th>      <!-- MariageStatus -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Position ID</th>          <!-- PositionID -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Department ID</th>        <!-- DepartmentID -->
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employment Type</th>      <!-- EmploymentType -->
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">First Name</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Last Name</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Date of Birth</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Gender</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Address</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Contact</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Email</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Payment Info</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Marriage Status</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Children</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Password</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Health Insurance</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Position ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Department ID</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employment Type</th>
+                                        <th class="px-4 py-3 text-left text-sm font-semibold">Role</th>
                                         <th class="px-4 py-3 text-right text-sm font-semibold">Actions</th>
                                     </tr>
                                 </thead>
 
-                                <!-- Table Body -->
+                                <!-- Table Body (PHP render) -->
                                 <tbody class="divide-y bg-white">
-                                    <tr>
-                                        <td class="px-4 py-3">
-                                            <input type="checkbox" class="row-check">
-                                        </td>
-                                        <td class="px-4 py-3">001</td>                                <!-- EmployeeID -->
-                                        <td class="px-4 py-3">Nguyen</td>                             <!-- First_Name -->
-                                        <td class="px-4 py-3">Quy Khanh</td>                          <!-- Last_Name -->
-                                        <td class="px-4 py-3">2004-11-30</td>                         <!-- DateOfBirth -->
-                                        <td class="px-4 py-3">Female</td>                             <!-- Gender -->
-                                        <td class="px-4 py-3">Homeless</td>                           <!-- Address -->
-                                        <td class="px-4 py-3">
-                                            quykhanhnq53@gmail.com / *******608                       <!-- Contact -->
-                                        </td>
-                                        <td class="px-4 py-3">N/A</td>                                 <!-- MariageStatus -->
-                                        <td class="px-4 py-3">000</td>                                 <!-- PositionID -->
-                                        <td class="px-4 py-3">000</td>                                 <!-- DepartmentID -->
-                                        <td class="px-4 py-3">Full-time</td>                           <!-- EmploymentType -->
-                                        <td class="px-4 py-3 text-right">
-                                            <button class="text-sm underline text-red-600 remove-row">Delete</button>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="px-4 py-3">
-                                            <input type="checkbox" class="row-check">
-                                        </td>
-                                        <td class="px-4 py-3">002</td>                                <!-- EmployeeID -->
-                                        <td class="px-4 py-3">Nguyen</td>                             <!-- First_Name -->
-                                        <td class="px-4 py-3">Khanh</td>                              <!-- Last_Name -->
-                                        <td class="px-4 py-3">Unknown</td>                            <!-- DateOfBirth -->
-                                        <td class="px-4 py-3">Female</td>                             <!-- Gender -->
-                                        <td class="px-4 py-3">Homeless</td>                           <!-- Address -->
-                                        <td class="px-4 py-3">
-                                            nqk3011@gmail.com / *******375                            <!-- Contact -->
-                                        </td>
-                                        <td class="px-4 py-3">N/A</td>                                 <!-- MariageStatus -->
-                                        <td class="px-4 py-3">008</td>                                 <!-- PositionID -->
-                                        <td class="px-4 py-3">008</td>                                 <!-- DepartmentID -->
-                                        <td class="px-4 py-3">Full-time</td>                           <!-- EmploymentType -->
-                                        <td class="px-4 py-3 text-right">
-                                            <button class="text-sm underline text-red-600 remove-row">Delete</button>
-                                        </td>
-                                    </tr>
+                                <?php
+                                if ($db_error !== "") {
+                                    echo "<tr><td colspan='19' class='px-4 py-3 text-red-600'>" . htmlspecialchars($db_error) . "</td></tr>";
+                                } else {
+                                    if ($result && mysqli_num_rows($result) > 0) {
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            echo "<tr>";
+                                            echo "<td class='px-4 py-3'><input type='checkbox' class='row-check'></td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['EmployeeID']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['FirstName']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['LastName']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['DateOfBirth']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Gender']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Address']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Contact']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Email']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['PaymentInfo']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['MarriageStatus']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Children']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Password']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['HealthInsurance']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['PositionID']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['DepartmentID']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['EmploymentType']) . "</td>";
+                                            echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Role']) . "</td>";
+                                            echo "<td class='px-4 py-3 text-right'>";
+                                            echo "<button class='text-sm underline text-red-600 remove-row'>Delete</button>";
+                                            echo "</td>";
+                                            echo "</tr>";
+                                        }
+                                    } else {
+                                        echo "<tr><td colspan='19' class='px-4 py-3'>No employees found.</td></tr>";
+                                    }
+                                }
+                                ?>
                                 </tbody>
                             </table>
                         </div>
                     </section>
 
+
                 </div>
             </div>
         </div>
     </div>
+
+    <?php
+    if ($result) {
+        mysqli_free_result($result);
+    }
+    if ($conn) {
+        mysqli_close($conn);
+    }
+    ?>
 
     <!-- Toast Notifications -->
     <div id="toasts" class="fixed top-4 right-4 z-50 space-y-2"></div>
@@ -335,3 +424,4 @@
     <script src="../demo/framework/employee.js" defer></script>
 </body>
 </html>
+
