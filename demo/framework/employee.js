@@ -31,6 +31,42 @@ function recomputeStats() {
   $('#avg-salary').textContent = '$0';
 }
 
+function updateDashboardFromTable() {
+  const rows = document.querySelectorAll('#employee-table tbody tr');
+  const total = rows.length;
+  document.getElementById('total-employees').textContent = total;
+
+  let active = 0;
+  const deptSet = new Set();
+
+  rows.forEach(row => {
+    const cells = row.querySelectorAll('td');
+    const empType = cells[16]?.textContent.trim(); // Employment Type
+    const deptId  = cells[15]?.textContent.trim(); // Department ID
+
+    if (empType === 'Full-time') active++;
+    if (deptId) deptSet.add(deptId);
+  });
+
+  document.getElementById('active-employees').textContent = active;
+  document.getElementById('total-departments').textContent = deptSet.size;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateDashboardFromTable();
+
+  document.querySelectorAll('.remove-row').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const row = e.target.closest('tr');
+      if (row) {
+        row.remove();
+        updateDashboardFromTable();
+      }
+    });
+  });
+});
+
+
 // === Delete (per row) ===
 $('#employee-table tbody').addEventListener('click', (e) => {
   if (!e.target.classList.contains('remove-row')) return;

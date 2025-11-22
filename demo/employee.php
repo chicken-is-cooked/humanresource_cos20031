@@ -9,7 +9,43 @@ $result = null;
 // Lấy giá trị search từ query string
 $searchEmpId = isset($_GET['emp_id']) ? trim($_GET['emp_id']) : "";
 $searchName  = isset($_GET['name'])   ? trim($_GET['name'])   : "";
+$totalEmployees   = 0;
+$activeEmployees  = 0;
+$totalDepartments = 0;
+$avgSalary        = 0;   // tạm thời 0, nếu sau này có bảng lương thì tính sau
 
+if (!$conn) {
+    $db_error = "Unable to connect to the database. Error code " . mysqli_connect_errno() .
+                ": " . mysqli_connect_error();
+} else {
+    // --- Thống kê tổng nhân viên ---
+    $sqlTotal = "SELECT COUNT(*) AS cnt FROM employees7";
+    $resTotal = mysqli_query($conn, $sqlTotal);
+    if ($resTotal) {
+        $rowTotal = mysqli_fetch_assoc($resTotal);
+        $totalEmployees = (int)$rowTotal['cnt'];
+        mysqli_free_result($resTotal);
+    }
+
+    // --- Thống kê Active (ví dụ: EmploymentType = 'Full-time') ---
+    $sqlActive = "SELECT COUNT(*) AS cnt FROM employees7 WHERE EmploymentType = 'Full-time'";
+    $resActive = mysqli_query($conn, $sqlActive);
+    if ($resActive) {
+        $rowActive = mysqli_fetch_assoc($resActive);
+        $activeEmployees = (int)$rowActive['cnt'];
+        mysqli_free_result($resActive);
+    }
+
+    // --- Thống kê số Department khác nhau ---
+    $sqlDept = "SELECT COUNT(DISTINCT DepartmentID) AS cnt FROM employees7";
+    $resDept = mysqli_query($conn, $sqlDept);
+    if ($resDept) {
+        $rowDept = mysqli_fetch_assoc($resDept);
+        $totalDepartments = (int)$rowDept['cnt'];
+        mysqli_free_result($resDept);
+    }
+
+}
 if (!$conn) {
     $db_error = "Unable to connect to the database. Error code " . mysqli_connect_errno() .
                 ": " . mysqli_connect_error();
@@ -241,48 +277,63 @@ if (!$conn) {
                     <section class="mb-8">
                         <div class="flex justify-between items-center mb-6">
                             <h2 class="text-2xl font-bold">Employee Management</h2>
-                            <button id="add-employee-btn" class="btn btn-primary">Add Employee</button>
+                            <a href="employee-form.php" class="btn btn-primary">Add Employee</a>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                            <!-- Stat Card -->
+                            <!-- Total Employees -->
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
                                     <span class="text-2xl mr-3">👥</span>
                                     <div>
                                         <p class="text-sm opacity-70">Total Employees</p>
-                                        <p id="total-employees" class="text-2xl font-bold">0</p>
+                                        <p id="total-employees" class="text-2xl font-bold">
+                                            <?php echo $totalEmployees; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Active -->
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
                                     <span class="text-2xl mr-3">✅</span>
                                     <div>
                                         <p class="text-sm opacity-70">Active</p>
-                                        <p id="active-employees" class="text-2xl font-bold">0</p>
+                                        <p id="active-employees" class="text-2xl font-bold">
+                                            <?php echo $activeEmployees; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Departments -->
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
                                     <span class="text-2xl mr-3">🏢</span>
                                     <div>
                                         <p class="text-sm opacity-70">Departments</p>
-                                        <p id="total-departments" class="text-2xl font-bold">0</p>
+                                        <p id="total-departments" class="text-2xl font-bold">
+                                            <?php echo $totalDepartments; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Avg Salary -->
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
                                     <span class="text-2xl mr-3">📈</span>
                                     <div>
                                         <p class="text-sm opacity-70">Avg Salary</p>
-                                        <p id="avg-salary" class="text-2xl font-bold">$0</p>
+                                        <p id="avg-salary" class="text-2xl font-bold">
+                                            $<?php echo $avgSalary; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </section>
 
                     <!-- Employee Table Section -->
