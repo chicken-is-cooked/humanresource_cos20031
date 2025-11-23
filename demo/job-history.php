@@ -1,5 +1,30 @@
 <?php
 require_once "settings.php";
+
+// Kết nối DB
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+if (!$conn) {
+    die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
+}
+
+// ===== LẤY DỮ LIỆU JOB HISTORY =====
+// ĐỔI tên bảng nếu bạn đặt khác (vd: job_history, JobHistory, ...)
+$tableName = "jobhistory";
+
+$sql = "
+    SELECT 
+        EmployeeID,
+        StartDate,
+        DepartmentID,
+        EndDate,
+        PositionID,
+        PayrollID
+    FROM `$tableName`
+    ORDER BY EmployeeID ASC, StartDate DESC
+";
+
+$result = mysqli_query($conn, $sql);
+$rowCount = $result ? mysqli_num_rows($result) : 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +38,6 @@ require_once "settings.php";
     <script src="/_sdk/data_sdk.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Bạn có thể tạm bỏ JS nếu chưa dùng -->
-    <!-- <script src="../demo/framework/job-history.js" defer></script> -->
-
     <style>
         :root {
             --bg: #f8fafc;
@@ -25,20 +47,14 @@ require_once "settings.php";
             --muted: #6b7280;
             --card: #f3f4f6;
         }
+
         html, body { height: 100%; }
         body {
             background: var(--bg);
             color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
-        .card { background: var(--surface); }
-        .shadow-smooth { box-shadow: 0 10px 30px rgba(0,0,0,.06); }
-        .sidebar { background: #fff; }
-        .sidebar a { border-radius: .75rem; }
-        .sidebar a.active { 
-            background: #eef2ff;
-            font-weight: 600;
-        }
+
         .btn {
             padding: .5rem .75rem;
             border-radius: .5rem;
@@ -48,278 +64,251 @@ require_once "settings.php";
             background: var(--primary);
             color: #fff;
         }
-        .btn-outline { border: 1px solid #e5e7eb; }
-        .table th, .table td { white-space: nowrap; }
-        .badge {
-            padding: .125rem .5rem;
-            border-radius: .5rem;
-            background: #ecfeff;
+        .btn-outline {
+            border: 1px solid #e5e7eb;
+            background: #fff;
         }
-        .modal-backdrop { background: rgba(0,0,0,.35); }
+
+        .form-control {
+            width: 100%;
+            padding: .5rem .75rem;
+            border-radius: .5rem;
+            border: 1px solid #d1d5db;
+            font-size: 0.875rem;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 1px rgba(59,130,246,.3);
+        }
+
+        .sidebar a { border-radius: .75rem; }
     </style>
 </head>
 <body>
 <div id="dashboard" class="h-full flex flex-col">
-    <div id="dashboard" class="h-full flex flex-col">
-        <!-- Top Navigation -->
-        <nav id="top-nav" class="shadow-sm border-b">
-            <div class="px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16">
-                    <div class="flex items-center">
-                        <button id="sidebar-toggle" class="p-2 rounded-md lg:hidden">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                        <h1 id="company-name-nav" class="ml-2 text-xl font-semibold">Group 5 HR</h1>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <span class="text-sm">Welcome, Admin</span>
-                        <button id="logout-btn" class="px-3 py-1 text-sm rounded-md transition-colors hover:opacity-80">
-                            <a href="../demo/login.html">Log Out</a>
-                        </button>
-                    </div>
+    <!-- Top Navigation -->
+    <nav id="top-nav" class="shadow-sm border-b">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <button id="sidebar-toggle" class="p-2 rounded-md lg:hidden">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <h1 id="company-name-nav" class="ml-2 text-xl font-semibold">Group 5 HR</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm">Welcome, Admin</span>
+                    <button id="logout-btn" class="px-3 py-1 text-sm rounded-md transition-colors hover:opacity-80">
+                        <a href="../demo/login.php">Log Out</a>
+                    </button>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-<!--sidebar-->
-
-       <div class="flex flex-1 overflow-hidden">
-            <!-- Sidebar Navigation -->
-            <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
-                <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
-                <div class="p-4 h-full overflow-y-auto">
+    <div class="flex flex-1 overflow-hidden">
+        <!-- Sidebar -->
+        <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
+            <div class="p-4 h-full overflow-y-auto">
                 <nav class="space-y-2">
-
                     <!-- CORE -->
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="employees">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">👥</span>
-                        <span><a href="../demo/employee.php">Employees</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">👥</span>
+                            <span><a href="../demo/employee.php">Employees</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">💰</span>
-                        <span><a href="../demo/payroll.php">Salary Management</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">💰</span>
+                            <span><a href="../demo/payroll.php">Salary Management</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">📅</span>
-                        <span><a href="../demo/attendance.php">Attendance</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">📅</span>
+                            <span><a href="../demo/attendance.php">Attendance</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="departments">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🏢</span>
-                        <span><a href="../demo/department.html">Departments</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">🏢</span>
+                            <span><a href="../demo/department.html">Departments</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="leave">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">📊</span>
-                        <span><a href="../demo/leave-request.php">Leave Request</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">📊</span>
+                            <span><a href="../demo/leave-request.php">Leave Request</a></span>
+                        </div>
                     </button>
 
                     <!-- FAMILY / CHILDREN -->
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="children">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">👶</span>
-                        <span><a href="../demo/children.php">Children</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">👶</span>
+                            <span><a href="../demo/children.php">Children</a></span>
+                        </div>
                     </button>
 
                     <!-- TRAINING & DEVELOPMENT -->
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="emp-training">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🎓</span>
-                        <span><a href="../demo/employee-training.php">Employee Training</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">🎓</span>
+                            <span><a href="../demo/employee-training.php">Employee Training</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="training">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🎯</span>
-                        <span><a href="../demo/training.php">Training Courses</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">🎯</span>
+                            <span><a href="../demo/training.php">Training Courses</a></span>
+                        </div>
                     </button>
 
-                    <!-- JOB MANAGEMENT (scroll xuống sẽ thấy hết) -->
-                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-history">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">🧾</span>
-                        <span><a href="../demo/job-history.php">Job History</a></span>
-                    </div>
+                    <!-- JOB MANAGEMENT -->
+                    <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors bg-gray-100" data-section="job-history">
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">🧾</span>
+                            <span><a href="../demo/job-history.php">Job History</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="position-history">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">📌</span>
-                        <span><a href="../demo/position-history.php">Position History</a></span>
-
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">📌</span>
+                            <span><a href="../demo/position-history.php">Position History</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-experience">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">💼</span>
-                        <span><a href="../demo/job-experience.php">Job Experience</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">💼</span>
+                            <span><a href="../demo/job-experience.php">Job Experience</a></span>
+                        </div>
                     </button>
 
                 </nav>
-                </div>
             </div>
+        </div>
 
-            
-            <!-- Main Content Area -->
-            <div class="flex-1 overflow-y-auto bg-gray-50">
-                <div class="p-6">
-                    <!-- Header + Actions -->
-                    <section class="mb-8">
-                        <div class="flex justify-between items-center mb-6">
-                            <h2 class="text-2xl font-bold">Employee Job History</h2>
-                            <div class="flex gap-2">
-                                <a href="../demo/job-history-form.html" class="btn btn-primary">Add Job History</a>
-                                <button id="jh-bulk-remove" class="btn btn-outline">Remove Selected</button>
-                            </div>
+        <!-- Main Content -->
+        <div class="flex-1 overflow-y-auto bg-gray-50">
+            <div class="p-6">
+                <!-- Header + Stats -->
+                <section class="mb-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold">Employee Job History</h2>
+                        <div class="flex gap-2">
+                            <a href="../demo/job-history-form.html" class="btn btn-primary">Add Job History</a>
+                            <button id="jh-bulk-remove" class="btn btn-outline">Remove Selected</button>
                         </div>
-                    </section>
+                    </div>
 
-                    <!-- Job History Table -->
-                    <section class="rounded-lg shadow-sm overflow-hidden bg-white">
-                        <!-- Toolbar (giữ nguyên filter, chưa xử lý) -->
-                        <div class="px-6 py-4 border-b">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                                <div class="flex flex-wrap items-end gap-3">
-                                    <div>
-                                        <label for="jh-emp-id" class="block text-sm mb-1">Employee ID</label>
-                                        <input id="jh-emp-id" type="text" class="form-control" placeholder="e.g. EMP1001" />
-                                    </div>
-                                    <div>
-                                        <label for="jh-dept" class="block text-sm mb-1">Department</label>
-                                        <input id="jh-dept" type="text" class="form-control" placeholder="e.g. DEP3001" />
-                                    </div>
-                                    <div>
-                                        <label for="jh-pos" class="block text-sm mb-1">Position</label>
-                                        <input id="jh-pos" type="text" class="form-control" placeholder="e.g. POS2001" />
-                                    </div>
-                                    <div>
-                                        <label for="jh-from" class="block text-sm mb-1">From</label>
-                                        <input id="jh-from" type="date" class="form-control" />
-                                    </div>
-                                    <div>
-                                        <label for="jh-to" class="block text-sm mb-1">To</label>
-                                        <input id="jh-to" type="date" class="form-control" />
-                                    </div>
-                                    <button id="jh-apply-filter" class="btn btn-outline">Apply</button>
-                                </div>
-
-                                <div class="flex gap-2">
-                                    <button class="px-3 py-1 rounded-md text-sm border">Copy</button>
-                                    <button class="px-3 py-1 rounded-md text-sm border">PDF</button>
-                                    <button class="px-3 py-1 rounded-md text-sm border">Excel</button>
-                                    <button class="px-3 py-1 rounded-md text-sm border">CSV</button>
-                                    <button class="px-3 py-1 rounded-md text-sm border">Print</button>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 rounded-lg shadow-sm bg-white">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🧾</span>
+                                <div>
+                                    <p class="text-sm opacity-70">Total Job History Records</p>
+                                    <p class="text-2xl font-bold">
+                                        <?php echo $rowCount; ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>
+                        <!-- Bạn có thể thêm các card khác nếu muốn -->
+                    </div>
+                </section>
 
-                        <!-- Table -->
-                        <div class="overflow-x-auto">
-                            <table id="jh-table" class="min-w-full divide-y">
-                                <thead class="bg-gray-50">
-                                    <tr>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Job History ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Position ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Company</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Start Date</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">End Date</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y bg-white">
-                                    <?php
-                                    // KẾT NỐI DB & LẤY DỮ LIỆU
-                                    $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+                <!-- Job History Table -->
+                <section class="rounded-lg shadow-sm overflow-hidden bg-white">
+                    <!-- Toolbar đơn giản -->
+                    <div class="px-6 py-4 border-b flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <h3 class="text-lg font-semibold">Job History List</h3>
 
-                                    if (!$conn) {
-                                        echo "<tr><td colspan='8' class='px-4 py-3 text-red-600'>";
-                                        echo "<p>Unable to connect to the database.</p>";
-                                        echo "<p>Error code " . mysqli_connect_errno() . ": " . mysqli_connect_error() . "</p>";
-                                        echo "</td></tr>";
-                                    } else {
-                                       $query = "
-                                                        SELECT 
-                                                            `COL 1` AS JobHistoryID,
-                                                            `COL 2` AS EmployeeID,
-                                                            `COL 3` AS PositionID,
-                                                            `COL 4` AS Company,
-                                                            `COL 5` AS StartDate,
-                                                            `COL 6` AS EndDate,
-                                                            `COL 7` AS Description
-                                                        FROM jobhistory
-                                                    ";
+                        <div class="flex flex-wrap items-end gap-3">
+                            <div>
+                                <label for="filter-emp" class="block text-sm mb-1">Employee ID</label>
+                                <input id="filter-emp" type="text" class="form-control" placeholder="e.g. 327" />
+                            </div>
+                            <div>
+                                <label for="filter-dept" class="block text-sm mb-1">Department ID</label>
+                                <input id="filter-dept" type="text" class="form-control" placeholder="e.g. 10" />
+                            </div>
+                            <button id="jh-apply-filter" class="btn btn-outline mt-4">Apply</button>
+                        </div>
+                    </div>
 
-                                        $result = mysqli_query($conn, $query);
-
-                                        if ($result) {
-                                            if (mysqli_num_rows($result) > 0) {
-                                                while ($row = mysqli_fetch_assoc($result)) {
-                                                    echo "<tr>";
-                                                    echo "<td class='px-4 py-3'><input type='checkbox' class='row-check' /></td>";
-                                                    echo "<td class='px-4 py-3'>" . htmlspecialchars($row['JobHistoryID']) . "</td>";
-                                                    echo "<td class='px-4 py-3'><a href='#' class='jh-emp underline'>" . htmlspecialchars($row['EmployeeID']) . "</a></td>";
-                                                    echo "<td class='px-4 py-3'>" . htmlspecialchars($row['PositionID']) . "</td>";
-                                                    echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Company']) . "</td>";
-                                                    echo "<td class='px-4 py-3'>" . htmlspecialchars($row['StartDate']) . "</td>";
-                                                    echo "<td class='px-4 py-3'>" . htmlspecialchars($row['EndDate']) . "</td>";
-                                                    echo "<td class='px-4 py-3'>" . htmlspecialchars($row['Description']) . "</td>";
-                                                    echo "</tr>";
-                                                }
-                                            } else {
-                                                echo "<tr><td colspan='8' class='px-4 py-3'>No records found.</td></tr>";
-                                            }
-                                            mysqli_free_result($result);
-                                        } else {
-                                            echo "<tr><td colspan='8' class='px-4 py-3 text-red-600'>";
-                                            echo "<p>MySQL query error.</p>";
-                                            echo "</td></tr>";
-                                        }
-                                        mysqli_close($conn);
+                    <div class="overflow-x-auto">
+                        <table id="jh-table" class="min-w-full divide-y">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold"></th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold">Start Date</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold">Department ID</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold">End Date</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold">Position ID</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold">Payroll ID</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y bg-white">
+                                <?php
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        echo "<tr>";
+                                        echo "<td class='px-4 py-3'><input type='checkbox' class='row-check' /></td>";
+                                        echo "<td class='px-4 py-3'>" . htmlspecialchars($row['EmployeeID']) . "</td>";
+                                        echo "<td class='px-4 py-3'>" . htmlspecialchars($row['StartDate']) . "</td>";
+                                        echo "<td class='px-4 py-3'>" . htmlspecialchars($row['DepartmentID']) . "</td>";
+                                        echo "<td class='px-4 py-3'>" . htmlspecialchars($row['EndDate']) . "</td>";
+                                        echo "<td class='px-4 py-3'>" . htmlspecialchars($row['PositionID']) . "</td>";
+                                        echo "<td class='px-4 py-3'>" . htmlspecialchars($row['PayrollID']) . "</td>";
+                                        echo "</tr>";
                                     }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
+                                } else {
+                                    echo "<tr><td colspan='7' class='px-4 py-3 text-center text-sm text-gray-500'>No job history records found.</td></tr>";
+                                }
 
-                    <!-- Detail card (chưa nối data, để sau cũng được) -->
-                    <section id="jh-detail" class="rounded-lg shadow-sm bg-white mt-6 px-6 py-5 hidden">
-                        <h3 class="text-lg font-semibold mb-4">Job History Detail</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div><strong>Job History ID:</strong> <span id="d-jh-id"></span></div>
-                            <div><strong>Employee ID:</strong> <span id="d-jh-emp"></span></div>
-                            <div><strong>Position ID:</strong> <span id="d-jh-pos"></span></div>
-                            <div><strong>Department ID:</strong> <span id="d-jh-dept"></span></div>
-                            <div><strong>Start Date:</strong> <span id="d-jh-start"></span></div>
-                            <div><strong>End Date:</strong> <span id="d-jh-end"></span></div>
-                            <div class="md:col-span-2"><strong>Description:</strong> <span id="d-jh-desc"></span></div>
-                        </div>
-                    </section>
-                </div>
+                                if ($result) {
+                                    mysqli_free_result($result);
+                                }
+                                mysqli_close($conn);
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+  // Filter client-side
+  document.getElementById('jh-apply-filter')?.addEventListener('click', () => {
+    const empFilter  = (document.getElementById('filter-emp')?.value || '').trim().toLowerCase();
+    const deptFilter = (document.getElementById('filter-dept')?.value || '').trim().toLowerCase();
+
+    const rows = document.querySelectorAll('#jh-table tbody tr');
+    rows.forEach(row => {
+      const empId  = row.children[1].textContent.trim().toLowerCase();
+      const deptId = row.children[3].textContent.trim().toLowerCase();
+
+      const okEmp  = !empFilter  || empId.includes(empFilter);
+      const okDept = !deptFilter || deptId.includes(deptFilter);
+
+      row.style.display = (okEmp && okDept) ? '' : 'none';
+    });
+  });
+</script>
 </body>
 </html>

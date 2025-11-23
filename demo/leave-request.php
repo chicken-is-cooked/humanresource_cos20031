@@ -1,8 +1,5 @@
 <?php
-// 1. Lấy thông tin kết nối từ settings.php
-require_once "settings.php";   // vì settings.php nằm cùng folder
-
-// 2. Kết nối MySQL (XAMPP)
+require_once "settings.php";   
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
 if (!$conn) {
@@ -35,15 +32,12 @@ $result = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Management System</title>
     
-    <!-- External Dependencies -->
     <script src="/_sdk/element_sdk.js"></script>
     <script src="/_sdk/data_sdk.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- JS xử lý Approve / Reject / Delete -->
     <script src="../demo/framework/leave-request.js" defer></script>
 
-    <!-- Core Styles -->
     <style>
         :root {
             --bg: #f8fafc;

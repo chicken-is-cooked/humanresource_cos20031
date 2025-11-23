@@ -1,1000 +1,1019 @@
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (1, 1, '2025-02-27', '6:56 AM', '4:17 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (2, 2, '2025-11-12', '8:41 AM', '12:01 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (3, 3, '2025-01-24', '6:26 AM', '4:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (4, 4, '2025-09-03', '7:46 AM', '4:37 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (5, 5, '2025-06-09', '8:10 AM', '1:04 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (6, 6, '2025-08-07', '7:00 AM', '4:07 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (7, 7, '2025-02-13', '8:13 AM', '12:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (8, 8, '2025-11-30', '6:34 AM', '2:31 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (9, 9, '2025-08-24', '6:56 AM', '3:09 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (10, 10, '2025-12-16', '8:13 AM', '4:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (11, 11, '2025-03-03', '7:53 AM', '4:21 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (12, 12, '2025-04-22', '8:46 AM', '2:57 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (13, 13, '2025-01-06', '6:56 AM', '3:58 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (14, 14, '2025-08-20', '8:15 AM', '12:15 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (15, 15, '2025-02-02', '7:31 AM', '2:23 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (16, 16, '2025-05-19', '6:33 AM', '4:41 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (17, 17, '2025-08-07', '6:46 AM', '12:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (18, 18, '2025-03-03', '7:39 AM', '2:42 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (19, 19, '2025-03-06', '8:25 AM', '1:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (20, 20, '2025-10-06', '6:56 AM', '12:45 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (21, 21, '2025-06-02', '6:34 AM', '1:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (22, 22, '2025-08-07', '7:08 AM', '4:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (23, 23, '2025-06-29', '8:29 AM', '2:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (24, 24, '2025-04-27', '7:01 AM', '1:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (25, 25, '2025-04-08', '6:18 AM', '1:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (26, 26, '2025-03-28', '7:31 AM', '1:15 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (27, 27, '2025-02-27', '8:36 AM', '2:33 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (28, 28, '2025-11-19', '8:31 AM', '3:36 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (29, 29, '2025-06-16', '8:50 AM', '12:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (30, 30, '2025-05-30', '8:41 AM', '12:00 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (31, 31, '2025-02-23', '8:41 AM', '2:46 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (32, 32, '2025-01-11', '8:48 AM', '2:27 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (33, 33, '2025-05-05', '6:21 AM', '3:46 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (34, 34, '2025-04-26', '7:08 AM', '4:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (35, 35, '2025-09-12', '6:56 AM', '4:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (36, 36, '2025-01-01', '7:24 AM', '4:55 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (37, 37, '2025-12-28', '8:37 AM', '12:39 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (38, 38, '2025-11-14', '6:36 AM', '1:06 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (39, 39, '2025-12-30', '7:28 AM', '1:57 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (40, 40, '2025-12-04', '8:10 AM', '2:27 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (41, 41, '2025-09-20', '8:13 AM', '3:33 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (42, 42, '2025-04-22', '6:36 AM', '3:34 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (43, 43, '2025-07-21', '8:36 AM', '1:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (44, 44, '2025-11-12', '7:12 AM', '1:37 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (45, 45, '2025-09-17', '8:07 AM', '3:09 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (46, 46, '2025-12-11', '7:32 AM', '4:27 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (47, 47, '2025-09-03', '6:57 AM', '4:09 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (48, 48, '2025-10-07', '6:00 AM', '4:47 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (49, 49, '2025-04-17', '6:39 AM', '2:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (50, 50, '2025-02-01', '7:25 AM', '4:53 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (51, 51, '2025-04-16', '6:00 AM', '12:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (52, 52, '2025-10-09', '8:21 AM', '2:46 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (53, 53, '2025-09-04', '7:03 AM', '2:24 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (54, 54, '2025-12-24', '7:35 AM', '2:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (55, 55, '2025-08-04', '6:32 AM', '3:52 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (56, 56, '2025-06-08', '7:46 AM', '1:58 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (57, 57, '2025-11-09', '7:30 AM', '4:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (58, 58, '2025-06-27', '7:39 AM', '3:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (59, 59, '2025-04-19', '7:14 AM', '12:14 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (60, 60, '2025-06-03', '8:34 AM', '12:40 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (61, 61, '2025-09-24', '8:59 AM', '3:32 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (62, 62, '2025-10-07', '6:48 AM', '3:24 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (63, 63, '2025-09-20', '8:48 AM', '12:18 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (64, 64, '2025-05-16', '6:44 AM', '4:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (65, 65, '2025-10-14', '8:43 AM', '3:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (66, 66, '2025-04-25', '8:12 AM', '3:48 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (67, 67, '2025-12-27', '7:25 AM', '12:36 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (68, 68, '2025-07-30', '6:14 AM', '4:17 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (69, 69, '2025-04-11', '6:47 AM', '1:13 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (70, 70, '2025-07-04', '8:27 AM', '4:18 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (71, 71, '2025-10-26', '8:26 AM', '12:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (72, 72, '2025-04-03', '7:24 AM', '2:53 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (73, 73, '2025-12-19', '6:29 AM', '1:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (74, 74, '2025-05-05', '7:36 AM', '2:41 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (75, 75, '2025-10-18', '8:49 AM', '2:49 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (76, 76, '2025-07-25', '7:20 AM', '12:59 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (77, 77, '2025-07-07', '7:37 AM', '4:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (78, 78, '2025-11-20', '7:11 AM', '2:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (79, 79, '2025-10-18', '7:42 AM', '3:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (80, 80, '2025-08-30', '6:38 AM', '2:05 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (81, 81, '2025-02-19', '7:35 AM', '4:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (82, 82, '2025-03-05', '6:54 AM', '1:08 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (83, 83, '2025-08-08', '7:14 AM', '1:41 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (84, 84, '2025-09-05', '6:51 AM', '1:37 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (85, 85, '2025-01-17', '7:10 AM', '12:54 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (86, 86, '2025-07-24', '8:55 AM', '12:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (87, 87, '2025-06-10', '8:20 AM', '4:11 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (88, 88, '2025-07-28', '8:49 AM', '1:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (89, 89, '2025-01-11', '6:11 AM', '4:45 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (90, 90, '2025-05-13', '7:44 AM', '2:05 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (91, 91, '2025-09-09', '8:55 AM', '3:03 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (92, 92, '2025-11-30', '6:23 AM', '3:43 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (93, 93, '2025-11-29', '8:00 AM', '2:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (94, 94, '2025-12-17', '8:41 AM', '1:37 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (95, 95, '2025-01-26', '6:36 AM', '2:52 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (96, 96, '2025-01-01', '8:40 AM', '1:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (97, 97, '2025-03-13', '8:33 AM', '1:50 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (98, 98, '2025-01-24', '7:00 AM', '4:37 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (99, 99, '2025-08-18', '7:03 AM', '4:55 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (100, 100, '2025-08-15', '8:19 AM', '1:23 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (101, 101, '2025-06-17', '6:00 AM', '2:25 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (102, 102, '2025-06-30', '6:13 AM', '1:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (103, 103, '2025-12-27', '8:04 AM', '12:47 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (104, 104, '2025-03-23', '7:51 AM', '1:51 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (105, 105, '2025-02-03', '8:00 AM', '4:24 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (106, 106, '2025-06-08', '7:08 AM', '4:10 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (107, 107, '2025-07-22', '8:06 AM', '1:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (108, 108, '2025-01-05', '7:41 AM', '12:17 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (109, 109, '2025-02-06', '7:09 AM', '3:30 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (110, 110, '2025-02-15', '8:20 AM', '3:29 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (111, 111, '2025-04-21', '7:19 AM', '4:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (112, 112, '2025-04-21', '7:33 AM', '12:20 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (113, 113, '2025-09-09', '8:10 AM', '3:22 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (114, 114, '2025-05-06', '6:33 AM', '1:33 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (115, 115, '2025-02-04', '8:32 AM', '4:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (116, 116, '2025-03-07', '6:59 AM', '4:08 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (117, 117, '2025-06-17', '7:58 AM', '2:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (118, 118, '2025-04-06', '6:15 AM', '3:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (119, 119, '2025-03-22', '6:51 AM', '3:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (120, 120, '2025-04-20', '8:06 AM', '2:23 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (121, 121, '2025-07-17', '7:29 AM', '2:38 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (122, 122, '2025-08-08', '7:26 AM', '1:22 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (123, 123, '2025-11-09', '8:45 AM', '2:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (124, 124, '2025-01-06', '6:47 AM', '3:43 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (125, 125, '2025-08-27', '8:18 AM', '3:15 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (126, 126, '2025-09-12', '7:30 AM', '4:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (127, 127, '2025-04-13', '8:26 AM', '1:37 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (128, 128, '2025-08-22', '6:46 AM', '12:02 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (129, 129, '2025-06-17', '6:44 AM', '4:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (130, 130, '2025-11-14', '8:19 AM', '3:53 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (131, 131, '2025-12-26', '8:26 AM', '12:16 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (132, 132, '2025-07-10', '8:25 AM', '4:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (133, 133, '2025-05-23', '6:34 AM', '12:03 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (134, 134, '2025-05-11', '6:23 AM', '12:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (135, 135, '2025-03-22', '6:38 AM', '2:40 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (136, 136, '2025-09-09', '6:32 AM', '4:12 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (137, 137, '2025-05-27', '6:58 AM', '2:46 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (138, 138, '2025-10-25', '8:00 AM', '3:56 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (139, 139, '2025-05-05', '8:46 AM', '4:25 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (140, 140, '2025-11-30', '8:59 AM', '1:42 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (141, 141, '2025-12-15', '6:38 AM', '12:33 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (142, 142, '2025-02-01', '7:50 AM', '12:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (143, 143, '2025-12-20', '6:49 AM', '4:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (144, 144, '2025-08-16', '6:58 AM', '1:57 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (145, 145, '2025-06-21', '8:47 AM', '12:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (146, 146, '2025-06-15', '6:41 AM', '3:08 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (147, 147, '2025-11-24', '6:23 AM', '12:37 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (148, 148, '2025-05-26', '7:21 AM', '1:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (149, 149, '2025-04-16', '7:17 AM', '12:22 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (150, 150, '2025-12-04', '8:19 AM', '4:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (151, 151, '2025-04-26', '7:51 AM', '2:14 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (152, 152, '2025-11-02', '7:33 AM', '12:00 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (153, 153, '2025-06-02', '8:22 AM', '3:06 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (154, 154, '2025-02-04', '7:41 AM', '12:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (155, 155, '2025-10-29', '7:50 AM', '3:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (156, 156, '2025-10-15', '6:37 AM', '1:10 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (157, 157, '2025-08-23', '8:25 AM', '4:54 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (158, 158, '2025-04-04', '6:05 AM', '1:13 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (159, 159, '2025-05-30', '6:20 AM', '4:54 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (160, 160, '2025-03-30', '7:20 AM', '3:40 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (161, 161, '2025-07-11', '7:42 AM', '12:06 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (162, 162, '2025-02-16', '7:53 AM', '2:43 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (163, 163, '2025-08-08', '6:34 AM', '4:40 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (164, 164, '2025-12-08', '8:32 AM', '1:36 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (165, 165, '2025-10-04', '8:11 AM', '1:25 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (166, 166, '2025-11-23', '8:15 AM', '3:28 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (167, 167, '2025-02-23', '6:00 AM', '1:35 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (168, 168, '2025-01-23', '7:56 AM', '4:35 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (169, 169, '2025-08-12', '7:29 AM', '3:43 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (170, 170, '2025-07-03', '8:42 AM', '3:42 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (171, 171, '2025-05-07', '8:50 AM', '1:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (172, 172, '2025-08-24', '6:55 AM', '4:19 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (173, 173, '2025-04-14', '7:54 AM', '4:07 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (174, 174, '2025-12-29', '8:34 AM', '12:51 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (175, 175, '2025-10-16', '7:30 AM', '3:08 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (176, 176, '2025-04-28', '7:06 AM', '3:47 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (177, 177, '2025-06-09', '8:13 AM', '2:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (178, 178, '2025-04-12', '7:06 AM', '2:10 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (179, 179, '2025-06-10', '8:22 AM', '3:25 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (180, 180, '2025-06-24', '7:40 AM', '1:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (181, 181, '2025-05-14', '7:55 AM', '1:19 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (182, 182, '2025-11-22', '6:51 AM', '12:12 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (183, 183, '2025-12-30', '8:01 AM', '4:15 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (184, 184, '2025-02-03', '8:31 AM', '1:06 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (185, 185, '2025-04-15', '6:49 AM', '3:38 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (186, 186, '2025-04-24', '8:57 AM', '4:49 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (187, 187, '2025-11-27', '7:14 AM', '4:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (188, 188, '2025-04-06', '7:08 AM', '4:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (189, 189, '2025-06-04', '8:09 AM', '3:28 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (190, 190, '2025-02-11', '8:02 AM', '4:49 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (191, 191, '2025-09-14', '8:43 AM', '4:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (192, 192, '2025-03-07', '6:55 AM', '2:12 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (193, 193, '2025-09-26', '7:34 AM', '3:06 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (194, 194, '2025-09-28', '7:34 AM', '1:21 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (195, 195, '2025-07-25', '7:08 AM', '4:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (196, 196, '2025-11-11', '7:24 AM', '3:39 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (197, 197, '2025-04-28', '7:04 AM', '3:55 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (198, 198, '2025-12-07', '6:13 AM', '2:17 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (199, 199, '2025-11-22', '7:04 AM', '1:01 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (200, 200, '2025-02-05', '6:36 AM', '2:15 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (201, 201, '2025-05-01', '8:21 AM', '12:02 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (202, 202, '2025-09-05', '6:53 AM', '1:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (203, 203, '2025-04-21', '8:08 AM', '4:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (204, 204, '2025-06-29', '6:35 AM', '12:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (205, 205, '2025-05-12', '8:45 AM', '1:02 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (206, 206, '2025-08-26', '7:40 AM', '12:00 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (207, 207, '2025-04-08', '8:41 AM', '2:27 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (208, 208, '2025-07-11', '7:17 AM', '3:23 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (209, 209, '2025-12-11', '7:48 AM', '3:02 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (210, 210, '2025-10-22', '7:47 AM', '12:11 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (211, 211, '2025-06-28', '7:52 AM', '2:29 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (212, 212, '2025-08-22', '7:42 AM', '2:44 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (213, 213, '2025-11-17', '8:24 AM', '3:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (214, 214, '2025-07-06', '6:11 AM', '12:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (215, 215, '2025-08-13', '8:32 AM', '2:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (216, 216, '2025-07-20', '7:30 AM', '12:44 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (217, 217, '2025-07-16', '8:03 AM', '1:42 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (218, 218, '2025-10-29', '7:04 AM', '3:00 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (219, 219, '2025-02-25', '8:59 AM', '4:20 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (220, 220, '2025-10-28', '6:53 AM', '2:10 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (221, 221, '2025-07-30', '8:18 AM', '4:36 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (222, 222, '2025-05-15', '6:29 AM', '12:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (223, 223, '2025-02-02', '7:16 AM', '3:28 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (224, 224, '2025-07-06', '7:46 AM', '3:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (225, 225, '2025-07-25', '6:27 AM', '4:00 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (226, 226, '2025-08-02', '8:05 AM', '2:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (227, 227, '2025-06-12', '7:47 AM', '12:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (228, 228, '2025-07-28', '6:43 AM', '3:54 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (229, 229, '2025-12-09', '8:26 AM', '4:22 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (230, 230, '2025-05-10', '7:18 AM', '2:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (231, 231, '2025-10-13', '8:21 AM', '3:14 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (232, 232, '2025-08-13', '7:20 AM', '3:32 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (233, 233, '2025-11-14', '6:42 AM', '12:53 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (234, 234, '2025-11-28', '6:30 AM', '1:06 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (235, 235, '2025-05-21', '6:17 AM', '3:13 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (236, 236, '2025-03-04', '8:39 AM', '4:18 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (237, 237, '2025-06-23', '6:57 AM', '3:27 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (238, 238, '2025-09-08', '7:47 AM', '12:32 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (239, 239, '2025-01-29', '7:21 AM', '3:17 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (240, 240, '2025-01-01', '8:57 AM', '3:02 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (241, 241, '2025-09-30', '6:22 AM', '12:24 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (242, 242, '2025-03-20', '6:48 AM', '1:59 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (243, 243, '2025-11-08', '6:22 AM', '3:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (244, 244, '2025-08-10', '6:59 AM', '12:09 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (245, 245, '2025-11-24', '6:13 AM', '12:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (246, 246, '2025-03-23', '7:04 AM', '4:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (247, 247, '2025-08-22', '7:45 AM', '4:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (248, 248, '2025-02-10', '6:32 AM', '12:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (249, 249, '2025-07-05', '7:20 AM', '4:15 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (250, 250, '2025-09-27', '6:22 AM', '3:51 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (251, 251, '2025-10-27', '6:20 AM', '4:23 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (252, 252, '2025-07-06', '8:53 AM', '2:11 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (253, 253, '2025-07-09', '8:47 AM', '1:02 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (254, 254, '2025-06-22', '8:47 AM', '3:21 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (255, 255, '2025-09-24', '8:07 AM', '2:30 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (256, 256, '2025-04-06', '7:19 AM', '3:33 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (257, 257, '2025-05-09', '7:25 AM', '4:13 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (258, 258, '2025-03-08', '8:10 AM', '3:50 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (259, 259, '2025-03-04', '8:44 AM', '3:52 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (260, 260, '2025-07-29', '7:52 AM', '12:02 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (261, 261, '2025-04-20', '8:40 AM', '2:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (262, 262, '2025-04-02', '7:01 AM', '12:07 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (263, 263, '2025-10-16', '7:39 AM', '2:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (264, 264, '2025-06-18', '6:25 AM', '2:26 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (265, 265, '2025-09-01', '6:19 AM', '1:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (266, 266, '2025-07-24', '7:46 AM', '1:03 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (267, 267, '2025-12-28', '6:56 AM', '12:00 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (268, 268, '2025-06-11', '8:34 AM', '12:07 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (269, 269, '2025-05-08', '7:47 AM', '1:22 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (270, 270, '2025-12-22', '6:44 AM', '1:08 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (271, 271, '2025-11-13', '8:12 AM', '12:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (272, 272, '2025-06-27', '6:20 AM', '2:17 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (273, 273, '2025-03-03', '6:56 AM', '1:12 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (274, 274, '2025-03-27', '7:14 AM', '1:19 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (275, 275, '2025-10-20', '8:15 AM', '4:04 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (276, 276, '2025-05-21', '6:04 AM', '2:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (277, 277, '2025-07-05', '6:51 AM', '3:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (278, 278, '2025-07-30', '8:25 AM', '4:47 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (279, 279, '2025-05-26', '7:59 AM', '1:48 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (280, 280, '2025-03-31', '6:59 AM', '3:38 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (281, 281, '2025-03-27', '7:46 AM', '3:00 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (282, 282, '2025-10-16', '6:37 AM', '4:18 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (283, 283, '2025-11-16', '8:34 AM', '1:31 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (284, 284, '2025-08-31', '7:23 AM', '3:44 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (285, 285, '2025-09-09', '8:37 AM', '4:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (286, 286, '2025-11-01', '6:48 AM', '4:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (287, 287, '2025-03-29', '6:28 AM', '12:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (288, 288, '2025-02-15', '8:55 AM', '4:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (289, 289, '2025-11-11', '8:48 AM', '4:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (290, 290, '2025-06-17', '7:06 AM', '12:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (291, 291, '2025-05-29', '6:23 AM', '2:51 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (292, 292, '2025-02-22', '7:22 AM', '2:30 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (293, 293, '2025-10-10', '7:55 AM', '3:34 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (294, 294, '2025-06-04', '7:54 AM', '12:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (295, 295, '2025-08-15', '6:56 AM', '4:11 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (296, 296, '2025-12-09', '6:35 AM', '12:24 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (297, 297, '2025-07-11', '6:16 AM', '2:51 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (298, 298, '2025-05-18', '7:34 AM', '1:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (299, 299, '2025-06-11', '8:53 AM', '12:36 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (300, 300, '2025-07-12', '8:24 AM', '3:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (301, 301, '2025-03-19', '8:00 AM', '1:32 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (302, 302, '2025-07-12', '6:25 AM', '3:26 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (303, 303, '2025-08-21', '6:33 AM', '2:06 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (304, 304, '2025-09-17', '6:13 AM', '2:40 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (305, 305, '2025-10-06', '6:06 AM', '1:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (306, 306, '2025-08-03', '7:18 AM', '1:09 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (307, 307, '2025-06-22', '6:21 AM', '3:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (308, 308, '2025-02-05', '8:34 AM', '2:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (309, 309, '2025-06-22', '7:14 AM', '3:34 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (310, 310, '2025-10-21', '8:35 AM', '2:02 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (311, 311, '2025-07-24', '8:29 AM', '2:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (312, 312, '2025-08-10', '8:51 AM', '1:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (313, 313, '2025-02-26', '6:32 AM', '4:00 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (314, 314, '2025-06-03', '6:08 AM', '3:02 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (315, 315, '2025-04-27', '8:23 AM', '2:58 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (316, 316, '2025-12-28', '6:46 AM', '12:23 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (317, 317, '2025-10-14', '6:15 AM', '4:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (318, 318, '2025-05-27', '6:48 AM', '2:08 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (319, 319, '2025-07-07', '6:39 AM', '4:48 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (320, 320, '2025-01-20', '6:47 AM', '1:36 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (321, 321, '2025-06-29', '6:23 AM', '3:50 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (322, 322, '2025-05-18', '6:44 AM', '12:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (323, 323, '2025-11-20', '8:50 AM', '12:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (324, 324, '2025-07-21', '7:24 AM', '1:27 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (325, 325, '2025-12-20', '7:59 AM', '12:23 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (326, 326, '2025-01-20', '6:22 AM', '12:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (327, 327, '2025-01-11', '8:11 AM', '1:19 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (328, 328, '2025-04-17', '6:35 AM', '4:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (329, 329, '2025-12-08', '8:23 AM', '12:52 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (330, 330, '2025-08-19', '7:14 AM', '3:22 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (331, 331, '2025-03-03', '6:05 AM', '12:00 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (332, 332, '2025-03-15', '8:08 AM', '4:38 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (333, 333, '2025-04-08', '8:53 AM', '4:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (334, 334, '2025-03-26', '7:39 AM', '4:38 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (335, 335, '2025-04-29', '8:25 AM', '12:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (336, 336, '2025-06-04', '8:59 AM', '4:23 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (337, 337, '2025-02-21', '8:13 AM', '1:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (338, 338, '2025-06-16', '8:52 AM', '4:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (339, 339, '2025-07-16', '6:01 AM', '4:55 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (340, 340, '2025-04-05', '8:10 AM', '1:59 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (341, 341, '2025-04-14', '7:56 AM', '3:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (342, 342, '2025-10-25', '6:46 AM', '2:10 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (343, 343, '2025-10-19', '6:54 AM', '12:39 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (344, 344, '2025-06-10', '7:59 AM', '2:43 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (345, 345, '2025-09-21', '6:41 AM', '12:25 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (346, 346, '2025-06-27', '8:27 AM', '4:51 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (347, 347, '2025-02-08', '7:12 AM', '1:55 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (348, 348, '2025-12-20', '7:59 AM', '3:01 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (349, 349, '2025-04-10', '6:39 AM', '1:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (350, 350, '2025-10-10', '7:59 AM', '2:38 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (351, 351, '2025-09-12', '6:05 AM', '4:57 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (352, 352, '2025-06-04', '8:13 AM', '1:21 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (353, 353, '2025-07-10', '8:36 AM', '2:02 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (354, 354, '2025-11-10', '8:53 AM', '3:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (355, 355, '2025-01-16', '8:59 AM', '3:59 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (356, 356, '2025-03-10', '8:10 AM', '12:11 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (357, 357, '2025-01-12', '8:12 AM', '1:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (358, 358, '2025-06-04', '7:37 AM', '4:33 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (359, 359, '2025-07-29', '6:58 AM', '1:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (360, 360, '2025-11-07', '8:45 AM', '12:26 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (361, 361, '2025-08-26', '8:52 AM', '2:37 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (362, 362, '2025-08-19', '7:49 AM', '1:11 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (363, 363, '2025-10-06', '6:35 AM', '3:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (364, 364, '2025-09-06', '8:27 AM', '1:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (365, 365, '2025-04-04', '7:13 AM', '4:42 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (366, 366, '2025-11-25', '8:24 AM', '4:43 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (367, 367, '2025-09-06', '7:26 AM', '3:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (368, 368, '2025-05-02', '6:25 AM', '3:00 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (369, 369, '2025-08-11', '8:53 AM', '3:54 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (370, 370, '2025-01-02', '8:55 AM', '1:10 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (371, 371, '2025-06-03', '6:22 AM', '12:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (372, 372, '2025-04-11', '6:15 AM', '4:01 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (373, 373, '2025-06-26', '8:53 AM', '3:59 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (374, 374, '2025-04-02', '6:27 AM', '1:08 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (375, 375, '2025-03-12', '6:13 AM', '3:12 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (376, 376, '2025-07-09', '7:32 AM', '1:01 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (377, 377, '2025-04-01', '7:19 AM', '12:51 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (378, 378, '2025-09-11', '8:13 AM', '3:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (379, 379, '2025-04-30', '6:24 AM', '2:10 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (380, 380, '2025-09-17', '8:39 AM', '2:46 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (381, 381, '2025-12-29', '8:31 AM', '2:22 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (382, 382, '2025-10-19', '7:03 AM', '4:01 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (383, 383, '2025-02-25', '8:38 AM', '4:48 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (384, 384, '2025-11-01', '8:05 AM', '1:59 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (385, 385, '2025-12-13', '6:01 AM', '1:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (386, 386, '2025-05-11', '7:19 AM', '1:10 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (387, 387, '2025-01-18', '8:40 AM', '3:57 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (388, 388, '2025-12-08', '8:46 AM', '4:04 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (389, 389, '2025-05-26', '8:41 AM', '4:36 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (390, 390, '2025-01-26', '7:52 AM', '3:14 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (391, 391, '2025-02-02', '6:15 AM', '12:11 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (392, 392, '2025-10-23', '7:34 AM', '1:25 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (393, 393, '2025-09-18', '8:15 AM', '4:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (394, 394, '2025-04-02', '8:02 AM', '1:08 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (395, 395, '2025-06-11', '8:52 AM', '12:19 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (396, 396, '2025-04-04', '6:51 AM', '4:40 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (397, 397, '2025-09-17', '7:31 AM', '1:15 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (398, 398, '2025-03-31', '8:25 AM', '2:57 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (399, 399, '2025-03-11', '7:33 AM', '3:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (400, 400, '2025-07-22', '8:48 AM', '4:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (401, 401, '2025-05-15', '7:45 AM', '12:16 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (402, 402, '2025-02-14', '7:56 AM', '1:26 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (403, 403, '2025-09-06', '6:15 AM', '3:48 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (404, 404, '2025-01-22', '8:40 AM', '12:08 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (405, 405, '2025-05-03', '7:36 AM', '3:51 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (406, 406, '2025-10-24', '8:35 AM', '4:55 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (407, 407, '2025-10-31', '8:31 AM', '2:57 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (408, 408, '2025-07-20', '6:19 AM', '1:47 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (409, 409, '2025-10-24', '7:01 AM', '4:43 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (410, 410, '2025-12-08', '8:00 AM', '4:53 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (411, 411, '2025-03-24', '8:33 AM', '4:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (412, 412, '2025-08-09', '7:18 AM', '2:49 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (413, 413, '2025-05-23', '6:17 AM', '12:40 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (414, 414, '2025-11-05', '6:00 AM', '12:42 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (415, 415, '2025-01-04', '7:01 AM', '3:36 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (416, 416, '2025-08-14', '8:25 AM', '4:16 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (417, 417, '2025-03-04', '8:04 AM', '4:55 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (418, 418, '2025-10-19', '8:58 AM', '12:13 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (419, 419, '2025-02-16', '7:30 AM', '3:16 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (420, 420, '2025-07-02', '7:03 AM', '3:20 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (421, 421, '2025-07-24', '8:29 AM', '12:24 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (422, 422, '2025-04-09', '7:26 AM', '1:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (423, 423, '2025-03-30', '7:59 AM', '12:10 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (424, 424, '2025-04-23', '8:05 AM', '3:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (425, 425, '2025-08-17', '7:40 AM', '2:53 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (426, 426, '2025-08-04', '8:26 AM', '3:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (427, 427, '2025-11-04', '7:03 AM', '12:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (428, 428, '2025-09-28', '8:25 AM', '4:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (429, 429, '2025-01-11', '7:18 AM', '1:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (430, 430, '2025-11-12', '6:31 AM', '4:49 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (431, 431, '2025-08-31', '8:07 AM', '12:15 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (432, 432, '2025-11-11', '6:29 AM', '4:44 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (433, 433, '2025-07-17', '6:00 AM', '4:11 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (434, 434, '2025-11-14', '8:31 AM', '3:45 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (435, 435, '2025-02-28', '8:13 AM', '3:48 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (436, 436, '2025-01-03', '6:47 AM', '3:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (437, 437, '2025-03-15', '8:04 AM', '1:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (438, 438, '2025-06-17', '8:51 AM', '4:48 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (439, 439, '2025-09-28', '7:15 AM', '3:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (440, 440, '2025-06-13', '6:55 AM', '2:54 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (441, 441, '2025-04-01', '8:52 AM', '12:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (442, 442, '2025-03-07', '7:16 AM', '4:21 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (443, 443, '2025-07-18', '6:35 AM', '4:50 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (444, 444, '2025-10-19', '7:49 AM', '1:11 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (445, 445, '2025-06-21', '8:42 AM', '4:39 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (446, 446, '2025-07-23', '6:48 AM', '3:17 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (447, 447, '2025-01-12', '6:20 AM', '3:24 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (448, 448, '2025-12-07', '6:40 AM', '2:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (449, 449, '2025-08-07', '8:54 AM', '12:53 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (450, 450, '2025-02-06', '8:25 AM', '4:40 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (451, 451, '2025-01-20', '7:05 AM', '12:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (452, 452, '2025-11-03', '7:49 AM', '12:16 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (453, 453, '2025-06-17', '6:16 AM', '2:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (454, 454, '2025-08-12', '7:56 AM', '12:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (455, 455, '2025-04-10', '6:55 AM', '12:18 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (456, 456, '2025-07-19', '7:05 AM', '3:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (457, 457, '2025-10-04', '8:39 AM', '12:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (458, 458, '2025-05-30', '6:10 AM', '3:54 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (459, 459, '2025-03-12', '7:05 AM', '2:33 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (460, 460, '2025-07-30', '7:11 AM', '12:36 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (461, 461, '2025-12-16', '7:55 AM', '2:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (462, 462, '2025-05-03', '8:36 AM', '1:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (463, 463, '2025-04-12', '8:56 AM', '4:46 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (464, 464, '2025-06-14', '6:57 AM', '2:34 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (465, 465, '2025-01-01', '6:40 AM', '12:54 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (466, 466, '2025-03-07', '6:47 AM', '2:45 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (467, 467, '2025-05-15', '7:54 AM', '12:42 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (468, 468, '2025-05-26', '8:50 AM', '1:00 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (469, 469, '2025-01-26', '6:59 AM', '1:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (470, 470, '2025-07-30', '8:45 AM', '3:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (471, 471, '2025-12-10', '6:13 AM', '3:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (472, 472, '2025-10-01', '8:37 AM', '4:00 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (473, 473, '2025-07-10', '7:28 AM', '12:24 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (474, 474, '2025-05-14', '8:30 AM', '4:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (475, 475, '2025-12-19', '8:46 AM', '2:14 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (476, 476, '2025-09-22', '6:13 AM', '2:07 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (477, 477, '2025-08-12', '8:49 AM', '4:41 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (478, 478, '2025-03-11', '8:21 AM', '4:54 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (479, 479, '2025-05-28', '6:41 AM', '1:40 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (480, 480, '2025-03-11', '7:53 AM', '3:54 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (481, 481, '2025-10-24', '7:34 AM', '1:36 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (482, 482, '2025-10-30', '6:58 AM', '12:27 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (483, 483, '2025-10-28', '8:44 AM', '2:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (484, 484, '2025-06-06', '7:29 AM', '4:27 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (485, 485, '2025-06-26', '8:51 AM', '2:36 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (486, 486, '2025-02-20', '8:31 AM', '4:26 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (487, 487, '2025-10-16', '8:42 AM', '4:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (488, 488, '2025-03-16', '8:55 AM', '3:08 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (489, 489, '2025-10-21', '8:45 AM', '1:51 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (490, 490, '2025-12-17', '8:04 AM', '2:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (491, 491, '2025-08-05', '6:12 AM', '1:11 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (492, 492, '2025-12-14', '8:08 AM', '1:05 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (493, 493, '2025-06-19', '6:01 AM', '1:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (494, 494, '2025-12-05', '6:33 AM', '12:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (495, 495, '2025-04-06', '6:55 AM', '12:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (496, 496, '2025-09-25', '6:50 AM', '3:20 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (497, 497, '2025-04-20', '8:57 AM', '1:54 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (498, 498, '2025-05-13', '7:17 AM', '3:48 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (499, 499, '2025-05-16', '6:25 AM', '3:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (500, 500, '2025-11-16', '7:38 AM', '2:39 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (501, 501, '2025-03-04', '8:09 AM', '1:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (502, 502, '2025-01-08', '7:50 AM', '1:33 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (503, 503, '2025-01-09', '8:06 AM', '2:55 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (504, 504, '2025-01-05', '8:35 AM', '12:26 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (505, 505, '2025-09-21', '8:46 AM', '1:05 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (506, 506, '2025-02-10', '7:59 AM', '1:15 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (507, 507, '2025-09-24', '7:00 AM', '12:35 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (508, 508, '2025-09-28', '8:59 AM', '2:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (509, 509, '2025-09-07', '7:36 AM', '4:54 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (510, 510, '2025-04-10', '8:28 AM', '3:24 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (511, 511, '2025-04-01', '6:00 AM', '2:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (512, 512, '2025-01-27', '8:40 AM', '4:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (513, 513, '2025-03-12', '8:12 AM', '12:25 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (514, 514, '2025-07-11', '6:16 AM', '4:25 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (515, 515, '2025-04-29', '8:25 AM', '4:18 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (516, 516, '2025-12-17', '7:31 AM', '12:00 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (517, 517, '2025-06-08', '6:29 AM', '4:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (518, 518, '2025-05-29', '8:51 AM', '4:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (519, 519, '2025-10-21', '7:04 AM', '2:57 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (520, 520, '2025-04-29', '7:40 AM', '2:18 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (521, 521, '2025-03-04', '6:49 AM', '4:15 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (522, 522, '2025-07-05', '7:31 AM', '4:43 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (523, 523, '2025-09-10', '8:05 AM', '1:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (524, 524, '2025-09-12', '6:52 AM', '2:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (525, 525, '2025-01-01', '6:39 AM', '4:08 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (526, 526, '2025-06-05', '6:47 AM', '3:20 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (527, 527, '2025-11-20', '6:55 AM', '1:53 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (528, 528, '2025-06-04', '7:01 AM', '3:37 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (529, 529, '2025-06-04', '8:11 AM', '3:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (530, 530, '2025-10-06', '6:30 AM', '1:25 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (531, 531, '2025-09-09', '7:22 AM', '3:24 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (532, 532, '2025-04-28', '8:03 AM', '4:05 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (533, 533, '2025-02-27', '7:17 AM', '3:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (534, 534, '2025-06-07', '7:21 AM', '1:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (535, 535, '2025-03-13', '8:45 AM', '3:01 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (536, 536, '2025-02-23', '7:57 AM', '2:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (537, 537, '2025-03-25', '7:42 AM', '4:37 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (538, 538, '2025-02-28', '6:49 AM', '4:11 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (539, 539, '2025-08-04', '8:53 AM', '4:19 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (540, 540, '2025-02-12', '7:55 AM', '2:44 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (541, 541, '2025-01-07', '6:50 AM', '2:08 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (542, 542, '2025-03-20', '8:22 AM', '12:08 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (543, 543, '2025-10-14', '8:55 AM', '4:25 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (544, 544, '2025-01-03', '7:37 AM', '3:13 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (545, 545, '2025-02-12', '7:11 AM', '1:00 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (546, 546, '2025-04-05', '7:16 AM', '1:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (547, 547, '2025-12-02', '7:55 AM', '3:26 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (548, 548, '2025-06-05', '7:11 AM', '4:24 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (549, 549, '2025-10-25', '8:45 AM', '12:32 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (550, 550, '2025-01-16', '8:44 AM', '3:31 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (551, 551, '2025-07-02', '7:02 AM', '3:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (552, 552, '2025-10-17', '7:04 AM', '4:09 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (553, 553, '2025-02-16', '6:31 AM', '2:54 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (554, 554, '2025-04-22', '8:53 AM', '2:51 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (555, 555, '2025-09-23', '7:54 AM', '4:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (556, 556, '2025-04-13', '8:24 AM', '2:55 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (557, 557, '2025-10-06', '7:55 AM', '3:17 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (558, 558, '2025-03-15', '6:36 AM', '2:39 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (559, 559, '2025-10-29', '7:08 AM', '2:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (560, 560, '2025-10-06', '7:18 AM', '1:11 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (561, 561, '2025-06-20', '6:55 AM', '1:27 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (562, 562, '2025-03-19', '6:13 AM', '2:51 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (563, 563, '2025-12-12', '7:32 AM', '4:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (564, 564, '2025-03-25', '6:02 AM', '1:57 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (565, 565, '2025-10-02', '8:39 AM', '2:39 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (566, 566, '2025-01-11', '7:15 AM', '1:56 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (567, 567, '2025-04-20', '7:37 AM', '1:32 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (568, 568, '2025-06-27', '8:54 AM', '3:08 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (569, 569, '2025-12-28', '8:26 AM', '3:58 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (570, 570, '2025-07-01', '7:36 AM', '1:40 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (571, 571, '2025-09-24', '6:48 AM', '12:33 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (572, 572, '2025-01-10', '7:19 AM', '3:09 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (573, 573, '2025-07-19', '6:42 AM', '4:58 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (574, 574, '2025-05-11', '8:58 AM', '1:37 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (575, 575, '2025-02-04', '6:55 AM', '12:02 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (576, 576, '2025-02-16', '8:55 AM', '1:37 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (577, 577, '2025-11-17', '7:40 AM', '1:35 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (578, 578, '2025-04-09', '7:30 AM', '2:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (579, 579, '2025-12-02', '8:56 AM', '12:06 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (580, 580, '2025-12-30', '8:25 AM', '2:48 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (581, 581, '2025-02-12', '8:29 AM', '4:40 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (582, 582, '2025-07-27', '7:02 AM', '12:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (583, 583, '2025-11-16', '8:39 AM', '1:55 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (584, 584, '2025-09-25', '8:47 AM', '12:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (585, 585, '2025-03-13', '8:02 AM', '3:27 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (586, 586, '2025-03-26', '6:27 AM', '12:41 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (587, 587, '2025-07-24', '6:32 AM', '12:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (588, 588, '2025-05-26', '7:42 AM', '3:52 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (589, 589, '2025-10-09', '8:23 AM', '4:56 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (590, 590, '2025-06-09', '6:30 AM', '2:34 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (591, 591, '2025-06-26', '8:37 AM', '12:13 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (592, 592, '2025-02-05', '6:43 AM', '1:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (593, 593, '2025-09-22', '7:40 AM', '12:56 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (594, 594, '2025-09-26', '8:38 AM', '4:48 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (595, 595, '2025-03-08', '8:02 AM', '3:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (596, 596, '2025-04-25', '7:22 AM', '12:12 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (597, 597, '2025-01-20', '8:45 AM', '1:10 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (598, 598, '2025-02-14', '8:21 AM', '3:03 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (599, 599, '2025-06-16', '6:37 AM', '12:55 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (600, 600, '2025-02-24', '6:00 AM', '2:00 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (601, 601, '2025-07-26', '7:57 AM', '4:10 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (602, 602, '2025-02-22', '6:24 AM', '3:48 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (603, 603, '2025-07-06', '6:17 AM', '4:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (604, 604, '2025-12-02', '7:49 AM', '12:30 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (605, 605, '2025-04-12', '6:27 AM', '12:09 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (606, 606, '2025-08-18', '6:50 AM', '3:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (607, 607, '2025-10-13', '8:13 AM', '2:18 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (608, 608, '2025-06-28', '6:57 AM', '12:50 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (609, 609, '2025-03-23', '6:37 AM', '1:27 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (610, 610, '2025-03-01', '7:34 AM', '12:52 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (611, 611, '2025-03-10', '8:47 AM', '4:14 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (612, 612, '2025-01-18', '8:35 AM', '2:20 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (613, 613, '2025-06-17', '6:51 AM', '1:57 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (614, 614, '2025-08-16', '7:16 AM', '1:42 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (615, 615, '2025-05-17', '7:00 AM', '2:06 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (616, 616, '2025-04-05', '7:28 AM', '1:48 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (617, 617, '2025-12-26', '7:30 AM', '3:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (618, 618, '2025-05-25', '7:09 AM', '3:06 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (619, 619, '2025-04-17', '7:25 AM', '4:46 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (620, 620, '2025-12-17', '6:44 AM', '2:37 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (621, 621, '2025-12-03', '6:46 AM', '12:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (622, 622, '2025-11-16', '7:52 AM', '2:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (623, 623, '2025-10-28', '6:31 AM', '2:19 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (624, 624, '2025-02-01', '6:55 AM', '2:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (625, 625, '2025-06-15', '7:55 AM', '2:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (626, 626, '2025-11-12', '7:06 AM', '3:28 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (627, 627, '2025-09-01', '8:29 AM', '3:40 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (628, 628, '2025-09-18', '7:02 AM', '12:12 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (629, 629, '2025-08-26', '8:57 AM', '4:12 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (630, 630, '2025-04-22', '6:39 AM', '12:13 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (631, 631, '2025-10-05', '7:33 AM', '1:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (632, 632, '2025-11-08', '8:56 AM', '12:39 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (633, 633, '2025-05-27', '8:37 AM', '3:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (634, 634, '2025-01-03', '6:24 AM', '12:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (635, 635, '2025-11-06', '7:07 AM', '1:12 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (636, 636, '2025-12-21', '7:34 AM', '2:50 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (637, 637, '2025-01-08', '6:00 AM', '3:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (638, 638, '2025-09-28', '6:45 AM', '1:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (639, 639, '2025-10-14', '8:17 AM', '4:15 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (640, 640, '2025-12-15', '7:25 AM', '3:33 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (641, 641, '2025-08-17', '7:23 AM', '3:53 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (642, 642, '2025-10-03', '6:51 AM', '4:07 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (643, 643, '2025-09-24', '8:49 AM', '3:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (644, 644, '2025-09-21', '8:23 AM', '12:17 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (645, 645, '2025-11-26', '7:58 AM', '2:49 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (646, 646, '2025-04-30', '8:51 AM', '2:23 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (647, 647, '2025-07-08', '7:49 AM', '1:59 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (648, 648, '2025-11-13', '7:03 AM', '2:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (649, 649, '2025-02-20', '8:40 AM', '3:47 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (650, 650, '2025-11-29', '8:09 AM', '1:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (651, 651, '2025-04-23', '6:38 AM', '3:32 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (652, 652, '2025-07-24', '6:07 AM', '1:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (653, 653, '2025-04-11', '7:36 AM', '1:17 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (654, 654, '2025-10-18', '8:53 AM', '4:39 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (655, 655, '2025-04-10', '6:46 AM', '4:29 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (656, 656, '2025-08-05', '6:27 AM', '12:41 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (657, 657, '2025-08-05', '7:21 AM', '2:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (658, 658, '2025-12-03', '6:22 AM', '4:19 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (659, 659, '2025-01-20', '7:08 AM', '12:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (660, 660, '2025-09-22', '6:50 AM', '4:50 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (661, 661, '2025-08-18', '6:56 AM', '12:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (662, 662, '2025-04-06', '6:42 AM', '1:57 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (663, 663, '2025-03-28', '8:15 AM', '1:12 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (664, 664, '2025-05-24', '8:35 AM', '3:20 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (665, 665, '2025-10-30', '7:27 AM', '1:32 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (666, 666, '2025-11-20', '6:08 AM', '4:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (667, 667, '2025-08-19', '8:44 AM', '1:54 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (668, 668, '2025-12-05', '7:20 AM', '1:12 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (669, 669, '2025-03-24', '6:11 AM', '1:34 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (670, 670, '2025-06-20', '6:41 AM', '1:14 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (671, 671, '2025-06-14', '8:35 AM', '12:52 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (672, 672, '2025-05-18', '6:13 AM', '3:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (673, 673, '2025-05-31', '8:33 AM', '1:20 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (674, 674, '2025-07-15', '7:28 AM', '1:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (675, 675, '2025-08-07', '6:29 AM', '1:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (676, 676, '2025-10-15', '8:20 AM', '4:24 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (677, 677, '2025-10-12', '7:50 AM', '4:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (678, 678, '2025-04-29', '7:55 AM', '12:41 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (679, 679, '2025-11-23', '7:25 AM', '1:25 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (680, 680, '2025-10-26', '8:19 AM', '1:26 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (681, 681, '2025-03-04', '7:50 AM', '1:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (682, 682, '2025-06-05', '6:20 AM', '2:18 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (683, 683, '2025-02-24', '7:16 AM', '2:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (684, 684, '2025-01-24', '7:24 AM', '12:00 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (685, 685, '2025-04-23', '7:08 AM', '12:57 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (686, 686, '2025-01-01', '7:07 AM', '12:39 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (687, 687, '2025-04-11', '8:11 AM', '1:05 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (688, 688, '2025-04-09', '7:14 AM', '12:04 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (689, 689, '2025-05-22', '6:42 AM', '2:35 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (690, 690, '2025-05-08', '7:20 AM', '4:47 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (691, 691, '2025-03-22', '8:38 AM', '1:44 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (692, 692, '2025-02-14', '6:58 AM', '3:42 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (693, 693, '2025-03-28', '7:18 AM', '4:02 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (694, 694, '2025-07-03', '8:52 AM', '2:04 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (695, 695, '2025-05-20', '6:09 AM', '12:49 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (696, 696, '2025-12-20', '7:26 AM', '2:10 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (697, 697, '2025-06-10', '7:21 AM', '12:07 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (698, 698, '2025-02-28', '6:29 AM', '12:53 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (699, 699, '2025-08-21', '7:45 AM', '1:06 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (700, 700, '2025-09-03', '7:36 AM', '3:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (701, 701, '2025-08-28', '7:47 AM', '1:24 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (702, 702, '2025-11-21', '6:53 AM', '2:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (703, 703, '2025-09-09', '8:51 AM', '2:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (704, 704, '2025-01-29', '8:45 AM', '4:20 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (705, 705, '2025-08-13', '6:20 AM', '3:32 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (706, 706, '2025-03-30', '8:10 AM', '2:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (707, 707, '2025-10-23', '6:22 AM', '1:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (708, 708, '2025-04-21', '7:24 AM', '2:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (709, 709, '2025-09-20', '6:07 AM', '12:24 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (710, 710, '2025-04-15', '6:11 AM', '1:45 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (711, 711, '2025-11-03', '7:20 AM', '3:44 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (712, 712, '2025-03-08', '7:17 AM', '4:11 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (713, 713, '2025-12-01', '7:00 AM', '2:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (714, 714, '2025-09-14', '7:45 AM', '1:51 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (715, 715, '2025-07-17', '7:59 AM', '12:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (716, 716, '2025-10-26', '7:51 AM', '1:41 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (717, 717, '2025-03-07', '8:07 AM', '2:22 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (718, 718, '2025-02-28', '6:20 AM', '3:53 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (719, 719, '2025-01-22', '7:27 AM', '3:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (720, 720, '2025-04-19', '7:42 AM', '2:25 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (721, 721, '2025-02-28', '7:20 AM', '1:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (722, 722, '2025-05-20', '7:25 AM', '12:49 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (723, 723, '2025-07-11', '8:41 AM', '3:06 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (724, 724, '2025-06-09', '8:08 AM', '2:26 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (725, 725, '2025-09-23', '7:09 AM', '12:33 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (726, 726, '2025-11-25', '7:18 AM', '12:27 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (727, 727, '2025-11-21', '8:54 AM', '2:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (728, 728, '2025-01-10', '8:44 AM', '4:36 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (729, 729, '2025-05-29', '6:21 AM', '4:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (730, 730, '2025-09-20', '6:58 AM', '1:06 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (731, 731, '2025-01-02', '8:42 AM', '1:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (732, 732, '2025-06-07', '6:41 AM', '2:08 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (733, 733, '2025-05-25', '6:15 AM', '4:30 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (734, 734, '2025-02-19', '8:27 AM', '1:54 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (735, 735, '2025-10-22', '6:41 AM', '1:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (736, 736, '2025-08-30', '6:37 AM', '1:50 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (737, 737, '2025-07-02', '8:40 AM', '1:55 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (738, 738, '2025-10-03', '8:46 AM', '4:40 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (739, 739, '2025-11-04', '6:45 AM', '4:55 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (740, 740, '2025-09-15', '8:20 AM', '1:41 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (741, 741, '2025-10-12', '8:03 AM', '2:39 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (742, 742, '2025-05-29', '7:48 AM', '2:13 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (743, 743, '2025-04-09', '6:20 AM', '2:11 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (744, 744, '2025-07-04', '8:42 AM', '4:04 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (745, 745, '2025-02-26', '6:29 AM', '2:15 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (746, 746, '2025-01-18', '7:13 AM', '3:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (747, 747, '2025-11-21', '8:51 AM', '4:15 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (748, 748, '2025-03-24', '8:19 AM', '4:51 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (749, 749, '2025-05-03', '8:43 AM', '2:16 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (750, 750, '2025-11-18', '8:28 AM', '4:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (751, 751, '2025-11-09', '6:51 AM', '2:59 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (752, 752, '2025-08-11', '6:01 AM', '4:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (753, 753, '2025-02-12', '7:48 AM', '2:01 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (754, 754, '2025-06-17', '7:34 AM', '3:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (755, 755, '2025-07-17', '6:59 AM', '4:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (756, 756, '2025-06-23', '6:48 AM', '1:02 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (757, 757, '2025-02-27', '8:45 AM', '4:17 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (758, 758, '2025-03-31', '8:40 AM', '1:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (759, 759, '2025-09-15', '8:44 AM', '12:51 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (760, 760, '2025-09-24', '8:07 AM', '3:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (761, 761, '2025-08-24', '6:07 AM', '2:33 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (762, 762, '2025-12-08', '7:08 AM', '4:05 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (763, 763, '2025-01-29', '6:40 AM', '12:47 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (764, 764, '2025-01-09', '6:56 AM', '4:54 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (765, 765, '2025-03-09', '8:37 AM', '3:18 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (766, 766, '2025-07-15', '8:17 AM', '1:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (767, 767, '2025-01-24', '8:14 AM', '2:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (768, 768, '2025-12-28', '6:28 AM', '12:04 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (769, 769, '2025-08-18', '7:40 AM', '12:13 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (770, 770, '2025-04-15', '6:27 AM', '3:37 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (771, 771, '2025-08-21', '6:21 AM', '4:09 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (772, 772, '2025-12-16', '8:07 AM', '1:48 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (773, 773, '2025-03-24', '6:31 AM', '3:41 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (774, 774, '2025-10-03', '8:42 AM', '4:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (775, 775, '2025-12-15', '6:48 AM', '12:39 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (776, 776, '2025-08-01', '7:06 AM', '3:00 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (777, 777, '2025-08-06', '8:41 AM', '4:07 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (778, 778, '2025-03-08', '7:30 AM', '1:32 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (779, 779, '2025-03-21', '8:57 AM', '2:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (780, 780, '2025-03-19', '6:51 AM', '1:22 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (781, 781, '2025-01-05', '7:12 AM', '12:04 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (782, 782, '2025-07-09', '6:01 AM', '3:48 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (783, 783, '2025-04-26', '7:27 AM', '2:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (784, 784, '2025-12-26', '8:42 AM', '3:50 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (785, 785, '2025-09-06', '7:35 AM', '12:14 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (786, 786, '2025-10-20', '6:39 AM', '12:22 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (787, 787, '2025-06-17', '6:41 AM', '2:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (788, 788, '2025-01-13', '8:01 AM', '1:22 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (789, 789, '2025-03-17', '8:17 AM', '4:20 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (790, 790, '2025-07-24', '6:20 AM', '4:36 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (791, 791, '2025-12-18', '8:12 AM', '4:46 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (792, 792, '2025-10-15', '8:14 AM', '1:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (793, 793, '2025-01-17', '8:08 AM', '4:05 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (794, 794, '2025-01-15', '8:16 AM', '4:13 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (795, 795, '2025-12-16', '6:51 AM', '1:05 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (796, 796, '2025-09-30', '6:05 AM', '12:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (797, 797, '2025-12-07', '6:03 AM', '3:23 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (798, 798, '2025-08-06', '6:28 AM', '3:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (799, 799, '2025-05-31', '6:55 AM', '3:18 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (800, 800, '2025-02-07', '7:09 AM', '12:10 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (801, 801, '2025-11-28', '7:01 AM', '3:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (802, 802, '2025-04-23', '7:23 AM', '12:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (803, 803, '2025-06-18', '8:19 AM', '12:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (804, 804, '2025-03-03', '6:20 AM', '4:18 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (805, 805, '2025-12-12', '6:47 AM', '1:27 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (806, 806, '2025-03-09', '7:31 AM', '2:06 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (807, 807, '2025-05-15', '8:15 AM', '12:05 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (808, 808, '2025-01-29', '8:18 AM', '1:58 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (809, 809, '2025-03-19', '7:24 AM', '1:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (810, 810, '2025-09-17', '8:18 AM', '4:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (811, 811, '2025-06-19', '6:22 AM', '1:07 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (812, 812, '2025-06-03', '6:29 AM', '2:30 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (813, 813, '2025-11-05', '7:00 AM', '3:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (814, 814, '2025-08-01', '6:45 AM', '12:35 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (815, 815, '2025-12-23', '7:11 AM', '4:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (816, 816, '2025-09-03', '8:36 AM', '3:35 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (817, 817, '2025-08-24', '8:40 AM', '1:15 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (818, 818, '2025-12-06', '8:24 AM', '12:07 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (819, 819, '2025-05-31', '7:40 AM', '2:42 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (820, 820, '2025-05-26', '8:55 AM', '1:55 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (821, 821, '2025-04-04', '6:24 AM', '1:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (822, 822, '2025-02-20', '8:30 AM', '12:18 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (823, 823, '2025-09-25', '8:12 AM', '2:10 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (824, 824, '2025-06-05', '7:03 AM', '1:39 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (825, 825, '2025-01-23', '7:34 AM', '12:46 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (826, 826, '2025-09-21', '8:00 AM', '3:27 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (827, 827, '2025-06-29', '8:08 AM', '3:33 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (828, 828, '2025-07-02', '6:01 AM', '2:37 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (829, 829, '2025-03-01', '7:16 AM', '2:48 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (830, 830, '2025-01-15', '7:52 AM', '12:44 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (831, 831, '2025-05-09', '6:44 AM', '12:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (832, 832, '2025-05-09', '7:58 AM', '12:01 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (833, 833, '2025-01-14', '6:57 AM', '1:52 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (834, 834, '2025-10-09', '8:13 AM', '12:51 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (835, 835, '2025-06-22', '6:10 AM', '2:59 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (836, 836, '2025-07-08', '7:32 AM', '2:44 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (837, 837, '2025-12-25', '7:52 AM', '3:52 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (838, 838, '2025-05-19', '8:41 AM', '3:22 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (839, 839, '2025-07-14', '6:49 AM', '1:03 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (840, 840, '2025-06-17', '8:50 AM', '12:41 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (841, 841, '2025-04-03', '6:56 AM', '4:15 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (842, 842, '2025-07-16', '6:25 AM', '1:17 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (843, 843, '2025-08-23', '7:03 AM', '3:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (844, 844, '2025-01-29', '6:23 AM', '3:03 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (845, 845, '2025-02-05', '7:41 AM', '3:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (846, 846, '2025-05-21', '7:31 AM', '1:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (847, 847, '2025-11-14', '7:09 AM', '2:37 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (848, 848, '2025-10-25', '6:27 AM', '1:51 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (849, 849, '2025-06-05', '7:12 AM', '12:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (850, 850, '2025-03-25', '7:54 AM', '1:55 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (851, 851, '2025-08-17', '6:50 AM', '1:10 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (852, 852, '2025-05-24', '8:04 AM', '2:59 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (853, 853, '2025-04-01', '8:54 AM', '3:55 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (854, 854, '2025-09-20', '6:29 AM', '4:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (855, 855, '2025-12-11', '6:33 AM', '3:18 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (856, 856, '2025-08-23', '7:14 AM', '4:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (857, 857, '2025-02-13', '7:38 AM', '12:16 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (858, 858, '2025-06-04', '6:40 AM', '3:06 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (859, 859, '2025-02-08', '6:22 AM', '4:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (860, 860, '2025-07-12', '8:25 AM', '12:14 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (861, 861, '2025-10-31', '8:08 AM', '1:00 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (862, 862, '2025-06-23', '7:13 AM', '3:09 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (863, 863, '2025-07-12', '7:55 AM', '3:46 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (864, 864, '2025-11-17', '6:05 AM', '3:12 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (865, 865, '2025-04-25', '6:16 AM', '1:26 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (866, 866, '2025-12-29', '6:35 AM', '1:05 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (867, 867, '2025-02-15', '8:36 AM', '1:53 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (868, 868, '2025-06-11', '6:28 AM', '3:48 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (869, 869, '2025-11-21', '6:11 AM', '4:21 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (870, 870, '2025-02-04', '6:10 AM', '12:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (871, 871, '2025-08-31', '8:17 AM', '4:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (872, 872, '2025-01-25', '7:30 AM', '12:28 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (873, 873, '2025-05-16', '8:06 AM', '12:48 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (874, 874, '2025-12-23', '7:23 AM', '1:59 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (875, 875, '2025-08-04', '7:20 AM', '4:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (876, 876, '2025-09-22', '6:22 AM', '3:42 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (877, 877, '2025-08-18', '8:10 AM', '4:14 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (878, 878, '2025-05-30', '6:27 AM', '4:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (879, 879, '2025-07-21', '7:08 AM', '4:20 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (880, 880, '2025-05-20', '7:59 AM', '12:13 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (881, 881, '2025-09-30', '7:43 AM', '1:37 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (882, 882, '2025-05-05', '6:20 AM', '1:38 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (883, 883, '2025-12-08', '6:57 AM', '3:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (884, 884, '2025-03-14', '6:55 AM', '1:44 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (885, 885, '2025-11-22', '7:28 AM', '3:43 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (886, 886, '2025-07-14', '7:11 AM', '1:48 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (887, 887, '2025-03-21', '7:37 AM', '1:52 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (888, 888, '2025-08-14', '6:45 AM', '3:01 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (889, 889, '2025-01-09', '8:23 AM', '1:44 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (890, 890, '2025-09-01', '8:27 AM', '3:49 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (891, 891, '2025-04-30', '6:19 AM', '1:09 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (892, 892, '2025-10-17', '7:59 AM', '12:34 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (893, 893, '2025-11-19', '6:33 AM', '12:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (894, 894, '2025-01-07', '6:55 AM', '12:29 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (895, 895, '2025-11-08', '6:11 AM', '3:25 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (896, 896, '2025-03-11', '8:11 AM', '2:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (897, 897, '2025-11-30', '6:45 AM', '2:24 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (898, 898, '2025-04-08', '6:06 AM', '4:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (899, 899, '2025-09-10', '8:42 AM', '4:19 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (900, 900, '2025-04-05', '8:35 AM', '4:26 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (901, 901, '2025-04-20', '8:32 AM', '2:45 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (902, 902, '2025-06-15', '8:54 AM', '12:46 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (903, 903, '2025-04-08', '8:46 AM', '2:18 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (904, 904, '2025-03-16', '8:30 AM', '1:09 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (905, 905, '2025-05-18', '7:35 AM', '2:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (906, 906, '2025-10-20', '6:52 AM', '12:42 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (907, 907, '2025-01-03', '6:44 AM', '4:38 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (908, 908, '2025-02-21', '7:23 AM', '4:27 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (909, 909, '2025-12-23', '6:22 AM', '4:16 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (910, 910, '2025-03-20', '7:31 AM', '2:52 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (911, 911, '2025-11-07', '8:40 AM', '3:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (912, 912, '2025-02-20', '7:53 AM', '4:18 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (913, 913, '2025-04-26', '7:32 AM', '1:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (914, 914, '2025-05-16', '6:21 AM', '12:54 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (915, 915, '2025-03-27', '6:43 AM', '3:45 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (916, 916, '2025-06-06', '7:50 AM', '1:17 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (917, 917, '2025-05-31', '6:17 AM', '1:33 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (918, 918, '2025-01-10', '8:32 AM', '4:10 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (919, 919, '2025-03-27', '8:16 AM', '2:18 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (920, 920, '2025-02-23', '6:28 AM', '1:35 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (921, 921, '2025-12-13', '7:37 AM', '3:51 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (922, 922, '2025-11-30', '8:13 AM', '4:07 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (923, 923, '2025-12-15', '6:42 AM', '4:26 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (924, 924, '2025-12-03', '7:25 AM', '12:44 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (925, 925, '2025-01-10', '7:12 AM', '4:00 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (926, 926, '2025-11-02', '7:15 AM', '3:48 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (927, 927, '2025-04-03', '7:32 AM', '3:56 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (928, 928, '2025-02-18', '7:45 AM', '4:54 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (929, 929, '2025-03-11', '8:42 AM', '3:25 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (930, 930, '2025-03-29', '7:36 AM', '12:49 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (931, 931, '2025-02-21', '6:43 AM', '2:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (932, 932, '2025-10-05', '7:22 AM', '3:00 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (933, 933, '2025-03-19', '7:00 AM', '3:39 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (934, 934, '2025-09-22', '6:54 AM', '3:35 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (935, 935, '2025-10-21', '7:36 AM', '1:31 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (936, 936, '2025-05-10', '7:22 AM', '12:40 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (937, 937, '2025-12-20', '6:36 AM', '2:27 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (938, 938, '2025-07-08', '7:06 AM', '12:02 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (939, 939, '2025-05-07', '7:37 AM', '3:03 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (940, 940, '2025-06-21', '6:35 AM', '4:55 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (941, 941, '2025-11-19', '6:38 AM', '4:32 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (942, 942, '2025-04-12', '6:45 AM', '12:13 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (943, 943, '2025-10-19', '6:02 AM', '1:54 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (944, 944, '2025-01-07', '8:07 AM', '1:43 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (945, 945, '2025-11-11', '8:51 AM', '3:58 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (946, 946, '2025-04-01', '6:37 AM', '4:42 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (947, 947, '2025-04-05', '6:53 AM', '12:49 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (948, 948, '2025-10-16', '7:52 AM', '4:24 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (949, 949, '2025-07-11', '8:13 AM', '1:41 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (950, 950, '2025-02-10', '8:43 AM', '2:59 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (951, 951, '2025-07-26', '7:54 AM', '3:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (952, 952, '2025-04-16', '7:08 AM', '3:35 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (953, 953, '2025-05-25', '6:42 AM', '2:40 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (954, 954, '2025-06-25', '8:22 AM', '12:30 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (955, 955, '2025-02-24', '6:22 AM', '3:30 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (956, 956, '2025-07-09', '6:51 AM', '2:22 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (957, 957, '2025-01-18', '8:04 AM', '4:24 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (958, 958, '2025-04-02', '7:14 AM', '12:31 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (959, 959, '2025-12-04', '6:35 AM', '3:11 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (960, 960, '2025-11-24', '6:12 AM', '1:52 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (961, 961, '2025-06-01', '7:28 AM', '3:05 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (962, 962, '2025-05-06', '6:33 AM', '1:22 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (963, 963, '2025-01-21', '6:01 AM', '3:35 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (964, 964, '2025-04-20', '7:45 AM', '2:29 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (965, 965, '2025-06-29', '7:36 AM', '4:46 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (966, 966, '2025-08-16', '8:30 AM', '4:14 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (967, 967, '2025-05-11', '6:11 AM', '1:57 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (968, 968, '2025-10-04', '8:00 AM', '4:37 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (969, 969, '2025-04-24', '8:15 AM', '3:24 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (970, 970, '2025-10-09', '8:56 AM', '12:13 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (971, 971, '2025-03-20', '8:12 AM', '1:56 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (972, 972, '2025-01-24', '6:06 AM', '2:47 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (973, 973, '2025-02-09', '6:38 AM', '4:19 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (974, 974, '2025-07-19', '7:48 AM', '12:36 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (975, 975, '2025-01-12', '8:27 AM', '12:04 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (976, 976, '2025-01-24', '6:29 AM', '12:45 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (977, 977, '2025-03-07', '7:59 AM', '2:52 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (978, 978, '2025-09-02', '7:07 AM', '2:59 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (979, 979, '2025-04-22', '8:36 AM', '3:39 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (980, 980, '2025-08-13', '7:16 AM', '1:48 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (981, 981, '2025-07-22', '8:44 AM', '12:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (982, 982, '2025-04-24', '6:13 AM', '4:53 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (983, 983, '2025-06-18', '8:47 AM', '2:17 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (984, 984, '2025-08-02', '8:02 AM', '4:04 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (985, 985, '2025-07-08', '7:03 AM', '3:57 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (986, 986, '2025-01-07', '8:25 AM', '4:29 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (987, 987, '2025-05-21', '8:04 AM', '2:07 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (988, 988, '2025-03-27', '7:41 AM', '2:07 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (989, 989, '2025-01-07', '6:30 AM', '4:46 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (990, 990, '2025-06-08', '6:00 AM', '12:43 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (991, 991, '2025-04-08', '7:30 AM', '2:38 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (992, 992, '2025-01-23', '8:56 AM', '1:21 PM', 'Absent');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (993, 993, '2025-10-17', '7:57 AM', '1:57 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (994, 994, '2025-02-14', '7:38 AM', '3:19 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (995, 995, '2025-07-01', '7:22 AM', '3:19 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (996, 996, '2025-08-01', '7:19 AM', '3:51 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (997, 997, '2025-04-25', '6:04 AM', '2:44 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (998, 998, '2025-10-12', '6:31 AM', '1:20 PM', 'Present');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (999, 999, '2025-05-24', '8:34 AM', '2:21 PM', 'Late');
-insert into Attendance (AttendanceID, EmployeeID, Date, TimeIn, TimeOut, Status) values (1000, 1000, '2025-03-29', '8:37 AM', '2:47 PM', 'Absent');
+
+INSERT INTO `Attendance` (`AttendanceID`, `EmployeeID`, `Date`, `TimeIn`, `TimeOut`, `Status`) VALUES
+(6000, 1, '2025-11-18', '03:36:00', '04:19:00', 'Present'),
+(6002, 3, '2025-11-18', '01:07:00', '06:42:00', 'Present'),
+(6003, 4, '2025-11-18', '05:12:00', '05:00:00', 'Present'),
+(6004, 5, '2025-11-18', '12:36:00', '08:41:00', 'Late'),
+(6005, 6, '2025-11-18', '05:03:00', '05:19:00', 'Present'),
+(6006, 7, '2025-11-18', '03:49:00', '04:30:00', 'Present'),
+(6007, 8, '2025-11-18', '06:33:00', '07:15:00', 'Present'),
+(6008, 9, '2025-11-18', '04:48:00', '08:02:00', 'Present'),
+(6009, 10, '2025-11-18', '12:32:00', '06:14:00', 'Late'),
+(6010, 11, '2025-11-18', '06:28:00', '06:56:00', 'Present'),
+(6011, 12, '2025-11-18', '04:22:00', '07:50:00', 'Present'),
+(6012, 13, '2025-11-18', '06:44:00', '04:38:00', 'Present'),
+(6013, 14, '2025-11-18', '05:53:00', '05:55:00', 'Present'),
+(6014, 15, '2025-11-18', '03:19:00', '04:49:00', 'Present'),
+(6015, 16, '2025-11-18', '01:57:00', '05:41:00', 'Present'),
+(6016, 17, '2025-11-18', '02:41:00', '08:36:00', 'Present'),
+(6017, 18, '2025-11-18', '05:20:00', '05:37:00', 'Present'),
+(6018, 19, '2025-11-18', '05:10:00', '04:35:00', 'Present'),
+(6019, 20, '2025-11-18', '04:16:00', '07:46:00', 'Present'),
+(6020, 21, '2025-11-18', '01:48:00', '08:52:00', 'Present'),
+(6021, 22, '2025-11-18', '05:46:00', '06:53:00', 'Present'),
+(6022, 23, '2025-11-18', '02:46:00', '07:37:00', 'Present'),
+(6023, 24, '2025-11-18', '04:59:00', '05:04:00', 'Present'),
+(6024, 25, '2025-11-18', '05:45:00', '07:26:00', 'Present'),
+(6025, 26, '2025-11-18', '02:55:00', '04:41:00', 'Present'),
+(6026, 27, '2025-11-18', '12:27:00', '07:44:00', 'Late'),
+(6027, 28, '2025-11-18', '03:26:00', '06:17:00', 'Present'),
+(6028, 29, '2025-11-18', '02:55:00', '07:46:00', 'Present'),
+(6029, 30, '2025-11-18', '01:22:00', '05:50:00', 'Present'),
+(6030, 31, '2025-11-18', '12:59:00', '04:46:00', 'Late'),
+(6031, 32, '2025-11-18', '02:31:00', '07:38:00', 'Present'),
+(6032, 33, '2025-11-18', '12:37:00', '06:19:00', 'Late'),
+(6033, 34, '2025-11-18', '02:40:00', '05:40:00', 'Present'),
+(6034, 35, '2025-11-18', '05:37:00', '04:23:00', 'Present'),
+(6035, 36, '2025-11-18', '03:25:00', '08:24:00', 'Present'),
+(6036, 37, '2025-11-18', '05:55:00', '08:48:00', 'Present'),
+(6037, 38, '2025-11-18', '02:41:00', '08:14:00', 'Present'),
+(6038, 39, '2025-11-18', '05:51:00', '06:21:00', 'Present'),
+(6039, 40, '2025-11-18', '12:23:00', '05:59:00', 'Late'),
+(6040, 41, '2025-11-18', '04:47:00', '08:32:00', 'Present'),
+(6041, 42, '2025-11-18', '05:08:00', '06:17:00', 'Present'),
+(6042, 43, '2025-11-18', '03:18:00', '07:59:00', 'Present'),
+(6043, 44, '2025-11-18', '03:09:00', '08:30:00', 'Present'),
+(6044, 45, '2025-11-18', '02:17:00', '04:38:00', 'Present'),
+(6045, 46, '2025-11-18', '03:43:00', '06:20:00', 'Present'),
+(6046, 47, '2025-11-18', '06:22:00', '04:29:00', 'Present'),
+(6047, 48, '2025-11-18', '12:38:00', '06:28:00', 'Late'),
+(6048, 49, '2025-11-18', '03:27:00', '04:48:00', 'Present'),
+(6049, 50, '2025-11-18', '03:56:00', '04:53:00', 'Present'),
+(6050, 51, '2025-11-18', '05:15:00', '05:41:00', 'Present'),
+(6051, 52, '2025-11-18', '03:07:00', '07:57:00', 'Present'),
+(6052, 53, '2025-11-18', '06:52:00', '07:16:00', 'Present'),
+(6053, 54, '2025-11-18', '03:28:00', '06:50:00', 'Present'),
+(6054, 55, '2025-11-18', '01:29:00', '04:00:00', 'Present'),
+(6055, 56, '2025-11-18', '01:46:00', '07:11:00', 'Present'),
+(6056, 57, '2025-11-18', '04:02:00', '05:08:00', 'Present'),
+(6057, 58, '2025-11-18', '04:36:00', '06:23:00', 'Present'),
+(6058, 59, '2025-11-18', '06:15:00', '08:54:00', 'Present'),
+(6059, 60, '2025-11-18', '04:25:00', '08:43:00', 'Present'),
+(6060, 61, '2025-11-18', '06:19:00', '08:05:00', 'Present'),
+(6061, 62, '2025-11-18', '04:59:00', '07:47:00', 'Present'),
+(6062, 63, '2025-11-18', '04:08:00', '04:00:00', 'Present'),
+(6063, 64, '2025-11-18', '05:31:00', '08:51:00', 'Present'),
+(6064, 65, '2025-11-18', '02:07:00', '05:53:00', 'Present'),
+(6065, 66, '2025-11-18', '12:18:00', '06:26:00', 'Late'),
+(6066, 67, '2025-11-18', '12:16:00', '08:09:00', 'Late'),
+(6067, 68, '2025-11-18', '02:39:00', '06:57:00', 'Present'),
+(6068, 69, '2025-11-18', '03:59:00', '07:09:00', 'Present'),
+(6069, 70, '2025-11-18', '03:33:00', '07:27:00', 'Present'),
+(6070, 71, '2025-11-18', '04:34:00', '04:02:00', 'Present'),
+(6071, 72, '2025-11-18', '01:52:00', '05:46:00', 'Present'),
+(6072, 73, '2025-11-18', '03:59:00', '06:13:00', 'Present'),
+(6073, 74, '2025-11-18', '01:56:00', '04:06:00', 'Present'),
+(6074, 75, '2025-11-18', '03:25:00', '08:03:00', 'Present'),
+(6075, 76, '2025-11-18', '06:14:00', '04:15:00', 'Present'),
+(6076, 77, '2025-11-18', '04:31:00', '04:56:00', 'Present'),
+(6077, 78, '2025-11-18', '12:34:00', '04:08:00', 'Late'),
+(6078, 79, '2025-11-18', '05:49:00', '08:34:00', 'Present'),
+(6079, 80, '2025-11-18', '01:11:00', '07:20:00', 'Present'),
+(6080, 81, '2025-11-18', '06:06:00', '08:19:00', 'Present'),
+(6081, 82, '2025-11-18', '06:43:00', '07:33:00', 'Present'),
+(6082, 83, '2025-11-18', '05:23:00', '07:48:00', 'Present'),
+(6083, 84, '2025-11-18', '02:46:00', '07:51:00', 'Present'),
+(6084, 85, '2025-11-18', '01:08:00', '08:06:00', 'Present'),
+(6085, 86, '2025-11-18', '03:17:00', '06:25:00', 'Present'),
+(6086, 87, '2025-11-18', '06:09:00', '04:12:00', 'Present'),
+(6087, 88, '2025-11-18', '01:32:00', '05:21:00', 'Present'),
+(6088, 89, '2025-11-18', '01:30:00', '07:49:00', 'Present'),
+(6089, 90, '2025-11-18', '06:09:00', '07:43:00', 'Present'),
+(6090, 91, '2025-11-18', '12:13:00', '06:10:00', 'Late'),
+(6091, 92, '2025-11-18', '02:07:00', '06:55:00', 'Present'),
+(6092, 93, '2025-11-18', '02:02:00', '06:00:00', 'Present'),
+(6093, 94, '2025-11-18', '02:01:00', '08:01:00', 'Present'),
+(6094, 95, '2025-11-18', '12:38:00', '08:27:00', 'Late'),
+(6095, 96, '2025-11-18', '01:24:00', '06:48:00', 'Present'),
+(6096, 97, '2025-11-18', '03:57:00', '08:34:00', 'Present'),
+(6097, 98, '2025-11-18', '12:05:00', '08:16:00', 'Late'),
+(6098, 99, '2025-11-18', '04:48:00', '04:16:00', 'Present'),
+(6099, 100, '2025-11-18', '01:25:00', '08:17:00', 'Present'),
+(6100, 101, '2025-11-18', '05:51:00', '07:50:00', 'Present'),
+(6101, 102, '2025-11-18', '01:45:00', '04:39:00', 'Present'),
+(6102, 103, '2025-11-18', '05:58:00', '06:39:00', 'Present'),
+(6103, 104, '2025-11-18', '12:01:00', '08:41:00', 'Late'),
+(6104, 105, '2025-11-18', '05:33:00', '07:59:00', 'Present'),
+(6105, 106, '2025-11-18', '06:13:00', '06:30:00', 'Present'),
+(6106, 107, '2025-11-18', '03:33:00', '05:56:00', 'Present'),
+(6107, 108, '2025-11-18', '06:10:00', '08:01:00', 'Present'),
+(6108, 109, '2025-11-18', '02:44:00', '07:37:00', 'Present'),
+(6109, 110, '2025-11-18', '06:51:00', '05:07:00', 'Present'),
+(6110, 111, '2025-11-18', '06:09:00', '04:49:00', 'Present'),
+(6111, 112, '2025-11-18', '04:44:00', '07:40:00', 'Present'),
+(6112, 113, '2025-11-18', '05:40:00', '05:06:00', 'Present'),
+(6113, 114, '2025-11-18', '12:01:00', '06:35:00', 'Late'),
+(6114, 115, '2025-11-18', '12:04:00', '06:51:00', 'Late'),
+(6115, 116, '2025-11-18', '03:10:00', '05:29:00', 'Present'),
+(6116, 117, '2025-11-18', '02:15:00', '07:01:00', 'Present'),
+(6117, 118, '2025-11-18', '05:32:00', '04:39:00', 'Present'),
+(6118, 119, '2025-11-18', '04:18:00', '04:13:00', 'Present'),
+(6119, 120, '2025-11-18', '04:21:00', '08:29:00', 'Present'),
+(6120, 121, '2025-11-18', '06:05:00', '06:07:00', 'Present'),
+(6121, 122, '2025-11-18', '12:19:00', '08:51:00', 'Late'),
+(6122, 123, '2025-11-18', '04:02:00', '04:16:00', 'Present'),
+(6123, 124, '2025-11-18', '01:53:00', '07:33:00', 'Present'),
+(6124, 125, '2025-11-18', '05:04:00', '04:01:00', 'Present'),
+(6125, 126, '2025-11-18', '01:09:00', '05:04:00', 'Present'),
+(6126, 127, '2025-11-18', '01:51:00', '07:59:00', 'Present'),
+(6127, 128, '2025-11-18', '03:59:00', '07:35:00', 'Present'),
+(6128, 129, '2025-11-18', '01:26:00', '07:32:00', 'Present'),
+(6129, 130, '2025-11-18', '12:59:00', '08:16:00', 'Late'),
+(6130, 131, '2025-11-18', '06:01:00', '08:14:00', 'Present'),
+(6131, 132, '2025-11-18', '02:13:00', '05:04:00', 'Present'),
+(6132, 133, '2025-11-18', '03:20:00', '06:05:00', 'Present'),
+(6133, 134, '2025-11-18', '03:55:00', '06:45:00', 'Present'),
+(6134, 135, '2025-11-18', '06:31:00', '06:25:00', 'Present'),
+(6135, 136, '2025-11-18', '06:58:00', '04:05:00', 'Present'),
+(6136, 137, '2025-11-18', '02:13:00', '05:28:00', 'Present'),
+(6137, 138, '2025-11-18', '02:41:00', '06:04:00', 'Present'),
+(6138, 139, '2025-11-18', '04:30:00', '08:52:00', 'Present'),
+(6139, 140, '2025-11-18', '04:45:00', '08:47:00', 'Present'),
+(6140, 141, '2025-11-18', '03:41:00', '04:39:00', 'Present'),
+(6141, 142, '2025-11-18', '05:54:00', '05:57:00', 'Present'),
+(6142, 143, '2025-11-18', '04:01:00', '08:51:00', 'Present'),
+(6143, 144, '2025-11-18', '02:22:00', '04:58:00', 'Present'),
+(6144, 145, '2025-11-18', '02:51:00', '07:47:00', 'Present'),
+(6145, 146, '2025-11-18', '05:13:00', '04:54:00', 'Present'),
+(6146, 147, '2025-11-18', '03:35:00', '05:37:00', 'Present'),
+(6147, 148, '2025-11-18', '12:45:00', '06:50:00', 'Late'),
+(6148, 149, '2025-11-18', '04:49:00', '07:44:00', 'Present'),
+(6149, 150, '2025-11-18', '04:54:00', '06:07:00', 'Present'),
+(6150, 151, '2025-11-18', '12:29:00', '06:45:00', 'Late'),
+(6151, 152, '2025-11-18', '05:07:00', '06:14:00', 'Present'),
+(6152, 153, '2025-11-18', '02:41:00', '05:44:00', 'Present'),
+(6153, 154, '2025-11-18', '01:43:00', '06:22:00', 'Present'),
+(6154, 155, '2025-11-18', '04:52:00', '05:29:00', 'Present'),
+(6155, 156, '2025-11-18', '12:19:00', '05:02:00', 'Late'),
+(6156, 157, '2025-11-18', '05:15:00', '05:20:00', 'Present'),
+(6157, 158, '2025-11-18', '05:18:00', '05:07:00', 'Present'),
+(6158, 159, '2025-11-18', '05:14:00', '05:21:00', 'Present'),
+(6159, 160, '2025-11-18', '04:30:00', '07:05:00', 'Present'),
+(6160, 161, '2025-11-18', '04:10:00', '04:22:00', 'Present'),
+(6161, 162, '2025-11-18', '04:41:00', '06:56:00', 'Present'),
+(6162, 163, '2025-11-18', '02:58:00', '07:08:00', 'Present'),
+(6163, 164, '2025-11-18', '02:45:00', '06:04:00', 'Present'),
+(6164, 165, '2025-11-18', '03:54:00', '08:25:00', 'Present'),
+(6165, 166, '2025-11-18', '01:38:00', '06:29:00', 'Present'),
+(6166, 167, '2025-11-18', '02:33:00', '04:05:00', 'Present'),
+(6167, 168, '2025-11-18', '12:56:00', '06:50:00', 'Late'),
+(6168, 169, '2025-11-18', '04:08:00', '04:40:00', 'Present'),
+(6169, 170, '2025-11-18', '06:16:00', '06:17:00', 'Present'),
+(6170, 171, '2025-11-18', '06:09:00', '04:54:00', 'Present'),
+(6171, 172, '2025-11-18', '12:06:00', '07:25:00', 'Late'),
+(6172, 173, '2025-11-18', '04:27:00', '07:30:00', 'Present'),
+(6173, 174, '2025-11-18', '04:33:00', '08:22:00', 'Present'),
+(6174, 175, '2025-11-18', '06:27:00', '06:46:00', 'Present'),
+(6175, 176, '2025-11-18', '06:25:00', '04:07:00', 'Present'),
+(6176, 177, '2025-11-18', '02:28:00', '04:58:00', 'Present'),
+(6177, 178, '2025-11-18', '03:08:00', '06:35:00', 'Present'),
+(6178, 179, '2025-11-18', '12:18:00', '06:19:00', 'Late'),
+(6179, 180, '2025-11-18', '12:18:00', '05:36:00', 'Late'),
+(6180, 181, '2025-11-18', '01:55:00', '08:58:00', 'Present'),
+(6181, 182, '2025-11-18', '06:48:00', '05:25:00', 'Present'),
+(6182, 183, '2025-11-18', '03:10:00', '07:49:00', 'Present'),
+(6183, 184, '2025-11-18', '05:04:00', '07:02:00', 'Present'),
+(6184, 185, '2025-11-18', '04:45:00', '08:40:00', 'Present'),
+(6185, 186, '2025-11-18', '06:40:00', '07:32:00', 'Present'),
+(6186, 187, '2025-11-18', '05:00:00', '06:28:00', 'Present'),
+(6187, 188, '2025-11-18', '03:19:00', '06:19:00', 'Present'),
+(6188, 189, '2025-11-18', '02:08:00', '06:46:00', 'Present'),
+(6189, 190, '2025-11-18', '05:36:00', '08:39:00', 'Present'),
+(6190, 191, '2025-11-18', '01:12:00', '07:26:00', 'Present'),
+(6191, 192, '2025-11-18', '06:55:00', '07:44:00', 'Present'),
+(6192, 193, '2025-11-18', '12:48:00', '04:17:00', 'Late'),
+(6193, 194, '2025-11-18', '02:03:00', '04:56:00', 'Present'),
+(6194, 195, '2025-11-18', '03:59:00', '06:24:00', 'Present'),
+(6195, 196, '2025-11-18', '06:06:00', '04:52:00', 'Present'),
+(6196, 197, '2025-11-18', '12:13:00', '07:19:00', 'Late'),
+(6197, 198, '2025-11-18', '01:28:00', '04:36:00', 'Present'),
+(6198, 199, '2025-11-18', '12:52:00', '06:43:00', 'Late'),
+(6199, 200, '2025-11-18', '02:53:00', '07:48:00', 'Present'),
+(6200, 201, '2025-11-18', '06:33:00', '07:29:00', 'Present'),
+(6201, 202, '2025-11-18', '06:45:00', '08:20:00', 'Present'),
+(6202, 203, '2025-11-18', '01:10:00', '06:23:00', 'Present'),
+(6203, 204, '2025-11-18', '05:13:00', '07:36:00', 'Present'),
+(6204, 205, '2025-11-18', '06:35:00', '06:53:00', 'Present'),
+(6205, 206, '2025-11-18', '01:21:00', '04:01:00', 'Present'),
+(6206, 207, '2025-11-18', '02:35:00', '07:07:00', 'Present'),
+(6207, 208, '2025-11-18', '04:31:00', '04:25:00', 'Present'),
+(6208, 209, '2025-11-18', '05:38:00', '05:05:00', 'Present'),
+(6209, 210, '2025-11-18', '06:05:00', '04:43:00', 'Present'),
+(6210, 211, '2025-11-18', '02:23:00', '06:11:00', 'Present'),
+(6211, 212, '2025-11-18', '04:38:00', '07:10:00', 'Present'),
+(6212, 213, '2025-11-18', '03:43:00', '06:07:00', 'Present'),
+(6213, 214, '2025-11-18', '06:09:00', '06:14:00', 'Present'),
+(6214, 215, '2025-11-18', '06:58:00', '04:58:00', 'Present'),
+(6215, 216, '2025-11-18', '03:53:00', '04:54:00', 'Present'),
+(6216, 217, '2025-11-18', '05:24:00', '06:19:00', 'Present'),
+(6217, 218, '2025-11-18', '02:39:00', '06:01:00', 'Present'),
+(6218, 219, '2025-11-18', '06:22:00', '07:59:00', 'Present'),
+(6219, 220, '2025-11-18', '06:30:00', '07:30:00', 'Present'),
+(6220, 221, '2025-11-18', '06:28:00', '05:38:00', 'Present'),
+(6221, 222, '2025-11-18', '04:04:00', '06:03:00', 'Present'),
+(6222, 223, '2025-11-18', '03:23:00', '04:46:00', 'Present'),
+(6223, 224, '2025-11-18', '12:36:00', '07:47:00', 'Late'),
+(6224, 225, '2025-11-18', '12:36:00', '08:45:00', 'Late'),
+(6225, 226, '2025-11-18', '12:55:00', '08:37:00', 'Late'),
+(6226, 227, '2025-11-18', '06:15:00', '08:37:00', 'Present'),
+(6227, 228, '2025-11-18', '03:28:00', '04:13:00', 'Present'),
+(6228, 229, '2025-11-18', '12:33:00', '08:52:00', 'Late'),
+(6229, 230, '2025-11-18', '12:29:00', '04:29:00', 'Late'),
+(6230, 231, '2025-11-18', '04:06:00', '05:16:00', 'Present'),
+(6231, 232, '2025-11-18', '04:12:00', '07:26:00', 'Present'),
+(6232, 233, '2025-11-18', '05:28:00', '07:54:00', 'Present'),
+(6233, 234, '2025-11-18', '05:23:00', '07:52:00', 'Present'),
+(6234, 235, '2025-11-18', '02:34:00', '07:02:00', 'Present'),
+(6235, 236, '2025-11-18', '01:24:00', '07:53:00', 'Present'),
+(6236, 237, '2025-11-18', '02:20:00', '07:57:00', 'Present'),
+(6237, 238, '2025-11-18', '12:57:00', '08:31:00', 'Late'),
+(6238, 239, '2025-11-18', '02:21:00', '08:12:00', 'Present'),
+(6239, 240, '2025-11-18', '05:42:00', '06:32:00', 'Present'),
+(6240, 241, '2025-11-18', '12:35:00', '07:32:00', 'Late'),
+(6241, 242, '2025-11-18', '05:53:00', '08:04:00', 'Present'),
+(6242, 243, '2025-11-18', '03:35:00', '05:38:00', 'Present'),
+(6243, 244, '2025-11-18', '03:04:00', '04:38:00', 'Present'),
+(6244, 245, '2025-11-18', '02:50:00', '07:19:00', 'Present'),
+(6245, 246, '2025-11-18', '04:30:00', '07:54:00', 'Present'),
+(6246, 247, '2025-11-18', '12:38:00', '06:02:00', 'Late'),
+(6247, 248, '2025-11-18', '03:12:00', '06:12:00', 'Present'),
+(6248, 249, '2025-11-18', '01:48:00', '06:05:00', 'Present'),
+(6249, 250, '2025-11-18', '04:18:00', '07:17:00', 'Present'),
+(6250, 251, '2025-11-18', '03:34:00', '07:25:00', 'Present'),
+(6251, 252, '2025-11-18', '06:51:00', '07:35:00', 'Present'),
+(6252, 253, '2025-11-18', '03:16:00', '05:56:00', 'Present'),
+(6253, 254, '2025-11-18', '05:07:00', '05:16:00', 'Present'),
+(6254, 255, '2025-11-18', '02:30:00', '06:47:00', 'Present'),
+(6255, 256, '2025-11-18', '05:14:00', '05:52:00', 'Present'),
+(6256, 257, '2025-11-18', '03:21:00', '04:25:00', 'Present'),
+(6257, 258, '2025-11-18', '01:23:00', '07:30:00', 'Present'),
+(6258, 259, '2025-11-18', '04:01:00', '04:30:00', 'Present'),
+(6259, 260, '2025-11-18', '06:44:00', '05:23:00', 'Present'),
+(6260, 261, '2025-11-18', '05:12:00', '05:36:00', 'Present'),
+(6261, 262, '2025-11-18', '12:20:00', '07:33:00', 'Late'),
+(6262, 263, '2025-11-18', '02:20:00', '07:04:00', 'Present'),
+(6263, 264, '2025-11-18', '06:07:00', '07:33:00', 'Present'),
+(6264, 265, '2025-11-18', '01:59:00', '05:43:00', 'Present'),
+(6265, 266, '2025-11-18', '12:23:00', '04:39:00', 'Late'),
+(6266, 267, '2025-11-18', '12:03:00', '08:22:00', 'Late'),
+(6267, 268, '2025-11-18', '01:54:00', '07:35:00', 'Present'),
+(6268, 269, '2025-11-18', '12:27:00', '06:05:00', 'Late'),
+(6269, 270, '2025-11-18', '02:53:00', '07:51:00', 'Present'),
+(6270, 271, '2025-11-18', '01:39:00', '04:06:00', 'Present'),
+(6271, 272, '2025-11-18', '03:47:00', '04:49:00', 'Present'),
+(6272, 273, '2025-11-18', '01:38:00', '04:43:00', 'Present'),
+(6273, 274, '2025-11-18', '04:23:00', '06:14:00', 'Present'),
+(6274, 275, '2025-11-18', '01:09:00', '05:10:00', 'Present'),
+(6275, 276, '2025-11-18', '01:09:00', '05:48:00', 'Present'),
+(6276, 277, '2025-11-18', '05:23:00', '06:37:00', 'Present'),
+(6277, 278, '2025-11-18', '03:42:00', '05:45:00', 'Present'),
+(6278, 279, '2025-11-18', '02:27:00', '08:25:00', 'Present'),
+(6279, 280, '2025-11-18', '05:42:00', '05:33:00', 'Present'),
+(6280, 281, '2025-11-18', '06:27:00', '07:39:00', 'Present'),
+(6281, 282, '2025-11-18', '03:32:00', '04:21:00', 'Present'),
+(6282, 283, '2025-11-18', '01:03:00', '06:34:00', 'Present'),
+(6283, 284, '2025-11-18', '01:18:00', '05:18:00', 'Present'),
+(6284, 285, '2025-11-18', '12:29:00', '08:07:00', 'Late'),
+(6285, 286, '2025-11-18', '12:02:00', '05:18:00', 'Late'),
+(6286, 287, '2025-11-18', '12:58:00', '08:32:00', 'Late'),
+(6287, 288, '2025-11-18', '03:33:00', '06:21:00', 'Present'),
+(6288, 289, '2025-11-18', '02:55:00', '05:50:00', 'Present'),
+(6289, 290, '2025-11-18', '03:14:00', '07:53:00', 'Present'),
+(6290, 291, '2025-11-18', '02:30:00', '04:12:00', 'Present'),
+(6291, 292, '2025-11-18', '03:58:00', '07:45:00', 'Present'),
+(6292, 293, '2025-11-18', '01:12:00', '05:37:00', 'Present'),
+(6293, 294, '2025-11-18', '01:57:00', '08:24:00', 'Present'),
+(6294, 295, '2025-11-18', '03:49:00', '04:44:00', 'Present'),
+(6295, 296, '2025-11-18', '04:13:00', '04:45:00', 'Present'),
+(6296, 297, '2025-11-18', '02:49:00', '04:04:00', 'Present'),
+(6297, 298, '2025-11-18', '05:57:00', '04:22:00', 'Present'),
+(6298, 299, '2025-11-18', '01:50:00', '04:33:00', 'Present'),
+(6299, 300, '2025-11-18', '02:11:00', '07:16:00', 'Present'),
+(6300, 301, '2025-11-18', '05:19:00', '05:19:00', 'Present'),
+(6301, 302, '2025-11-18', '06:05:00', '04:31:00', 'Present'),
+(6302, 303, '2025-11-18', '01:48:00', '08:50:00', 'Present'),
+(6303, 304, '2025-11-18', '01:42:00', '04:29:00', 'Present'),
+(6304, 305, '2025-11-18', '01:08:00', '08:57:00', 'Present'),
+(6305, 306, '2025-11-18', '04:24:00', '04:41:00', 'Present'),
+(6306, 307, '2025-11-18', '05:44:00', '04:19:00', 'Present'),
+(6307, 308, '2025-11-18', '05:26:00', '08:56:00', 'Present'),
+(6308, 309, '2025-11-18', '02:30:00', '06:10:00', 'Present'),
+(6309, 310, '2025-11-18', '01:26:00', '07:28:00', 'Present'),
+(6310, 311, '2025-11-18', '12:48:00', '08:31:00', 'Late'),
+(6311, 312, '2025-11-18', '03:07:00', '07:39:00', 'Present'),
+(6312, 313, '2025-11-18', '02:21:00', '08:23:00', 'Present'),
+(6313, 314, '2025-11-18', '01:50:00', '06:34:00', 'Present'),
+(6314, 315, '2025-11-18', '02:19:00', '08:21:00', 'Present'),
+(6315, 316, '2025-11-18', '03:24:00', '04:08:00', 'Present'),
+(6316, 317, '2025-11-18', '01:18:00', '05:00:00', 'Present'),
+(6317, 318, '2025-11-18', '03:58:00', '06:40:00', 'Present'),
+(6318, 319, '2025-11-18', '06:07:00', '08:28:00', 'Present'),
+(6319, 320, '2025-11-18', '02:41:00', '06:27:00', 'Present'),
+(6320, 321, '2025-11-18', '04:55:00', '07:22:00', 'Present'),
+(6321, 322, '2025-11-18', '03:45:00', '05:30:00', 'Present'),
+(6322, 323, '2025-11-18', '02:18:00', '08:50:00', 'Present'),
+(6323, 324, '2025-11-18', '06:21:00', '05:43:00', 'Present'),
+(6324, 325, '2025-11-18', '06:47:00', '08:07:00', 'Present'),
+(6325, 326, '2025-11-18', '02:49:00', '04:59:00', 'Present'),
+(6326, 327, '2025-11-18', '05:56:00', '06:37:00', 'Present'),
+(6327, 328, '2025-11-18', '12:20:00', '04:20:00', 'Late'),
+(6328, 329, '2025-11-18', '01:02:00', '05:21:00', 'Present'),
+(6329, 330, '2025-11-18', '06:36:00', '06:39:00', 'Present'),
+(6330, 331, '2025-11-18', '06:02:00', '08:00:00', 'Present'),
+(6331, 332, '2025-11-18', '04:34:00', '05:49:00', 'Present'),
+(6332, 333, '2025-11-18', '12:45:00', '06:09:00', 'Late'),
+(6333, 334, '2025-11-18', '03:08:00', '06:25:00', 'Present'),
+(6334, 335, '2025-11-18', '01:20:00', '04:36:00', 'Present'),
+(6335, 336, '2025-11-18', '05:55:00', '05:09:00', 'Present'),
+(6336, 337, '2025-11-18', '12:00:00', '05:12:00', 'Late'),
+(6337, 338, '2025-11-18', '01:44:00', '08:22:00', 'Present'),
+(6338, 339, '2025-11-18', '05:59:00', '08:56:00', 'Present'),
+(6339, 340, '2025-11-18', '06:42:00', '07:21:00', 'Present'),
+(6340, 341, '2025-11-18', '04:41:00', '04:42:00', 'Present'),
+(6341, 342, '2025-11-18', '02:44:00', '05:08:00', 'Present'),
+(6342, 343, '2025-11-18', '01:02:00', '05:25:00', 'Present'),
+(6343, 344, '2025-11-18', '06:54:00', '05:17:00', 'Present'),
+(6344, 345, '2025-11-18', '01:08:00', '05:35:00', 'Present'),
+(6345, 346, '2025-11-18', '04:03:00', '04:12:00', 'Present'),
+(6346, 347, '2025-11-18', '02:47:00', '08:55:00', 'Present'),
+(6347, 348, '2025-11-18', '05:33:00', '05:12:00', 'Present'),
+(6348, 349, '2025-11-18', '01:20:00', '08:11:00', 'Present'),
+(6349, 350, '2025-11-18', '03:08:00', '06:18:00', 'Present'),
+(6350, 351, '2025-11-18', '01:34:00', '06:08:00', 'Present'),
+(6351, 352, '2025-11-18', '03:22:00', '08:37:00', 'Present'),
+(6352, 353, '2025-11-18', '05:58:00', '05:13:00', 'Present'),
+(6353, 354, '2025-11-18', '03:44:00', '04:32:00', 'Present'),
+(6354, 355, '2025-11-18', '12:00:00', '05:39:00', 'Late'),
+(6355, 356, '2025-11-18', '05:38:00', '08:30:00', 'Present'),
+(6356, 357, '2025-11-18', '02:25:00', '07:09:00', 'Present'),
+(6357, 358, '2025-11-18', '06:57:00', '06:20:00', 'Present'),
+(6358, 359, '2025-11-18', '02:19:00', '05:05:00', 'Present'),
+(6359, 360, '2025-11-18', '01:07:00', '06:21:00', 'Present'),
+(6360, 361, '2025-11-18', '12:05:00', '07:41:00', 'Late'),
+(6361, 362, '2025-11-18', '04:30:00', '07:02:00', 'Present'),
+(6362, 363, '2025-11-18', '12:02:00', '08:19:00', 'Late'),
+(6363, 364, '2025-11-18', '12:16:00', '05:38:00', 'Late'),
+(6364, 365, '2025-11-18', '03:07:00', '04:02:00', 'Present'),
+(6365, 366, '2025-11-18', '01:43:00', '07:35:00', 'Present'),
+(6366, 367, '2025-11-18', '04:04:00', '07:25:00', 'Present'),
+(6367, 368, '2025-11-18', '05:34:00', '04:50:00', 'Present'),
+(6368, 369, '2025-11-18', '02:56:00', '07:44:00', 'Present'),
+(6369, 370, '2025-11-18', '02:01:00', '06:15:00', 'Present'),
+(6370, 371, '2025-11-18', '05:28:00', '08:22:00', 'Present'),
+(6371, 372, '2025-11-18', '05:23:00', '06:29:00', 'Present'),
+(6372, 373, '2025-11-18', '01:06:00', '06:01:00', 'Present'),
+(6373, 374, '2025-11-18', '05:10:00', '08:43:00', 'Present'),
+(6374, 375, '2025-11-18', '12:20:00', '08:35:00', 'Late'),
+(6375, 376, '2025-11-18', '01:32:00', '07:58:00', 'Present'),
+(6376, 377, '2025-11-18', '04:49:00', '07:06:00', 'Present'),
+(6377, 378, '2025-11-18', '12:54:00', '07:42:00', 'Late'),
+(6378, 379, '2025-11-18', '04:51:00', '06:29:00', 'Present'),
+(6379, 380, '2025-11-18', '06:30:00', '05:34:00', 'Present'),
+(6380, 381, '2025-11-18', '05:10:00', '04:57:00', 'Present'),
+(6381, 382, '2025-11-18', '03:27:00', '07:00:00', 'Present'),
+(6382, 383, '2025-11-18', '04:16:00', '08:48:00', 'Present'),
+(6383, 384, '2025-11-18', '05:19:00', '07:07:00', 'Present'),
+(6384, 385, '2025-11-18', '01:55:00', '08:47:00', 'Present'),
+(6385, 386, '2025-11-18', '03:18:00', '07:15:00', 'Present'),
+(6386, 387, '2025-11-18', '02:03:00', '07:51:00', 'Present'),
+(6387, 388, '2025-11-18', '04:06:00', '06:53:00', 'Present'),
+(6388, 389, '2025-11-18', '06:42:00', '05:04:00', 'Present'),
+(6389, 390, '2025-11-18', '05:21:00', '08:58:00', 'Present'),
+(6390, 391, '2025-11-18', '02:56:00', '08:12:00', 'Present'),
+(6391, 392, '2025-11-18', '06:47:00', '07:20:00', 'Present'),
+(6392, 393, '2025-11-18', '04:18:00', '05:03:00', 'Present'),
+(6393, 394, '2025-11-18', '12:17:00', '08:12:00', 'Late'),
+(6394, 395, '2025-11-18', '06:19:00', '05:01:00', 'Present'),
+(6395, 396, '2025-11-18', '06:44:00', '07:06:00', 'Present'),
+(6396, 397, '2025-11-18', '01:58:00', '06:43:00', 'Present'),
+(6397, 398, '2025-11-18', '06:41:00', '06:41:00', 'Present'),
+(6398, 399, '2025-11-18', '03:14:00', '08:49:00', 'Present'),
+(6399, 400, '2025-11-18', '03:21:00', '07:36:00', 'Present'),
+(6400, 401, '2025-11-18', '03:45:00', '05:18:00', 'Present'),
+(6401, 402, '2025-11-18', '12:50:00', '07:08:00', 'Late'),
+(6402, 403, '2025-11-18', '01:25:00', '04:25:00', 'Present'),
+(6403, 404, '2025-11-18', '06:19:00', '04:30:00', 'Present'),
+(6404, 405, '2025-11-18', '02:55:00', '04:16:00', 'Present'),
+(6405, 406, '2025-11-18', '01:07:00', '07:15:00', 'Present'),
+(6406, 407, '2025-11-18', '03:15:00', '08:33:00', 'Present'),
+(6407, 408, '2025-11-18', '12:24:00', '07:14:00', 'Late'),
+(6408, 409, '2025-11-18', '03:00:00', '07:09:00', 'Present'),
+(6409, 410, '2025-11-18', '04:48:00', '06:27:00', 'Present'),
+(6410, 411, '2025-11-18', '06:42:00', '05:56:00', 'Present'),
+(6411, 412, '2025-11-18', '06:55:00', '08:47:00', 'Present'),
+(6412, 413, '2025-11-18', '05:19:00', '06:02:00', 'Present'),
+(6413, 414, '2025-11-18', '03:07:00', '07:44:00', 'Present'),
+(6414, 415, '2025-11-18', '05:34:00', '07:53:00', 'Present'),
+(6415, 416, '2025-11-18', '02:07:00', '08:37:00', 'Present'),
+(6416, 417, '2025-11-18', '05:26:00', '08:58:00', 'Present'),
+(6417, 418, '2025-11-18', '06:38:00', '06:10:00', 'Present'),
+(6418, 419, '2025-11-18', '01:34:00', '04:53:00', 'Present'),
+(6419, 420, '2025-11-18', '03:15:00', '07:23:00', 'Present'),
+(6420, 421, '2025-11-18', '03:48:00', '05:37:00', 'Present'),
+(6421, 422, '2025-11-18', '02:57:00', '07:39:00', 'Present'),
+(6422, 423, '2025-11-18', '01:01:00', '06:45:00', 'Present'),
+(6423, 424, '2025-11-18', '02:47:00', '06:29:00', 'Present'),
+(6424, 425, '2025-11-18', '03:44:00', '06:56:00', 'Present'),
+(6425, 426, '2025-11-18', '03:53:00', '05:56:00', 'Present'),
+(6426, 427, '2025-11-18', '02:13:00', '05:25:00', 'Present'),
+(6427, 428, '2025-11-18', '02:09:00', '05:44:00', 'Present'),
+(6428, 429, '2025-11-18', '02:18:00', '08:34:00', 'Present'),
+(6429, 430, '2025-11-18', '03:08:00', '05:39:00', 'Present'),
+(6430, 431, '2025-11-18', '03:52:00', '07:31:00', 'Present'),
+(6431, 432, '2025-11-18', '03:45:00', '07:17:00', 'Present'),
+(6432, 433, '2025-11-18', '12:43:00', '06:01:00', 'Late'),
+(6433, 434, '2025-11-18', '04:21:00', '04:13:00', 'Present'),
+(6434, 435, '2025-11-18', '06:24:00', '04:38:00', 'Present'),
+(6435, 436, '2025-11-18', '12:03:00', '05:04:00', 'Late'),
+(6436, 437, '2025-11-18', '12:43:00', '04:20:00', 'Late'),
+(6437, 438, '2025-11-18', '06:46:00', '06:02:00', 'Present'),
+(6438, 439, '2025-11-18', '01:57:00', '04:04:00', 'Present'),
+(6439, 440, '2025-11-18', '12:38:00', '05:41:00', 'Late'),
+(6440, 441, '2025-11-18', '01:20:00', '04:23:00', 'Present'),
+(6441, 442, '2025-11-18', '04:07:00', '07:55:00', 'Present'),
+(6442, 443, '2025-11-18', '05:12:00', '05:59:00', 'Present'),
+(6443, 444, '2025-11-18', '04:51:00', '07:22:00', 'Present'),
+(6444, 445, '2025-11-18', '04:02:00', '06:31:00', 'Present'),
+(6445, 446, '2025-11-18', '06:53:00', '05:36:00', 'Present'),
+(6446, 447, '2025-11-18', '06:31:00', '06:04:00', 'Present'),
+(6447, 448, '2025-11-18', '05:56:00', '08:57:00', 'Present'),
+(6448, 449, '2025-11-18', '05:14:00', '05:43:00', 'Present'),
+(6449, 450, '2025-11-18', '01:29:00', '05:17:00', 'Present'),
+(6450, 451, '2025-11-18', '12:59:00', '06:55:00', 'Late'),
+(6451, 452, '2025-11-18', '06:32:00', '05:10:00', 'Present'),
+(6452, 453, '2025-11-18', '01:47:00', '04:32:00', 'Present'),
+(6453, 454, '2025-11-18', '01:07:00', '05:05:00', 'Present'),
+(6454, 455, '2025-11-18', '05:17:00', '08:08:00', 'Present'),
+(6455, 456, '2025-11-18', '01:41:00', '06:55:00', 'Present'),
+(6456, 457, '2025-11-18', '04:08:00', '08:55:00', 'Present'),
+(6457, 458, '2025-11-18', '12:42:00', '05:58:00', 'Late'),
+(6458, 459, '2025-11-18', '01:59:00', '08:31:00', 'Present'),
+(6459, 460, '2025-11-18', '03:51:00', '07:34:00', 'Present'),
+(6460, 461, '2025-11-18', '01:43:00', '07:50:00', 'Present'),
+(6461, 462, '2025-11-18', '04:18:00', '05:37:00', 'Present'),
+(6462, 463, '2025-11-18', '06:22:00', '08:19:00', 'Present'),
+(6463, 464, '2025-11-18', '12:34:00', '04:27:00', 'Late'),
+(6464, 465, '2025-11-18', '05:25:00', '07:01:00', 'Present'),
+(6465, 466, '2025-11-18', '04:01:00', '08:45:00', 'Present'),
+(6466, 467, '2025-11-18', '02:13:00', '05:18:00', 'Present'),
+(6467, 468, '2025-11-18', '05:11:00', '06:13:00', 'Present'),
+(6468, 469, '2025-11-18', '12:38:00', '04:33:00', 'Late'),
+(6469, 470, '2025-11-18', '01:32:00', '08:43:00', 'Present'),
+(6470, 471, '2025-11-18', '04:13:00', '08:11:00', 'Present'),
+(6471, 472, '2025-11-18', '02:29:00', '07:28:00', 'Present'),
+(6472, 473, '2025-11-18', '12:46:00', '06:39:00', 'Late'),
+(6473, 474, '2025-11-18', '04:41:00', '08:09:00', 'Present'),
+(6474, 475, '2025-11-18', '04:13:00', '06:50:00', 'Present'),
+(6475, 476, '2025-11-18', '03:16:00', '04:02:00', 'Present'),
+(6476, 477, '2025-11-18', '05:52:00', '04:31:00', 'Present'),
+(6477, 478, '2025-11-18', '03:27:00', '04:51:00', 'Present'),
+(6478, 479, '2025-11-18', '01:28:00', '07:37:00', 'Present'),
+(6479, 480, '2025-11-18', '01:18:00', '08:14:00', 'Present'),
+(6480, 481, '2025-11-18', '12:44:00', '04:57:00', 'Late'),
+(6481, 482, '2025-11-18', '03:39:00', '05:35:00', 'Present'),
+(6482, 483, '2025-11-18', '04:18:00', '07:50:00', 'Present'),
+(6483, 484, '2025-11-18', '01:04:00', '05:46:00', 'Present'),
+(6484, 485, '2025-11-18', '01:17:00', '06:39:00', 'Present'),
+(6485, 486, '2025-11-18', '02:40:00', '08:43:00', 'Present'),
+(6486, 487, '2025-11-18', '01:40:00', '06:13:00', 'Present'),
+(6487, 488, '2025-11-18', '01:28:00', '06:10:00', 'Present'),
+(6488, 489, '2025-11-18', '03:07:00', '04:12:00', 'Present'),
+(6489, 490, '2025-11-18', '12:42:00', '08:13:00', 'Late'),
+(6490, 491, '2025-11-18', '02:49:00', '05:44:00', 'Present'),
+(6491, 492, '2025-11-18', '02:28:00', '04:30:00', 'Present'),
+(6492, 493, '2025-11-18', '02:59:00', '06:42:00', 'Present'),
+(6493, 494, '2025-11-18', '04:53:00', '04:02:00', 'Present'),
+(6494, 495, '2025-11-18', '02:37:00', '05:37:00', 'Present'),
+(6495, 496, '2025-11-18', '02:24:00', '07:58:00', 'Present'),
+(6496, 497, '2025-11-18', '05:45:00', '05:03:00', 'Present'),
+(6497, 498, '2025-11-18', '06:36:00', '08:39:00', 'Present'),
+(6498, 499, '2025-11-18', '04:09:00', '07:54:00', 'Present'),
+(6499, 500, '2025-11-18', '03:07:00', '05:41:00', 'Present'),
+(6500, 501, '2025-11-18', '04:14:00', '04:48:00', 'Present'),
+(6501, 502, '2025-11-18', '01:40:00', '08:30:00', 'Present'),
+(6502, 503, '2025-11-18', '04:43:00', '06:40:00', 'Present'),
+(6503, 504, '2025-11-18', '12:50:00', '04:41:00', 'Late'),
+(6504, 505, '2025-11-18', '02:09:00', '06:45:00', 'Present'),
+(6505, 506, '2025-11-18', '06:36:00', '04:46:00', 'Present'),
+(6506, 507, '2025-11-18', '05:39:00', '04:03:00', 'Present'),
+(6507, 508, '2025-11-18', '02:11:00', '05:12:00', 'Present'),
+(6508, 509, '2025-11-18', '03:40:00', '08:19:00', 'Present'),
+(6509, 510, '2025-11-18', '01:11:00', '04:42:00', 'Present'),
+(6510, 511, '2025-11-18', '02:46:00', '08:19:00', 'Present'),
+(6511, 512, '2025-11-18', '06:10:00', '08:37:00', 'Present'),
+(6512, 513, '2025-11-18', '04:51:00', '05:50:00', 'Present'),
+(6513, 514, '2025-11-18', '02:41:00', '04:25:00', 'Present'),
+(6514, 515, '2025-11-18', '04:42:00', '08:08:00', 'Present'),
+(6515, 516, '2025-11-18', '05:21:00', '05:25:00', 'Present'),
+(6516, 517, '2025-11-18', '06:13:00', '08:05:00', 'Present'),
+(6517, 518, '2025-11-18', '05:43:00', '05:18:00', 'Present'),
+(6518, 519, '2025-11-18', '02:53:00', '05:06:00', 'Present'),
+(6519, 520, '2025-11-18', '05:01:00', '05:28:00', 'Present'),
+(6520, 521, '2025-11-18', '12:56:00', '05:48:00', 'Late'),
+(6521, 522, '2025-11-18', '03:10:00', '06:30:00', 'Present'),
+(6522, 523, '2025-11-18', '01:11:00', '04:38:00', 'Present'),
+(6523, 524, '2025-11-18', '03:19:00', '07:11:00', 'Present'),
+(6524, 525, '2025-11-18', '06:29:00', '07:12:00', 'Present'),
+(6525, 526, '2025-11-18', '06:16:00', '07:00:00', 'Present'),
+(6526, 527, '2025-11-18', '04:59:00', '06:11:00', 'Present'),
+(6527, 528, '2025-11-18', '03:52:00', '07:26:00', 'Present'),
+(6528, 529, '2025-11-18', '06:43:00', '06:25:00', 'Present'),
+(6529, 530, '2025-11-18', '02:27:00', '05:40:00', 'Present'),
+(6530, 531, '2025-11-18', '02:05:00', '05:12:00', 'Present'),
+(6531, 532, '2025-11-18', '04:50:00', '07:55:00', 'Present'),
+(6532, 533, '2025-11-18', '12:25:00', '05:36:00', 'Late'),
+(6533, 534, '2025-11-18', '06:37:00', '07:28:00', 'Present'),
+(6534, 535, '2025-11-18', '12:15:00', '08:25:00', 'Late'),
+(6535, 536, '2025-11-18', '01:26:00', '06:50:00', 'Present'),
+(6536, 537, '2025-11-18', '03:39:00', '08:08:00', 'Present'),
+(6537, 538, '2025-11-18', '01:46:00', '08:34:00', 'Present'),
+(6538, 539, '2025-11-18', '05:08:00', '06:25:00', 'Present'),
+(6539, 540, '2025-11-18', '06:44:00', '07:23:00', 'Present'),
+(6540, 541, '2025-11-18', '01:06:00', '07:29:00', 'Present'),
+(6541, 542, '2025-11-18', '04:15:00', '06:27:00', 'Present'),
+(6542, 543, '2025-11-18', '01:39:00', '05:15:00', 'Present'),
+(6543, 544, '2025-11-18', '04:09:00', '08:47:00', 'Present'),
+(6544, 545, '2025-11-18', '01:18:00', '07:38:00', 'Present'),
+(6545, 546, '2025-11-18', '03:54:00', '04:08:00', 'Present'),
+(6546, 547, '2025-11-18', '05:03:00', '05:57:00', 'Present'),
+(6547, 548, '2025-11-18', '01:15:00', '05:20:00', 'Present'),
+(6548, 549, '2025-11-18', '05:44:00', '08:23:00', 'Present'),
+(6549, 550, '2025-11-18', '01:32:00', '05:41:00', 'Present'),
+(6550, 551, '2025-11-18', '05:56:00', '08:12:00', 'Present'),
+(6551, 552, '2025-11-18', '12:22:00', '08:07:00', 'Late'),
+(6552, 553, '2025-11-18', '03:48:00', '06:16:00', 'Present'),
+(6553, 554, '2025-11-18', '12:23:00', '07:37:00', 'Late'),
+(6554, 555, '2025-11-18', '05:33:00', '07:54:00', 'Present'),
+(6555, 556, '2025-11-18', '01:02:00', '07:13:00', 'Present'),
+(6556, 557, '2025-11-18', '05:36:00', '05:04:00', 'Present'),
+(6557, 558, '2025-11-18', '03:11:00', '08:46:00', 'Present'),
+(6558, 559, '2025-11-18', '12:41:00', '05:06:00', 'Late'),
+(6559, 560, '2025-11-18', '04:15:00', '05:32:00', 'Present'),
+(6560, 561, '2025-11-18', '05:38:00', '07:59:00', 'Present'),
+(6561, 562, '2025-11-18', '12:29:00', '05:15:00', 'Late'),
+(6562, 563, '2025-11-18', '12:42:00', '07:25:00', 'Late'),
+(6563, 564, '2025-11-18', '12:04:00', '08:10:00', 'Late'),
+(6564, 565, '2025-11-18', '12:54:00', '07:01:00', 'Late'),
+(6565, 566, '2025-11-18', '06:11:00', '04:27:00', 'Present'),
+(6566, 567, '2025-11-18', '06:23:00', '08:36:00', 'Present'),
+(6567, 568, '2025-11-18', '05:05:00', '06:22:00', 'Present'),
+(6568, 569, '2025-11-18', '12:05:00', '05:28:00', 'Late'),
+(6569, 570, '2025-11-18', '01:23:00', '05:38:00', 'Present'),
+(6570, 571, '2025-11-18', '02:39:00', '06:18:00', 'Present'),
+(6571, 572, '2025-11-18', '04:21:00', '05:34:00', 'Present'),
+(6572, 573, '2025-11-18', '02:04:00', '06:49:00', 'Present'),
+(6573, 574, '2025-11-18', '05:31:00', '08:16:00', 'Present'),
+(6574, 575, '2025-11-18', '06:34:00', '08:12:00', 'Present'),
+(6575, 576, '2025-11-18', '12:20:00', '08:36:00', 'Late'),
+(6576, 577, '2025-11-18', '06:12:00', '06:44:00', 'Present'),
+(6577, 578, '2025-11-18', '12:40:00', '07:28:00', 'Late'),
+(6578, 579, '2025-11-18', '01:05:00', '05:55:00', 'Present'),
+(6579, 580, '2025-11-18', '05:40:00', '05:34:00', 'Present'),
+(6580, 581, '2025-11-18', '06:24:00', '05:25:00', 'Present'),
+(6581, 582, '2025-11-18', '04:43:00', '04:01:00', 'Present'),
+(6582, 583, '2025-11-18', '03:20:00', '04:31:00', 'Present'),
+(6583, 584, '2025-11-18', '06:38:00', '08:00:00', 'Present'),
+(6584, 585, '2025-11-18', '05:46:00', '06:37:00', 'Present'),
+(6585, 586, '2025-11-18', '12:23:00', '06:35:00', 'Late'),
+(6586, 587, '2025-11-18', '03:17:00', '04:23:00', 'Present'),
+(6587, 588, '2025-11-18', '05:02:00', '04:33:00', 'Present'),
+(6588, 589, '2025-11-18', '06:14:00', '05:44:00', 'Present'),
+(6589, 590, '2025-11-18', '01:40:00', '07:20:00', 'Present'),
+(6590, 591, '2025-11-18', '02:36:00', '08:54:00', 'Present'),
+(6591, 592, '2025-11-18', '12:15:00', '07:50:00', 'Late'),
+(6592, 593, '2025-11-18', '05:50:00', '05:23:00', 'Present'),
+(6593, 594, '2025-11-18', '03:48:00', '06:21:00', 'Present'),
+(6594, 595, '2025-11-18', '03:03:00', '08:06:00', 'Present'),
+(6595, 596, '2025-11-18', '05:55:00', '06:49:00', 'Present'),
+(6596, 597, '2025-11-18', '03:16:00', '08:28:00', 'Present'),
+(6597, 598, '2025-11-18', '05:08:00', '05:55:00', 'Present'),
+(6598, 599, '2025-11-18', '01:49:00', '04:11:00', 'Present'),
+(6599, 600, '2025-11-18', '12:47:00', '04:59:00', 'Late'),
+(6600, 601, '2025-11-18', '04:50:00', '05:12:00', 'Present'),
+(6601, 602, '2025-11-18', '01:22:00', '04:18:00', 'Present'),
+(6602, 603, '2025-11-18', '06:26:00', '08:11:00', 'Present'),
+(6603, 604, '2025-11-18', '12:11:00', '08:24:00', 'Late'),
+(6604, 605, '2025-11-18', '06:07:00', '08:55:00', 'Present'),
+(6605, 606, '2025-11-18', '04:48:00', '05:20:00', 'Present'),
+(6606, 607, '2025-11-18', '12:21:00', '07:05:00', 'Late'),
+(6607, 608, '2025-11-18', '01:16:00', '06:24:00', 'Present'),
+(6608, 609, '2025-11-18', '06:16:00', '05:06:00', 'Present'),
+(6609, 610, '2025-11-18', '06:08:00', '08:03:00', 'Present'),
+(6610, 611, '2025-11-18', '06:26:00', '04:56:00', 'Present'),
+(6611, 612, '2025-11-18', '01:34:00', '06:12:00', 'Present'),
+(6612, 613, '2025-11-18', '06:30:00', '05:31:00', 'Present'),
+(6613, 614, '2025-11-18', '01:38:00', '05:11:00', 'Present'),
+(6614, 615, '2025-11-18', '06:45:00', '05:30:00', 'Present'),
+(6615, 616, '2025-11-18', '04:29:00', '08:37:00', 'Present'),
+(6616, 617, '2025-11-18', '03:07:00', '07:31:00', 'Present'),
+(6617, 618, '2025-11-18', '06:38:00', '06:40:00', 'Present'),
+(6618, 619, '2025-11-18', '06:59:00', '07:24:00', 'Present'),
+(6619, 620, '2025-11-18', '05:28:00', '06:56:00', 'Present'),
+(6620, 621, '2025-11-18', '01:43:00', '04:01:00', 'Present'),
+(6621, 622, '2025-11-18', '06:19:00', '06:02:00', 'Present'),
+(6622, 623, '2025-11-18', '12:53:00', '08:39:00', 'Late'),
+(6623, 624, '2025-11-18', '06:42:00', '04:36:00', 'Present'),
+(6624, 625, '2025-11-18', '04:06:00', '08:52:00', 'Present'),
+(6625, 626, '2025-11-18', '05:42:00', '06:09:00', 'Present'),
+(6626, 627, '2025-11-18', '03:16:00', '08:26:00', 'Present'),
+(6627, 628, '2025-11-18', '04:21:00', '07:16:00', 'Present'),
+(6628, 629, '2025-11-18', '04:25:00', '06:41:00', 'Present'),
+(6629, 630, '2025-11-18', '01:00:00', '04:08:00', 'Present'),
+(6630, 631, '2025-11-18', '06:49:00', '07:00:00', 'Present'),
+(6631, 632, '2025-11-18', '04:29:00', '04:28:00', 'Present'),
+(6632, 633, '2025-11-18', '01:12:00', '08:41:00', 'Present'),
+(6633, 634, '2025-11-18', '02:03:00', '08:11:00', 'Present'),
+(6634, 635, '2025-11-18', '04:17:00', '07:26:00', 'Present'),
+(6635, 636, '2025-11-18', '03:14:00', '07:25:00', 'Present'),
+(6636, 637, '2025-11-18', '04:09:00', '08:08:00', 'Present'),
+(6637, 638, '2025-11-18', '01:48:00', '08:48:00', 'Present'),
+(6638, 639, '2025-11-18', '02:57:00', '08:46:00', 'Present'),
+(6639, 640, '2025-11-18', '12:08:00', '08:30:00', 'Late'),
+(6640, 641, '2025-11-18', '03:56:00', '07:43:00', 'Present'),
+(6641, 642, '2025-11-18', '01:24:00', '07:32:00', 'Present'),
+(6642, 643, '2025-11-18', '01:38:00', '08:33:00', 'Present'),
+(6643, 644, '2025-11-18', '05:59:00', '06:31:00', 'Present'),
+(6644, 645, '2025-11-18', '12:09:00', '07:46:00', 'Late'),
+(6645, 646, '2025-11-18', '12:05:00', '07:24:00', 'Late'),
+(6646, 647, '2025-11-18', '05:11:00', '08:48:00', 'Present'),
+(6647, 648, '2025-11-18', '05:05:00', '05:49:00', 'Present'),
+(6648, 649, '2025-11-18', '06:26:00', '05:46:00', 'Present'),
+(6649, 650, '2025-11-18', '01:39:00', '07:08:00', 'Present'),
+(6650, 651, '2025-11-18', '03:36:00', '05:42:00', 'Present'),
+(6651, 652, '2025-11-18', '04:36:00', '07:25:00', 'Present'),
+(6652, 653, '2025-11-18', '04:38:00', '06:52:00', 'Present'),
+(6653, 654, '2025-11-18', '03:19:00', '04:06:00', 'Present'),
+(6654, 655, '2025-11-18', '03:56:00', '05:34:00', 'Present'),
+(6655, 656, '2025-11-18', '12:29:00', '07:54:00', 'Late'),
+(6656, 657, '2025-11-18', '12:07:00', '06:01:00', 'Late'),
+(6657, 658, '2025-11-18', '12:40:00', '05:15:00', 'Late'),
+(6658, 659, '2025-11-18', '02:06:00', '07:21:00', 'Present'),
+(6659, 660, '2025-11-18', '12:02:00', '06:35:00', 'Late'),
+(6660, 661, '2025-11-18', '03:49:00', '05:52:00', 'Present'),
+(6661, 662, '2025-11-18', '03:31:00', '05:09:00', 'Present'),
+(6662, 663, '2025-11-18', '03:17:00', '08:55:00', 'Present'),
+(6663, 664, '2025-11-18', '01:27:00', '07:00:00', 'Present'),
+(6664, 665, '2025-11-18', '05:31:00', '05:24:00', 'Present'),
+(6665, 666, '2025-11-18', '04:19:00', '07:47:00', 'Present'),
+(6666, 667, '2025-11-18', '01:42:00', '07:35:00', 'Present'),
+(6667, 668, '2025-11-18', '03:53:00', '04:41:00', 'Present'),
+(6668, 669, '2025-11-18', '02:47:00', '07:29:00', 'Present'),
+(6669, 670, '2025-11-18', '01:45:00', '04:49:00', 'Present'),
+(6670, 671, '2025-11-18', '04:25:00', '08:20:00', 'Present'),
+(6671, 672, '2025-11-18', '02:31:00', '07:36:00', 'Present'),
+(6672, 673, '2025-11-18', '01:16:00', '08:36:00', 'Present'),
+(6673, 674, '2025-11-18', '06:02:00', '08:55:00', 'Present'),
+(6674, 675, '2025-11-18', '01:55:00', '06:34:00', 'Present'),
+(6675, 676, '2025-11-18', '02:01:00', '08:19:00', 'Present'),
+(6676, 677, '2025-11-18', '02:52:00', '07:18:00', 'Present'),
+(6677, 678, '2025-11-18', '02:04:00', '04:12:00', 'Present'),
+(6678, 679, '2025-11-18', '05:21:00', '06:48:00', 'Present'),
+(6679, 680, '2025-11-18', '03:33:00', '04:37:00', 'Present'),
+(6680, 681, '2025-11-18', '04:06:00', '08:15:00', 'Present'),
+(6681, 682, '2025-11-18', '02:12:00', '06:19:00', 'Present'),
+(6682, 683, '2025-11-18', '02:55:00', '08:58:00', 'Present'),
+(6683, 684, '2025-11-18', '01:55:00', '08:45:00', 'Present'),
+(6684, 685, '2025-11-18', '06:05:00', '08:08:00', 'Present'),
+(6685, 686, '2025-11-18', '12:08:00', '05:04:00', 'Late'),
+(6686, 687, '2025-11-18', '04:06:00', '04:16:00', 'Present'),
+(6687, 688, '2025-11-18', '05:22:00', '04:52:00', 'Present'),
+(6688, 689, '2025-11-18', '12:14:00', '05:37:00', 'Late'),
+(6689, 690, '2025-11-18', '02:27:00', '05:02:00', 'Present'),
+(6690, 691, '2025-11-18', '02:46:00', '08:47:00', 'Present'),
+(6691, 692, '2025-11-18', '06:18:00', '07:05:00', 'Present'),
+(6692, 693, '2025-11-18', '05:45:00', '07:26:00', 'Present'),
+(6693, 694, '2025-11-18', '06:12:00', '05:33:00', 'Present'),
+(6694, 695, '2025-11-18', '01:48:00', '04:22:00', 'Present'),
+(6695, 696, '2025-11-18', '05:22:00', '06:48:00', 'Present'),
+(6696, 697, '2025-11-18', '04:20:00', '07:23:00', 'Present'),
+(6697, 698, '2025-11-18', '03:42:00', '04:44:00', 'Present'),
+(6698, 699, '2025-11-18', '04:39:00', '08:01:00', 'Present'),
+(6699, 700, '2025-11-18', '05:03:00', '07:52:00', 'Present'),
+(6700, 701, '2025-11-18', '01:46:00', '08:40:00', 'Present'),
+(6701, 702, '2025-11-18', '03:54:00', '04:31:00', 'Present'),
+(6702, 703, '2025-11-18', '01:00:00', '04:35:00', 'Present'),
+(6703, 704, '2025-11-18', '02:32:00', '07:44:00', 'Present'),
+(6704, 705, '2025-11-18', '05:19:00', '04:59:00', 'Present'),
+(6705, 706, '2025-11-18', '04:22:00', '05:29:00', 'Present'),
+(6706, 707, '2025-11-18', '04:54:00', '04:26:00', 'Present'),
+(6707, 708, '2025-11-18', '12:38:00', '07:44:00', 'Late'),
+(6708, 709, '2025-11-18', '01:25:00', '07:07:00', 'Present'),
+(6709, 710, '2025-11-18', '02:27:00', '06:46:00', 'Present'),
+(6710, 711, '2025-11-18', '02:52:00', '07:46:00', 'Present'),
+(6711, 712, '2025-11-18', '12:42:00', '07:55:00', 'Late'),
+(6712, 713, '2025-11-18', '05:13:00', '04:09:00', 'Present'),
+(6713, 714, '2025-11-18', '04:42:00', '08:44:00', 'Present'),
+(6714, 715, '2025-11-18', '04:02:00', '07:32:00', 'Present'),
+(6715, 716, '2025-11-18', '02:21:00', '05:58:00', 'Present'),
+(6716, 717, '2025-11-18', '03:24:00', '07:42:00', 'Present'),
+(6717, 718, '2025-11-18', '04:31:00', '04:02:00', 'Present'),
+(6718, 719, '2025-11-18', '12:01:00', '04:15:00', 'Late'),
+(6719, 720, '2025-11-18', '04:42:00', '06:46:00', 'Present'),
+(6720, 721, '2025-11-18', '06:50:00', '05:23:00', 'Present'),
+(6721, 722, '2025-11-18', '01:23:00', '07:41:00', 'Present'),
+(6722, 723, '2025-11-18', '05:42:00', '04:23:00', 'Present'),
+(6723, 724, '2025-11-18', '03:50:00', '04:28:00', 'Present'),
+(6724, 725, '2025-11-18', '01:27:00', '05:06:00', 'Present'),
+(6725, 726, '2025-11-18', '03:38:00', '08:24:00', 'Present'),
+(6726, 727, '2025-11-18', '12:40:00', '08:27:00', 'Late'),
+(6727, 728, '2025-11-18', '04:27:00', '07:05:00', 'Present'),
+(6728, 729, '2025-11-18', '06:22:00', '07:39:00', 'Present'),
+(6729, 730, '2025-11-18', '06:07:00', '04:51:00', 'Present'),
+(6730, 731, '2025-11-18', '02:46:00', '05:27:00', 'Present'),
+(6731, 732, '2025-11-18', '06:16:00', '05:41:00', 'Present'),
+(6732, 733, '2025-11-18', '05:39:00', '08:45:00', 'Present'),
+(6733, 734, '2025-11-18', '04:12:00', '05:33:00', 'Present'),
+(6734, 735, '2025-11-18', '12:16:00', '05:36:00', 'Late'),
+(6735, 736, '2025-11-18', '05:01:00', '08:17:00', 'Present'),
+(6736, 737, '2025-11-18', '04:48:00', '07:05:00', 'Present'),
+(6737, 738, '2025-11-18', '04:01:00', '04:07:00', 'Present'),
+(6738, 739, '2025-11-18', '03:15:00', '05:57:00', 'Present'),
+(6739, 740, '2025-11-18', '12:26:00', '04:56:00', 'Late'),
+(6740, 741, '2025-11-18', '05:04:00', '08:24:00', 'Present'),
+(6741, 742, '2025-11-18', '06:18:00', '06:22:00', 'Present'),
+(6742, 743, '2025-11-18', '12:37:00', '08:56:00', 'Late'),
+(6743, 744, '2025-11-18', '12:16:00', '08:08:00', 'Late'),
+(6744, 745, '2025-11-18', '03:25:00', '07:59:00', 'Present'),
+(6745, 746, '2025-11-18', '12:36:00', '07:50:00', 'Late'),
+(6746, 747, '2025-11-18', '04:08:00', '06:07:00', 'Present'),
+(6747, 748, '2025-11-18', '01:17:00', '06:35:00', 'Present'),
+(6748, 749, '2025-11-18', '06:59:00', '07:03:00', 'Present'),
+(6749, 750, '2025-11-18', '04:22:00', '08:08:00', 'Present'),
+(6750, 751, '2025-11-18', '04:31:00', '06:34:00', 'Present'),
+(6751, 752, '2025-11-18', '04:37:00', '07:07:00', 'Present'),
+(6752, 753, '2025-11-18', '03:46:00', '08:23:00', 'Present'),
+(6753, 754, '2025-11-18', '01:17:00', '08:06:00', 'Present'),
+(6754, 755, '2025-11-18', '12:13:00', '08:42:00', 'Late'),
+(6755, 756, '2025-11-18', '05:53:00', '08:30:00', 'Present'),
+(6756, 757, '2025-11-18', '03:42:00', '05:19:00', 'Present'),
+(6757, 758, '2025-11-18', '04:38:00', '05:17:00', 'Present'),
+(6758, 759, '2025-11-18', '06:28:00', '08:56:00', 'Present'),
+(6759, 760, '2025-11-18', '12:21:00', '06:27:00', 'Late'),
+(6760, 761, '2025-11-18', '01:56:00', '08:55:00', 'Present'),
+(6761, 762, '2025-11-18', '02:58:00', '07:35:00', 'Present'),
+(6762, 763, '2025-11-18', '05:55:00', '08:27:00', 'Present'),
+(6763, 764, '2025-11-18', '12:41:00', '04:08:00', 'Late'),
+(6764, 765, '2025-11-18', '04:26:00', '05:12:00', 'Present'),
+(6765, 766, '2025-11-18', '12:35:00', '05:53:00', 'Late'),
+(6766, 767, '2025-11-18', '03:30:00', '04:36:00', 'Present'),
+(6767, 768, '2025-11-18', '02:46:00', '06:39:00', 'Present'),
+(6768, 769, '2025-11-18', '12:26:00', '06:44:00', 'Late'),
+(6769, 770, '2025-11-18', '12:50:00', '08:47:00', 'Late'),
+(6770, 771, '2025-11-18', '02:03:00', '04:47:00', 'Present'),
+(6771, 772, '2025-11-18', '06:38:00', '04:42:00', 'Present'),
+(6772, 773, '2025-11-18', '01:36:00', '04:32:00', 'Present'),
+(6773, 774, '2025-11-18', '02:33:00', '07:24:00', 'Present'),
+(6774, 775, '2025-11-18', '03:11:00', '08:25:00', 'Present'),
+(6775, 776, '2025-11-18', '01:29:00', '05:47:00', 'Present'),
+(6776, 777, '2025-11-18', '05:29:00', '06:51:00', 'Present'),
+(6777, 778, '2025-11-18', '04:34:00', '05:27:00', 'Present'),
+(6778, 779, '2025-11-18', '12:17:00', '07:14:00', 'Late'),
+(6779, 780, '2025-11-18', '04:00:00', '08:21:00', 'Present'),
+(6780, 781, '2025-11-18', '03:06:00', '06:54:00', 'Present'),
+(6781, 782, '2025-11-18', '04:44:00', '04:59:00', 'Present'),
+(6782, 783, '2025-11-18', '02:54:00', '06:44:00', 'Present'),
+(6783, 784, '2025-11-18', '06:51:00', '07:16:00', 'Present'),
+(6784, 785, '2025-11-18', '02:23:00', '08:54:00', 'Present'),
+(6785, 786, '2025-11-18', '02:16:00', '05:11:00', 'Present'),
+(6786, 787, '2025-11-18', '05:05:00', '04:05:00', 'Present'),
+(6787, 788, '2025-11-18', '04:22:00', '07:00:00', 'Present'),
+(6788, 789, '2025-11-18', '05:47:00', '07:43:00', 'Present'),
+(6789, 790, '2025-11-18', '05:43:00', '07:53:00', 'Present'),
+(6790, 791, '2025-11-18', '01:06:00', '08:11:00', 'Present'),
+(6791, 792, '2025-11-18', '04:30:00', '06:04:00', 'Present'),
+(6792, 793, '2025-11-18', '02:50:00', '04:40:00', 'Present'),
+(6793, 794, '2025-11-18', '01:22:00', '04:20:00', 'Present'),
+(6794, 795, '2025-11-18', '05:37:00', '06:42:00', 'Present'),
+(6795, 796, '2025-11-18', '05:53:00', '08:12:00', 'Present'),
+(6796, 797, '2025-11-18', '02:06:00', '04:38:00', 'Present'),
+(6797, 798, '2025-11-18', '06:18:00', '07:41:00', 'Present'),
+(6798, 799, '2025-11-18', '02:22:00', '06:59:00', 'Present'),
+(6799, 800, '2025-11-18', '04:30:00', '04:24:00', 'Present'),
+(6800, 801, '2025-11-18', '12:55:00', '06:27:00', 'Late'),
+(6801, 802, '2025-11-18', '02:30:00', '05:37:00', 'Present'),
+(6802, 803, '2025-11-18', '03:56:00', '05:54:00', 'Present'),
+(6803, 804, '2025-11-18', '05:22:00', '04:56:00', 'Present'),
+(6804, 805, '2025-11-18', '06:49:00', '05:16:00', 'Present'),
+(6805, 806, '2025-11-18', '12:18:00', '07:43:00', 'Late'),
+(6806, 807, '2025-11-18', '02:38:00', '06:02:00', 'Present'),
+(6807, 808, '2025-11-18', '04:31:00', '08:18:00', 'Present'),
+(6808, 809, '2025-11-18', '01:10:00', '05:05:00', 'Present'),
+(6809, 810, '2025-11-18', '02:21:00', '08:53:00', 'Present'),
+(6810, 811, '2025-11-18', '05:12:00', '06:07:00', 'Present'),
+(6811, 812, '2025-11-18', '03:47:00', '06:11:00', 'Present'),
+(6812, 813, '2025-11-18', '06:09:00', '07:12:00', 'Present'),
+(6813, 814, '2025-11-18', '12:04:00', '07:17:00', 'Late'),
+(6814, 815, '2025-11-18', '05:25:00', '07:36:00', 'Present'),
+(6815, 816, '2025-11-18', '03:57:00', '07:00:00', 'Present'),
+(6816, 817, '2025-11-18', '12:50:00', '04:15:00', 'Late'),
+(6817, 818, '2025-11-18', '02:37:00', '08:25:00', 'Present'),
+(6818, 819, '2025-11-18', '05:54:00', '04:36:00', 'Present'),
+(6819, 820, '2025-11-18', '12:39:00', '05:00:00', 'Late'),
+(6820, 821, '2025-11-18', '02:55:00', '05:44:00', 'Present'),
+(6821, 822, '2025-11-18', '03:42:00', '06:27:00', 'Present'),
+(6822, 823, '2025-11-18', '03:01:00', '07:01:00', 'Present'),
+(6823, 824, '2025-11-18', '12:47:00', '04:46:00', 'Late'),
+(6824, 825, '2025-11-18', '01:02:00', '07:36:00', 'Present'),
+(6825, 826, '2025-11-18', '06:29:00', '05:02:00', 'Present'),
+(6826, 827, '2025-11-18', '02:05:00', '06:46:00', 'Present'),
+(6827, 828, '2025-11-18', '06:18:00', '07:00:00', 'Present'),
+(6828, 829, '2025-11-18', '05:42:00', '05:53:00', 'Present'),
+(6829, 830, '2025-11-18', '03:04:00', '07:46:00', 'Present'),
+(6830, 831, '2025-11-18', '12:36:00', '05:11:00', 'Late'),
+(6831, 832, '2025-11-18', '06:19:00', '06:16:00', 'Present'),
+(6832, 833, '2025-11-18', '05:02:00', '08:56:00', 'Present'),
+(6833, 834, '2025-11-18', '04:39:00', '06:19:00', 'Present'),
+(6834, 835, '2025-11-18', '12:31:00', '05:19:00', 'Late'),
+(6835, 836, '2025-11-18', '01:23:00', '05:39:00', 'Present'),
+(6836, 837, '2025-11-18', '01:20:00', '08:53:00', 'Present'),
+(6837, 838, '2025-11-18', '03:21:00', '04:15:00', 'Present'),
+(6838, 839, '2025-11-18', '05:39:00', '05:40:00', 'Present'),
+(6839, 840, '2025-11-18', '02:27:00', '05:17:00', 'Present');
+INSERT INTO `Attendance` (`AttendanceID`, `EmployeeID`, `Date`, `TimeIn`, `TimeOut`, `Status`) VALUES
+(6840, 841, '2025-11-18', '03:23:00', '08:45:00', 'Present'),
+(6841, 842, '2025-11-18', '05:35:00', '08:16:00', 'Present'),
+(6842, 843, '2025-11-18', '05:12:00', '07:40:00', 'Present'),
+(6843, 844, '2025-11-18', '05:48:00', '05:48:00', 'Present'),
+(6844, 845, '2025-11-18', '06:32:00', '08:31:00', 'Present'),
+(6845, 846, '2025-11-18', '01:47:00', '05:20:00', 'Present'),
+(6846, 847, '2025-11-18', '12:01:00', '04:02:00', 'Late'),
+(6847, 848, '2025-11-18', '02:34:00', '06:52:00', 'Present'),
+(6848, 849, '2025-11-18', '02:50:00', '05:35:00', 'Present'),
+(6849, 850, '2025-11-18', '04:38:00', '04:06:00', 'Present'),
+(6850, 851, '2025-11-18', '04:31:00', '07:07:00', 'Present'),
+(6851, 852, '2025-11-18', '04:23:00', '05:14:00', 'Present'),
+(6852, 853, '2025-11-18', '05:42:00', '04:32:00', 'Present'),
+(6853, 854, '2025-11-18', '04:56:00', '06:28:00', 'Present'),
+(6854, 855, '2025-11-18', '02:00:00', '05:52:00', 'Present'),
+(6855, 856, '2025-11-18', '02:44:00', '07:45:00', 'Present'),
+(6856, 857, '2025-11-18', '01:07:00', '08:27:00', 'Present'),
+(6857, 858, '2025-11-18', '01:56:00', '07:01:00', 'Present'),
+(6858, 859, '2025-11-18', '01:21:00', '04:19:00', 'Present'),
+(6859, 860, '2025-11-18', '12:37:00', '08:13:00', 'Late'),
+(6860, 861, '2025-11-18', '12:35:00', '04:55:00', 'Late'),
+(6861, 862, '2025-11-18', '02:58:00', '08:52:00', 'Present'),
+(6862, 863, '2025-11-18', '03:18:00', '05:03:00', 'Present'),
+(6863, 864, '2025-11-18', '02:18:00', '05:24:00', 'Present'),
+(6864, 865, '2025-11-18', '12:58:00', '06:03:00', 'Late'),
+(6865, 866, '2025-11-18', '04:59:00', '04:51:00', 'Present'),
+(6866, 867, '2025-11-18', '05:50:00', '07:19:00', 'Present'),
+(6867, 868, '2025-11-18', '03:44:00', '06:16:00', 'Present'),
+(6868, 869, '2025-11-18', '06:20:00', '07:41:00', 'Present'),
+(6869, 870, '2025-11-18', '02:40:00', '08:30:00', 'Present'),
+(6870, 871, '2025-11-18', '03:02:00', '06:09:00', 'Present'),
+(6871, 872, '2025-11-18', '01:46:00', '05:08:00', 'Present'),
+(6872, 873, '2025-11-18', '01:00:00', '05:54:00', 'Present'),
+(6873, 874, '2025-11-18', '06:50:00', '04:59:00', 'Present'),
+(6874, 875, '2025-11-18', '06:34:00', '06:19:00', 'Present'),
+(6875, 876, '2025-11-18', '06:30:00', '04:29:00', 'Present'),
+(6876, 877, '2025-11-18', '06:41:00', '04:53:00', 'Present'),
+(6877, 878, '2025-11-18', '06:38:00', '04:01:00', 'Present'),
+(6878, 879, '2025-11-18', '12:40:00', '05:34:00', 'Late'),
+(6879, 880, '2025-11-18', '01:12:00', '07:10:00', 'Present'),
+(6880, 881, '2025-11-18', '04:51:00', '04:12:00', 'Present'),
+(6881, 882, '2025-11-18', '02:15:00', '08:09:00', 'Present'),
+(6882, 883, '2025-11-18', '04:14:00', '06:23:00', 'Present'),
+(6883, 884, '2025-11-18', '02:13:00', '07:46:00', 'Present'),
+(6884, 885, '2025-11-18', '12:02:00', '04:51:00', 'Late'),
+(6885, 886, '2025-11-18', '06:33:00', '04:41:00', 'Present'),
+(6886, 887, '2025-11-18', '05:20:00', '04:35:00', 'Present'),
+(6887, 888, '2025-11-18', '02:14:00', '04:37:00', 'Present'),
+(6888, 889, '2025-11-18', '03:31:00', '07:16:00', 'Present'),
+(6889, 890, '2025-11-18', '06:23:00', '08:46:00', 'Present'),
+(6890, 891, '2025-11-18', '05:50:00', '05:59:00', 'Present'),
+(6891, 892, '2025-11-18', '03:02:00', '08:04:00', 'Present'),
+(6892, 893, '2025-11-18', '03:02:00', '07:10:00', 'Present'),
+(6893, 894, '2025-11-18', '05:09:00', '08:10:00', 'Present'),
+(6894, 895, '2025-11-18', '12:05:00', '05:21:00', 'Late'),
+(6895, 896, '2025-11-18', '12:01:00', '07:37:00', 'Late'),
+(6896, 897, '2025-11-18', '02:16:00', '04:22:00', 'Present'),
+(6897, 898, '2025-11-18', '01:35:00', '06:03:00', 'Present'),
+(6898, 899, '2025-11-18', '06:48:00', '08:05:00', 'Present'),
+(6899, 900, '2025-11-18', '02:02:00', '08:12:00', 'Present'),
+(6900, 901, '2025-11-18', '04:58:00', '05:04:00', 'Present'),
+(6901, 902, '2025-11-18', '12:42:00', '07:11:00', 'Late'),
+(6902, 903, '2025-11-18', '01:49:00', '04:00:00', 'Present'),
+(6903, 904, '2025-11-18', '04:46:00', '07:45:00', 'Present'),
+(6904, 905, '2025-11-18', '02:51:00', '05:53:00', 'Present'),
+(6905, 906, '2025-11-18', '06:19:00', '08:07:00', 'Present'),
+(6906, 907, '2025-11-18', '01:20:00', '05:03:00', 'Present'),
+(6907, 908, '2025-11-18', '12:31:00', '08:16:00', 'Late'),
+(6908, 909, '2025-11-18', '04:19:00', '08:50:00', 'Present'),
+(6909, 910, '2025-11-18', '06:28:00', '07:42:00', 'Present'),
+(6910, 911, '2025-11-18', '01:49:00', '05:05:00', 'Present'),
+(6911, 912, '2025-11-18', '06:22:00', '06:52:00', 'Present'),
+(6912, 913, '2025-11-18', '06:40:00', '04:11:00', 'Present'),
+(6913, 914, '2025-11-18', '05:09:00', '08:10:00', 'Present'),
+(6914, 915, '2025-11-18', '12:32:00', '04:12:00', 'Late'),
+(6915, 916, '2025-11-18', '01:49:00', '05:27:00', 'Present'),
+(6916, 917, '2025-11-18', '01:36:00', '08:49:00', 'Present'),
+(6917, 918, '2025-11-18', '01:27:00', '08:57:00', 'Present'),
+(6918, 919, '2025-11-18', '03:35:00', '06:27:00', 'Present'),
+(6919, 920, '2025-11-18', '02:43:00', '06:01:00', 'Present'),
+(6920, 921, '2025-11-18', '04:39:00', '08:43:00', 'Present'),
+(6921, 922, '2025-11-18', '04:57:00', '07:29:00', 'Present'),
+(6922, 923, '2025-11-18', '04:22:00', '07:53:00', 'Present'),
+(6923, 924, '2025-11-18', '12:51:00', '08:18:00', 'Late'),
+(6924, 925, '2025-11-18', '03:00:00', '08:32:00', 'Present'),
+(6925, 926, '2025-11-18', '04:14:00', '08:18:00', 'Present'),
+(6926, 927, '2025-11-18', '05:02:00', '04:51:00', 'Present'),
+(6927, 928, '2025-11-18', '12:57:00', '05:11:00', 'Late'),
+(6928, 929, '2025-11-18', '02:44:00', '08:31:00', 'Present'),
+(6929, 930, '2025-11-18', '04:03:00', '06:03:00', 'Present'),
+(6930, 931, '2025-11-18', '06:33:00', '05:11:00', 'Present'),
+(6931, 932, '2025-11-18', '05:58:00', '07:52:00', 'Present'),
+(6932, 933, '2025-11-18', '01:56:00', '08:53:00', 'Present'),
+(6933, 934, '2025-11-18', '12:12:00', '08:18:00', 'Late'),
+(6934, 935, '2025-11-18', '05:20:00', '06:43:00', 'Present'),
+(6935, 936, '2025-11-18', '01:42:00', '06:11:00', 'Present'),
+(6936, 937, '2025-11-18', '02:35:00', '05:24:00', 'Present'),
+(6937, 938, '2025-11-18', '06:28:00', '08:44:00', 'Present'),
+(6938, 939, '2025-11-18', '06:31:00', '08:43:00', 'Present'),
+(6939, 940, '2025-11-18', '06:14:00', '04:18:00', 'Present'),
+(6940, 941, '2025-11-18', '06:03:00', '05:53:00', 'Present'),
+(6941, 942, '2025-11-18', '12:07:00', '07:03:00', 'Late'),
+(6942, 943, '2025-11-18', '01:45:00', '08:37:00', 'Present'),
+(6943, 944, '2025-11-18', '12:39:00', '06:17:00', 'Late'),
+(6944, 945, '2025-11-18', '02:44:00', '07:58:00', 'Present'),
+(6945, 946, '2025-11-18', '02:59:00', '08:10:00', 'Present'),
+(6946, 947, '2025-11-18', '02:09:00', '08:11:00', 'Present'),
+(6947, 948, '2025-11-18', '04:30:00', '05:26:00', 'Present'),
+(6948, 949, '2025-11-18', '03:27:00', '04:38:00', 'Present'),
+(6949, 950, '2025-11-18', '12:03:00', '06:28:00', 'Late'),
+(6950, 951, '2025-11-18', '01:26:00', '04:26:00', 'Present'),
+(6951, 952, '2025-11-18', '05:55:00', '04:51:00', 'Present'),
+(6952, 953, '2025-11-18', '06:25:00', '04:31:00', 'Present'),
+(6953, 954, '2025-11-18', '03:08:00', '08:40:00', 'Present'),
+(6954, 955, '2025-11-18', '12:46:00', '04:41:00', 'Late'),
+(6955, 956, '2025-11-18', '12:56:00', '04:50:00', 'Late'),
+(6956, 957, '2025-11-18', '05:16:00', '06:12:00', 'Present'),
+(6957, 958, '2025-11-18', '04:21:00', '08:53:00', 'Present'),
+(6958, 959, '2025-11-18', '02:35:00', '08:51:00', 'Present'),
+(6959, 960, '2025-11-18', '01:04:00', '05:48:00', 'Present'),
+(6960, 961, '2025-11-18', '06:21:00', '08:39:00', 'Present'),
+(6961, 962, '2025-11-18', '04:04:00', '06:02:00', 'Present'),
+(6962, 963, '2025-11-18', '01:11:00', '07:50:00', 'Present'),
+(6963, 964, '2025-11-18', '02:14:00', '07:25:00', 'Present'),
+(6964, 965, '2025-11-18', '05:15:00', '05:16:00', 'Present'),
+(6965, 966, '2025-11-18', '03:47:00', '04:28:00', 'Present'),
+(6966, 967, '2025-11-18', '01:47:00', '07:17:00', 'Present'),
+(6967, 968, '2025-11-18', '03:20:00', '05:41:00', 'Present'),
+(6968, 969, '2025-11-18', '03:29:00', '05:06:00', 'Present'),
+(6969, 970, '2025-11-18', '02:04:00', '08:01:00', 'Present'),
+(6970, 971, '2025-11-18', '04:05:00', '07:31:00', 'Present'),
+(6971, 972, '2025-11-18', '05:14:00', '05:00:00', 'Present'),
+(6972, 973, '2025-11-18', '05:26:00', '07:23:00', 'Present'),
+(6973, 974, '2025-11-18', '12:06:00', '05:43:00', 'Late'),
+(6974, 975, '2025-11-18', '06:50:00', '06:10:00', 'Present'),
+(6975, 976, '2025-11-18', '06:25:00', '04:02:00', 'Present'),
+(6976, 977, '2025-11-18', '04:32:00', '08:45:00', 'Present'),
+(6977, 978, '2025-11-18', '03:24:00', '08:52:00', 'Present'),
+(6978, 979, '2025-11-18', '01:05:00', '08:26:00', 'Present'),
+(6979, 980, '2025-11-18', '06:40:00', '05:15:00', 'Present'),
+(6980, 981, '2025-11-18', '06:56:00', '04:31:00', 'Present'),
+(6981, 982, '2025-11-18', '06:45:00', '06:54:00', 'Present'),
+(6982, 983, '2025-11-18', '05:58:00', '04:03:00', 'Present'),
+(6983, 984, '2025-11-18', '02:56:00', '07:44:00', 'Present'),
+(6984, 985, '2025-11-18', '02:25:00', '04:52:00', 'Present'),
+(6985, 986, '2025-11-18', '01:43:00', '06:34:00', 'Present'),
+(6986, 987, '2025-11-18', '03:23:00', '07:01:00', 'Present'),
+(6987, 988, '2025-11-18', '12:12:00', '06:21:00', 'Late'),
+(6988, 989, '2025-11-18', '03:48:00', '04:41:00', 'Present'),
+(6989, 990, '2025-11-18', '03:41:00', '06:17:00', 'Present'),
+(6990, 991, '2025-11-18', '04:25:00', '05:43:00', 'Present'),
+(6991, 992, '2025-11-18', '03:20:00', '05:41:00', 'Present'),
+(6992, 993, '2025-11-18', '04:27:00', '05:35:00', 'Present'),
+(6993, 994, '2025-11-18', '06:39:00', '05:22:00', 'Present'),
+(6994, 995, '2025-11-18', '04:42:00', '05:50:00', 'Present'),
+(6995, 996, '2025-11-18', '02:14:00', '07:29:00', 'Present'),
+(6996, 997, '2025-11-18', '12:48:00', '08:35:00', 'Late'),
+(6997, 998, '2025-11-18', '01:16:00', '06:59:00', 'Present'),
+(6998, 999, '2025-11-18', '03:22:00', '05:16:00', 'Present'),
+(6999, 1000, '2025-11-18', '06:54:00', '05:44:00', 'Present'),
+(7001, 1001, '2025-11-19', '07:48:56', '04:05:56', 'Present'),
+(7002, 1002, '2025-11-18', '08:00:12', '16:10:24', 'Present'),
+(7003, 1003, '2025-11-18', '07:30:16', '16:13:44', 'Present'),
+(7004, 1004, '2025-11-19', '07:04:34', '16:08:25', 'Present'),
+(7005, 1005, '2025-11-19', '07:50:12', '16:16:14', 'Present'),
+(7006, 327, '2025-11-01', '08:45:00', '17:00:00', 'Present'),
+(8503, 327, '2025-11-02', '09:10:00', '17:05:00', 'Late'),
+(9303, 327, '2025-11-03', '08:50:00', '17:00:00', 'Present'),
+(10028, 327, '2025-11-04', '09:05:00', '17:10:00', 'Late'),
+(11284, 327, '2025-11-05', '08:55:00', '17:00:00', 'Present'),
+(21942, 327, '2025-11-06', '08:40:00', '17:00:00', 'Present'),
+(34872, 327, '2025-11-07', '09:15:00', '17:20:00', 'Late'),
+(49357, 327, '2025-11-08', '08:50:00', '17:00:00', 'Present'),
+(58325, 327, '2025-11-09', '09:00:00', '17:05:00', 'Late'),
+(63945, 327, '2025-11-10', '08:45:00', '17:00:00', 'Present');
+
+

@@ -7,7 +7,7 @@ if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
 
-// Lấy dữ liệu từ bảng training
+// Lấy dữ liệu từ bảng training (danh sách đầy đủ để render bảng)
 $sql = "
     SELECT 
         TrainingID,
@@ -20,7 +20,20 @@ $sql = "
 ";
 $result   = mysqli_query($conn, $sql);
 $rowCount = $result ? mysqli_num_rows($result) : 0;
+
+// Đếm số COURSE thực sự (distinct Course)
+$totalCourses = 0;
+$courseCountSql = "SELECT COUNT(DISTINCT Course) AS totalCourses FROM `training`";
+if ($courseRes = mysqli_query($conn, $courseCountSql)) {
+    $cRow         = mysqli_fetch_assoc($courseRes);
+    $totalCourses = (int)$cRow['totalCourses'];
+    mysqli_free_result($courseRes);
+} else {
+    // fallback: nếu query lỗi thì dùng số dòng
+    $totalCourses = $rowCount;
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,10 +147,10 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="salary">
-                    <div class="flex items-center">
-                        <span class="text-lg mr-3">💰</span>
-                        <span><a href="../demo/payroll.php">Salary Management</a></span>
-                    </div>
+                        <div class="flex items-center">
+                            <span class="text-lg mr-3">💰</span>
+                            <span><a href="../demo/salary.php">Salary Management</a></span>
+                        </div>
                     </button>
 
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="attendance">
@@ -219,7 +232,7 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                         <div class="flex justify-between items-center mb-6">
                             <h2 class="text-2xl font-bold">Training Management</h2>
                             <div class="flex gap-2">
-                                <a href="../demo/training-form.html" class="btn btn-primary">Add Training</a>
+                                <a href="training-form.php" class="btn btn-primary">Add Training</a>
                                 <button id="edit-training-btn" class="btn btn-outline">Edit Selected</button>
                             </div>
                         </div>
@@ -232,7 +245,7 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                                     <div>
                                         <p class="text-sm opacity-70">Total Courses</p>
                                         <p id="training-total" class="text-2xl font-bold">
-                                            <?php echo $rowCount; ?>
+                                            <?php echo $totalCourses; ?>
                                         </p>
                                     </div>
                                 </div>
@@ -362,7 +375,28 @@ mysqli_close($conn);
 ?>
 
 <script>
-  // Filter theo Course + StartDate (client-side)
+  // ========= EDIT SELECTED =========
+  document.getElementById('edit-training-btn')?.addEventListener('click', () => {
+    const checks = document.querySelectorAll('#training-table tbody .row-check:checked');
+
+    if (checks.length !== 1) {
+      alert('Please select exactly ONE training to edit.');
+      return;
+    }
+
+    const row = checks[0].closest('tr');
+    // cột 0 = checkbox, cột 1 = TrainingID
+    const trainingId = row.children[1].textContent.trim();
+
+    if (!trainingId) {
+      alert('Cannot determine Training ID.');
+      return;
+    }
+
+    window.location.href = 'training-form.php?id=' + encodeURIComponent(trainingId);
+  });
+
+  // ========= FILTER (giữ nguyên đoạn cũ) =========
   document.getElementById('apply-filter')?.addEventListener('click', () => {
     const from = document.getElementById('from-date')?.value || '';
     const to   = document.getElementById('to-date')?.value || '';
@@ -380,5 +414,8 @@ mysqli_close($conn);
     });
   });
 </script>
+</body>
+</html>
+
 </body>
 </html>

@@ -10,13 +10,13 @@ if (!$conn) {
 // Lấy dữ liệu từ bảng children
 $sql = "
     SELECT 
-        ChildrenID,
+        ChildID,
         EmployeeID,
         Name,
         DateOfBirth,
         Gender
     FROM `children`
-    ORDER BY EmployeeID ASC, ChildrenID ASC
+    ORDER BY EmployeeID ASC, ChildID ASC
 ";
 $result = mysqli_query($conn, $sql);
 $rowCount = $result ? mysqli_num_rows($result) : 0;
@@ -218,53 +218,27 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                     <!-- Header + Action -->
                     <section class="mb-8">
                         <div class="flex justify-between items-center mb-6">
-                            <h2 class="text-2xl font-bold">Attendance Management</h2>
+                            <h2 class="text-2xl font-bold">Children</h2>
                             <div class="flex gap-2">
-                                <a href="../demo/attendance-form.html" class="btn btn-primary">Add Attendance</a>
+                                <a href="../demo/attendance-form.html" class="btn btn-primary">Add Information</a>
                                 <button id="edit-attendance-btn" class="btn btn-outline">Edit Selected</button>
                             </div>
                         </div>
 
                         <!-- Quick Stats (để nguyên, chỉ dùng số record từ children) -->
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols gap-6">
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
                                     <span class="text-2xl mr-3">🗓️</span>
                                     <div>
-                                        <p class="text-sm opacity-70">Attendance Records</p>
+                                        <p class="text-sm opacity-70">Kids Records</p>
                                         <p id="att-total" class="text-2xl font-bold">
                                             <?php echo $rowCount; ?>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-6 rounded-lg shadow-sm bg-white">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">✅</span>
-                                    <div>
-                                        <p class="text-sm opacity-70">On Time Today</p>
-                                        <p id="att-ontime" class="text-2xl font-bold">–</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-sm bg-white">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">⏱️</span>
-                                    <div>
-                                        <p class="text-sm opacity-70">Avg Hours</p>
-                                        <p id="att-avg" class="text-2xl font-bold">–</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-sm bg-white">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">🚫</span>
-                                    <div>
-                                        <p class="text-sm opacity-70">Absences</p>
-                                        <p id="att-absent" class="text-2xl font-bold">–</p>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </section>
 
@@ -321,7 +295,7 @@ $rowCount = $result ? mysqli_num_rows($result) : 0;
                                                     <input type="checkbox" class="row-check" />
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['ChildrenID']); ?>
+                                                    <?php echo htmlspecialchars($row['ChildID']); ?>
                                                 </td>
                                                 <td class="px-4 py-3 text-sm">
                                                     <?php echo htmlspecialchars($row['EmployeeID']); ?>

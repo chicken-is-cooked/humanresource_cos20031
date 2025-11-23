@@ -2,10 +2,16 @@
 session_start();
 include '../db-connect.php';
 
-// Default to User 327 if not logged in
-if (!isset($_SESSION['employeeID'])) { $_SESSION['employeeID'] = 327; }
-$employeeID = $_SESSION['employeeID'];
+// Bắt buộc phải đăng nhập
+if (!isset($_SESSION['employeeID'], $_SESSION['role'])) {
+    header('Location: ../login/login.php');
+    exit;
+}
+
+$employeeID = (int)$_SESSION['employeeID'];
+$role = $_SESSION['role'];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

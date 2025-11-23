@@ -1,55 +1,86 @@
- // Sidebar toggle (giữ nguyên nếu bạn đã có)
-  document.querySelector('.sidebar-toggle')?.addEventListener('click', () => {
-    document.getElementById('appSidebar')?.classList.toggle('open');
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const rows = Array.from(document.querySelectorAll(".salary-row"));
+  const filterInput = document.getElementById("filter-emp-id");
+  const filterBtn = document.getElementById("apply-filter");
 
-  const table = document.getElementById('salary-table');
-  const panel = document.getElementById('salary-detail');
+  const detailSection = document.getElementById("salary-detail");
+  const dId = document.getElementById("d-id");
+  const dEmpId = document.getElementById("d-empid");
+  const dHours = document.getElementById("d-hours");
+  const dHourly = document.getElementById("d-hourly");
+  const dBase = document.getElementById("d-base");
+  const dBonus = document.getElementById("d-bonus");
+  const dDeduction = document.getElementById("d-deduction");
+  const dTotal = document.getElementById("d-total");
 
-  function formatCurrency(n) {
-    const num = Number(n);
-    if (isNaN(num)) return n;
-    return num.toLocaleString(undefined, { maximumFractionDigits: 2 });
+  function showDetailsFromRow(row) {
+    if (!row) return;
+
+    dId.textContent = row.dataset.id || "";
+    dEmpId.textContent = row.dataset.empid || "";
+    dHours.textContent = row.dataset.hours || "0";
+    dHourly.textContent = row.dataset.hourly || "0";
+    dBase.textContent = row.dataset.basesalary || "0";
+    dBonus.textContent = row.dataset.bonus || "0";
+    dDeduction.textContent = row.dataset.deduction || "0";
+    dTotal.textContent = row.dataset.total || "0";
+
+    detailSection.classList.remove("hidden");
   }
 
-  function fillPanel(tr) {
-    const d = tr.dataset;
-    document.getElementById('d-id').textContent        = d.id || '';
-    document.getElementById('d-empid').textContent     = d.empid || '';
-    document.getElementById('d-hours').textContent     = d.hours || '';
-    document.getElementById('d-hourly').textContent    = formatCurrency(d.hourly || '');
-    document.getElementById('d-base').textContent      = formatCurrency(d.basesalary || '');
-    document.getElementById('d-bonus').textContent     = formatCurrency(d.bonus || '');
-    document.getElementById('d-deduction').textContent = formatCurrency(d.deduction || '');
-    document.getElementById('d-total').textContent     = formatCurrency(d.total || '');
+  rows.forEach((row) => {
+    const checkbox = row.querySelector(".row-check");
+    const viewBtn = row.querySelector(".view-details");
+
+    if (checkbox) {
+      checkbox.addEventListener("change", () => {
+        // bỏ tick các dòng khác
+        rows.forEach((r) => {
+          const cb = r.querySelector(".row-check");
+          if (cb && cb !== checkbox) cb.checked = false;
+        });
+
+        if (checkbox.checked) {
+          showDetailsFromRow(row);
+        } else {
+          detailSection.classList.add("hidden");
+        }
+      });
+    }
+
+    if (viewBtn) {
+      viewBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (checkbox) {
+          checkbox.checked = true;
+          rows.forEach((r) => {
+            const cb = r.querySelector(".row-check");
+            if (cb && cb !== checkbox) cb.checked = false;
+          });
+        }
+        showDetailsFromRow(row);
+      });
+    }
+  });
+
+  function applyFilter() {
+    const value = (filterInput.value || "").trim().toLowerCase();
+    rows.forEach((row) => {
+      const empId = (row.dataset.empid || "").toLowerCase();
+      row.style.display = !value || empId.includes(value) ? "" : "none";
+    });
   }
 
-  // click vào Employee ID -> mở panel chi tiết
-  table.addEventListener('click', function (e) {
-    const link = e.target.closest('.emp-link');
-    if (!link) return;
-    e.preventDefault();
-    const tr = link.closest('tr');
-    fillPanel(tr);
-    panel.classList.remove('hidden');
-    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-
-  // Xóa dòng
-  table.querySelectorAll('.remove-row').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const tr = e.target.closest('tr');
-      tr?.parentNode?.removeChild(tr);
-      // TODO: show toast nếu bạn đã có hệ thống #toasts
+  if (filterBtn) {
+    filterBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      applyFilter();
     });
-  });
+  }
 
-  // Filter theo Employee ID
-  document.getElementById('apply-filter')?.addEventListener('click', () => {
-    const empId = (document.getElementById('filter-emp-id')?.value || '').trim();
-    const rows = table.querySelectorAll('tbody tr');
-    rows.forEach(row => {
-      const rEmp = row.querySelector('.emp-link')?.textContent.trim() || row.children[2].textContent.trim();
-      row.style.display = (!empId || rEmp.includes(empId)) ? '' : 'none';
+  if (filterInput) {
+    filterInput.addEventListener("keyup", (e) => {
+      if (e.key === "Enter") applyFilter();
     });
-  });
+  }
+});

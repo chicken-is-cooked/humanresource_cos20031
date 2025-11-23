@@ -1,13 +1,35 @@
 <?php
+session_start();
 require_once "settings.php";
 
-// Kết nối DB
+// ==== BẮT BUỘC LOGIN & ROLE ADMIN (CEO/HR/Manager) ====
+if (!isset($_SESSION['employeeID'], $_SESSION['role'])) {
+    header('Location: ../login/login.php');
+    exit;
+}
+
+if (!in_array($_SESSION['role'], ['CEO', 'HR', 'Manager'])) {
+    header('Location: ../employee/index.php');
+    exit;
+}
+
+// ==== KẾT NỐI DB ====
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
 
-// Lấy dữ liệu attendance
+// ==== XÓA ATTENDANCE (Delete Selected) ====
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_ids'])) {
+    $ids = array_filter(array_map('intval', $_POST['delete_ids'] ?? []));
+    if (!empty($ids)) {
+        $idList = implode(',', $ids);
+        $delSql = "DELETE FROM `attendance` WHERE AttendanceID IN ($idList)";
+        mysqli_query($conn, $delSql);
+    }
+}
+
+// ==== LẤY DỮ LIỆU ATTENDANCE ====
 $sql = "
     SELECT 
         AttendanceID,
@@ -20,6 +42,60 @@ $sql = "
     ORDER BY Date DESC, EmployeeID ASC
 ";
 $result = mysqli_query($conn, $sql);
+
+// ==== THỐNG KÊ CHO 3 CARD: ON TIME TODAY, AVG HOURS, ABSENCES ====
+$onTimeToday   = 0;
+$avgHours      = 0;
+$absencesTotal = 0;
+
+// 1. On Time Today (Status = 'present' và Date = hôm nay)
+$today = date('Y-m-d');
+$sqlOnTime = "
+    SELECT COUNT(*) AS cnt
+    FROM `attendance`
+    WHERE Date = '$today' AND Status = 'present'
+";
+if ($res = mysqli_query($conn, $sqlOnTime)) {
+    $row = mysqli_fetch_assoc($res);
+    $onTimeToday = (int)$row['cnt'];
+    mysqli_free_result($res);
+}
+
+// 2. Absences (tổng số record Status = 'absent')
+$sqlAbs = "
+    SELECT COUNT(*) AS cnt
+    FROM `attendance`
+    WHERE Status = 'absent'
+";
+if ($res = mysqli_query($conn, $sqlAbs)) {
+    $row = mysqli_fetch_assoc($res);
+    $absencesTotal = (int)$row['cnt'];
+    mysqli_free_result($res);
+}
+
+// 3. Avg Hours (giờ trung bình giữa TimeIn và TimeOut, tính trên tất cả record có giờ)
+// TIMESTAMPDIFF(MINUTE, Date+TimeIn, Date+TimeOut) -> phút, chia 60 ra giờ
+$sqlAvg = "
+    SELECT AVG(
+        TIMESTAMPDIFF(
+            MINUTE,
+            CONCAT(Date, ' ', TimeIn),
+            CONCAT(Date, ' ', TimeOut)
+        )
+    ) AS avg_minutes
+    FROM `attendance`
+    WHERE TimeIn IS NOT NULL 
+      AND TimeOut IS NOT NULL 
+      AND Status <> 'absent'
+";
+if ($res = mysqli_query($conn, $sqlAvg)) {
+    $row = mysqli_fetch_assoc($res);
+    if ($row && $row['avg_minutes'] !== null) {
+        $avgHours = round(((float)$row['avg_minutes']) / 60, 1); // vd: 7.5
+    }
+    mysqli_free_result($res);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,19 +185,16 @@ $result = mysqli_query($conn, $sql);
                     <div class="flex items-center space-x-4">
                         <span class="text-sm">Welcome, Admin</span>
                         <button id="logout-btn" class="px-3 py-1 text-sm rounded-md transition-colors hover:opacity-80">
-                            <a href="../demo/login.html">Log Out</a>
+                            <a href="../login/logout.php">Log Out</a>
                         </button>
                     </div>
                 </div>
             </div>
         </nav>
 
-            <!--sidebar-->
-
        <div class="flex flex-1 overflow-hidden">
             <!-- Sidebar Navigation -->
             <div id="sidebar" class="w-64 shadow-lg sidebar-transition lg:translate-x-0 -translate-x-full fixed lg:relative z-30 h-full bg-white">
-                <!-- h-full + overflow-y-auto để sidebar có thể scroll xuống -->
                 <div class="p-4 h-full overflow-y-auto">
                 <nav class="space-y-2">
 
@@ -184,7 +257,7 @@ $result = mysqli_query($conn, $sql);
                     </div>
                     </button>
 
-                    <!-- JOB MANAGEMENT (scroll xuống sẽ thấy hết) -->
+                    <!-- JOB MANAGEMENT -->
                     <button class="sidebar-item w-full text-left px-4 py-3 rounded-lg transition-colors" data-section="job-history">
                     <div class="flex items-center">
                         <span class="text-lg mr-3">🧾</span>
@@ -196,7 +269,6 @@ $result = mysqli_query($conn, $sql);
                     <div class="flex items-center">
                         <span class="text-lg mr-3">📌</span>
                         <span><a href="../demo/position-history.php">Position History</a></span>
-
                     </div>
                     </button>
 
@@ -210,8 +282,6 @@ $result = mysqli_query($conn, $sql);
                 </nav>
                 </div>
             </div>
- 
-
 
             <!-- Main Content Area -->
             <div class="flex-1 overflow-y-auto bg-gray-50">
@@ -221,12 +291,13 @@ $result = mysqli_query($conn, $sql);
                         <div class="flex justify-between items-center mb-6">
                             <h2 class="text-2xl font-bold">Attendance Management</h2>
                             <div class="flex gap-2">
-                                <a href="../demo/attendance-form.html" class="btn btn-primary">Add Attendance</a>
+                                <a href="../demo/attendance-form.php" class="btn btn-primary">Add Attendance</a>
                                 <button id="edit-attendance-btn" class="btn btn-outline">Edit Selected</button>
+                                <button id="delete-attendance-btn" class="btn btn-outline text-red-600">Delete Selected</button>
                             </div>
                         </div>
 
-                        <!-- Quick Stats (tạm để số 0/demo) -->
+                        <!-- Quick Stats -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <div class="p-6 rounded-lg shadow-sm bg-white">
                                 <div class="flex items-center">
@@ -244,7 +315,9 @@ $result = mysqli_query($conn, $sql);
                                     <span class="text-2xl mr-3">✅</span>
                                     <div>
                                         <p class="text-sm opacity-70">On Time Today</p>
-                                        <p id="att-ontime" class="text-2xl font-bold">–</p>
+                                        <p id="att-ontime" class="text-2xl font-bold">
+                                            <?php echo $onTimeToday; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +326,9 @@ $result = mysqli_query($conn, $sql);
                                     <span class="text-2xl mr-3">⏱️</span>
                                     <div>
                                         <p class="text-sm opacity-70">Avg Hours</p>
-                                        <p id="att-avg" class="text-2xl font-bold">–</p>
+                                        <p id="att-avg" class="text-2xl font-bold">
+                                            <?php echo $avgHours > 0 ? $avgHours . ' h' : '0 h'; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +337,9 @@ $result = mysqli_query($conn, $sql);
                                     <span class="text-2xl mr-3">🚫</span>
                                     <div>
                                         <p class="text-sm opacity-70">Absences</p>
-                                        <p id="att-absent" class="text-2xl font-bold">–</p>
+                                        <p id="att-absent" class="text-2xl font-bold">
+                                            <?php echo $absencesTotal; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -304,55 +381,57 @@ $result = mysqli_query($conn, $sql);
 
                         <!-- Table -->
                         <div class="overflow-x-auto">
-                            <table id="attendance-table" class="min-w-full divide-y">
-                                <thead class="bg-gray-50">
-                                    <tr>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold"></th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Attendance ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Date</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Time In</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Time Out</th>
-                                        <th class="px-4 py-3 text-left text-sm font-semibold">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y bg-white">
-                                    <?php if ($result && mysqli_num_rows($result) > 0): ?>
-                                        <?php mysqli_data_seek($result, 0); // về đầu result để lặp ?>
-                                        <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                            <form id="delete-form" method="post">
+                                <table id="attendance-table" class="min-w-full divide-y">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="px-4 py-3 text-left text-sm font-semibold"></th>
+                                            <th class="px-4 py-3 text-left text-sm font-semibold">Attendance ID</th>
+                                            <th class="px-4 py-3 text-left text-sm font-semibold">Employee ID</th>
+                                            <th class="px-4 py-3 text-left text-sm font-semibold">Date</th>
+                                            <th class="px-4 py-3 text-left text-sm font-semibold">Time In</th>
+                                            <th class="px-4 py-3 text-left text-sm font-semibold">Time Out</th>
+                                            <th class="px-4 py-3 text-left text-sm font-semibold">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y bg-white">
+                                        <?php if ($result && mysqli_num_rows($result) > 0): ?>
+                                            <?php mysqli_data_seek($result, 0); ?>
+                                            <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                                                <tr>
+                                                    <td class="px-4 py-3">
+                                                        <input type="checkbox" class="row-check" />
+                                                    </td>
+                                                    <td class="px-4 py-3 text-sm">
+                                                        <?php echo htmlspecialchars($row['AttendanceID']); ?>
+                                                    </td>
+                                                    <td class="px-4 py-3 text-sm">
+                                                        <?php echo htmlspecialchars($row['EmployeeID']); ?>
+                                                    </td>
+                                                    <td class="px-4 py-3 text-sm">
+                                                        <?php echo htmlspecialchars($row['Date']); ?>
+                                                    </td>
+                                                    <td class="px-4 py-3 text-sm">
+                                                        <?php echo htmlspecialchars($row['TimeIn']); ?>
+                                                    </td>
+                                                    <td class="px-4 py-3 text-sm">
+                                                        <?php echo htmlspecialchars($row['TimeOut']); ?>
+                                                    </td>
+                                                    <td class="px-4 py-3 text-sm">
+                                                        <?php echo htmlspecialchars($row['Status']); ?>
+                                                    </td>
+                                                </tr>
+                                            <?php endwhile; ?>
+                                        <?php else: ?>
                                             <tr>
-                                                <td class="px-4 py-3">
-                                                    <input type="checkbox" class="row-check" />
-                                                </td>
-                                                <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['AttendanceID']); ?>
-                                                </td>
-                                                <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['EmployeeID']); ?>
-                                                </td>
-                                                <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['Date']); ?>
-                                                </td>
-                                                <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['TimeIn']); ?>
-                                                </td>
-                                                <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['TimeOut']); ?>
-                                                </td>
-                                                <td class="px-4 py-3 text-sm">
-                                                    <?php echo htmlspecialchars($row['Status']); ?>
+                                                <td colspan="7" class="px-4 py-3 text-center text-sm text-gray-500">
+                                                    No attendance records found.
                                                 </td>
                                             </tr>
-                                        <?php endwhile; ?>
-                                    <?php else: ?>
-                                        <tr>
-                                            <td colspan="7" class="px-4 py-3 text-center text-sm text-gray-500">
-                                                No attendance records found.
-                                            </td>
-                                        </tr>
-                                    <?php endif; ?>
-                                </tbody>
-                            </table>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
+                            </form>
                         </div>
                     </section>
                 </div>
@@ -384,6 +463,44 @@ mysqli_close($conn);
 
       row.style.display = (okEmp && okDate) ? '' : 'none';
     });
+  });
+
+  // Edit Selected -> redirect sang attendance-form.php?id=...
+  document.getElementById('edit-attendance-btn')?.addEventListener('click', () => {
+    const checked = document.querySelector('#attendance-table tbody input.row-check:checked');
+    if (!checked) {
+      alert('Please select one record to edit.');
+      return;
+    }
+    const row = checked.closest('tr');
+    const id  = row.children[1].textContent.trim(); // AttendanceID
+    window.location.href = '../demo/attendance-form.php?id=' + encodeURIComponent(id);
+  });
+
+  // Delete Selected -> POST delete_ids[]
+  document.getElementById('delete-attendance-btn')?.addEventListener('click', () => {
+    const checks = document.querySelectorAll('#attendance-table tbody input.row-check:checked');
+    if (!checks.length) {
+      alert('Please select at least one record to delete.');
+      return;
+    }
+    if (!confirm('Are you sure you want to delete the selected record(s)?')) return;
+
+    const form = document.getElementById('delete-form');
+    // Clear old hidden inputs
+    Array.from(form.querySelectorAll('input[name="delete_ids[]"]')).forEach(el => el.remove());
+
+    checks.forEach(chk => {
+      const row = chk.closest('tr');
+      const id  = row.children[1].textContent.trim();
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'delete_ids[]';
+      input.value = id;
+      form.appendChild(input);
+    });
+
+    form.submit();
   });
 </script>
 </body>
